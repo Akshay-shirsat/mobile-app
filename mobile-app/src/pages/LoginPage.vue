@@ -1,13 +1,5 @@
 <template>
   <div>
-    <q-bar dense class="bg-white text-black">
-      <div>10:00AM</div>
-      <q-space />
-      <div class="custom-icon">
-        <img src="/assets/Levels.png" alt="Custom Icon" />
-      </div>
-    </q-bar>
-
     <!-- Login Section -->
     <div class="login-section q-mb-md">
       <text-h1 class="login-title">Log-in</text-h1>
@@ -16,38 +8,57 @@
       <!-- Driver Name Input -->
       <q-input
         v-model="driverName"
-        filled
-        placeholder="Driver Name"
         dense
-        class="input-field"
+        outlined
+        placeholder="Driver Name"
+        class="input-field q-pb-md"
       ></q-input>
 
       <!-- Password Input -->
       <q-input
         v-model="password"
-        filled
+        outlined
+        dense
         type="password"
         placeholder="Password"
-        dense
         class="input-field"
       ></q-input>
-      <div class="checkbox-link-container ">
-      <!-- Keep me logged in checkbox -->
-      <q-checkbox v-model="keepLoggedIn" label="Keep me logged in" dense class="keep-logged-in-checkbox q-mt-sm q"/>
-
-      <!-- Forgot Password link -->
-      <q-btn flat label="Forgot Password?" class="forgot-password q-mr-xl q-mt-sm" />
-    </div>
+      <div class="row">
+        <div class="col-md-6 col-xs-6 col-sm-6">
+          <!-- Keep me logged in checkbox -->
+          <q-checkbox
+            v-model="keepLoggedIn"
+            label="Keep me logged in"
+            class="keep-logged-in-checkbox q-mt-sm text-left"
+          />
+        </div>
+        <div class="col-md-6 col-xs-6 col-sm-6">
+          <!-- Forgot Password link -->
+          <q-btn
+            flat
+            no-caps
+            color="black"
+            label="Forgot Password?"
+            class="forgot-password q-mt-sm text-right"
+          />
+        </div>
+      </div>
+      <div class="checkbox-link-container"></div>
       <!-- Login Button -->
+
       <q-btn
         color="primary"
+        no-caps
+        rounded
         label="Login"
         @click="handleLogin"
-        class="login-button q-mt-md"
+        class="login-button q-px-lg q-py-sm q-mt-xl"
       />
 
       <!-- Sign Up Option -->
-      <p class="signup-option q-mt-md">Don't have an account? <a href="#">Sign Up</a></p>
+      <p class="signup-option q-mt-md">
+        Don't have an account? <a href="#">Sign Up</a>
+      </p>
     </div>
   </div>
 </template>
@@ -56,8 +67,8 @@
 export default {
   data() {
     return {
-      driverName: '',
-      password: '',
+      driverName: "",
+      password: "",
       keepLoggedIn: false,
     };
   },
@@ -79,32 +90,29 @@ export default {
   justify-content: center;
   height: auto;
   flex-shrink: 0;
-  color: #4A4A4A;
+  color: #4a4a4a;
   text-align: center;
-  font-family: 'DM Sans', sans-serif;
-  font-size: 24px;
+  font-family: "DM Sans";
+  font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
-  margin-top: 25%;
+  margin-top: 55%;
   max-width: 100%;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
 
-
-
 .sub-title {
-  font-size: 14px;
+  font-size: 12px;
   color: #919191;
   margin-top: 8px;
-
 }
 
 .input-field {
   width: 100%;
-  max-width: 300px; /* Adjust as needed */
+  max-width: 320px; /* Adjust as needed */
   margin-top: 16px;
 }
 
@@ -114,12 +122,14 @@ export default {
 }
 
 .login-button {
-  margin-top: 16px;
+  margin-top: 56px;
+  width: 215px;
+  height: auto;
 }
 
 .signup-option {
-  font-size: 14px;
-  color: #666666;
+  font-size: 10px;
+  color: #777777;
   margin-top: 16px;
 }
 
@@ -129,26 +139,33 @@ export default {
 }
 .keep-logged-in-checkbox {
   color: #999;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 22px;
+  width: 200px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 15%;
+}
+.forgot-password {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  color: #3498db;
+  font-style: normal;
   width: 212px;
   height: 20px;
   flex-shrink: 0;
-}
-.forgot-password {
-  font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
-  color: #3498db; /* Adjust the color as needed */
-  width: 220px;
-height: 26px;
-flex-shrink: 0;
+  margin-top: 12%;
 }
 .checkbox-link-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+.rounded-button {
+  border-radius: 16px;
+  width: 200px;
+  height: 45px;
 }
 </style>
