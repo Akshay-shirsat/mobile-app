@@ -4,7 +4,9 @@
     <q-header elevated>
       <!-- Left side: Greeting -->
       <q-bar class="q-py-lg" color="primary">
-        <q-toolbar-title class="abc q-ml-sm"> Good Morning Akshay! </q-toolbar-title>
+        <q-toolbar-title class="q-ml-md">
+          Good Morning Akshay!
+        </q-toolbar-title>
         <q-btn
           square
           class="outlined-button"
@@ -19,42 +21,37 @@
       <!-- Right side: Notification Icon -->
     </q-header>
 
-
     <q-page-container>
       <q-page>
-
         <div class="flex-container">
-
           <div class="flex-item top-section">
-
-            <div class="text-h6 q-ml-md q-mt-sm" >
-              Selected Vehicle
-            </div>
+            <div class="text-h6 q-ml-md q-mt-sm">Selected Vehicle</div>
 
             <q-select
-            outlined
-            dense
+              outlined
+              dense
               v-model="selectedOption"
               :options="dropdownOptions"
               label="Select an option"
-              style="width: 150px; margin-left: 10px;"
+              style="width: 150px; margin-left: 10px"
             ></q-select>
 
-            <q-btn label="View Details" color="primary"
-        no-caps
-        rounded @click="viewDetails" class="q-mt-lg q-ml-md"/>
+            <q-btn
+              label="View Details"
+              color="primary"
+              no-caps
+              rounded
+              @click="viewDetails"
+              class="q-mt-lg q-ml-md"
+            />
           </div>
 
-
           <div class="flex-item">
-
             <img src="/assets/image1.png" alt="Image" class="image-right" />
           </div>
         </div>
         <div class="quick-actions-section">
-          <div class="text-h6 q-ml-md">
-            Quick Actions
-          </div>
+          <div class="text-h6 q-ml-md">Quick Actions</div>
         </div>
         <!-- Three Columns Section -->
         <div class="three-columns-section">
@@ -87,7 +84,14 @@
               <div class="text-h6">Licence Due Date</div>
               <div class="subtitle">Expiring in 2 days</div>
             </div>
-            <q-btn icon="keyboard_arrow_right" color="primary" />
+            <q-btn
+              class="q-mr-sm"
+              text-color="black"
+              round
+              icon="keyboard_arrow_right"
+              color="grey-4"
+              size="sm"
+            />
           </div>
 
           <!-- Row 2 -->
@@ -97,7 +101,14 @@
               <div class="text-h6">MOT Due</div>
               <div class="subtitle">Expiring in 5 days</div>
             </div>
-            <q-btn icon="keyboard_arrow_right" color="primary" />
+            <q-btn
+              class="q-mr-sm"
+              text-color="black"
+              round
+              icon="keyboard_arrow_right"
+              color="grey-4"
+              size="sm"
+            />
           </div>
 
           <!-- Row 3 -->
@@ -107,10 +118,16 @@
               <div class="text-h6">Insurance Due</div>
               <div class="subtitle">Expiring on 19/11/2023</div>
             </div>
-            <q-btn icon="keyboard_arrow_right" color="primary" />
+            <q-btn
+              round
+              icon="keyboard_arrow_right"
+              text-color="black"
+              color="grey-4"
+              class="q-mr-sm"
+              size="sm"
+            />
           </div>
         </div>
-        
       </q-page>
     </q-page-container>
   </div>
@@ -122,16 +139,13 @@ export default {
     return {
       selectedOption: null,
       dropdownOptions: [
-        { label: 'Option 1', value: 1 },
-        { label: 'Option 2', value: 2 },
-
+        { label: "Option 1", value: 1 },
+        { label: "Option 2", value: 2 },
       ],
     };
   },
   methods: {
-    viewDetails() {
-
-    },
+    viewDetails() {},
   },
 };
 </script>
@@ -168,7 +182,6 @@ export default {
 }
 .title-container {
   margin-left: 10px;
-
 }
 .top-section {
   margin-top: -35px; /* Adjust the margin-top as needed */
@@ -200,12 +213,12 @@ export default {
 /* Style for name */
 .name {
   color: #000;
-text-align: center;
-font-family: DM Sans;
-font-size: 12px;
-font-style: normal;
-font-weight: 500;
-line-height: 22px;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
 }
 .custom-icon {
   width: 24px; /* Adjust the width as needed */
@@ -219,17 +232,17 @@ line-height: 22px;
 
 /* Style for icon1 */
 .icon1 {
-  background-image: url('/assets/calendar--tools.png'); /* Adjust the path as needed */
+  background-image: url("/assets/calendar--tools.png"); /* Adjust the path as needed */
 }
 
 /* Style for icon2 */
 .icon2 {
-  background-image: url('/assets/vector.png'); /* Adjust the path as needed */
+  background-image: url("/assets/vector.png"); /* Adjust the path as needed */
 }
 
 /* Style for icon3 */
 .icon3 {
-  background-image: url('/assets/vectorr.png'); /* Adjust the path as needed */
+  background-image: url("/assets/vectorr.png"); /* Adjust the path as needed */
 }
 .row-structure {
   display: flex;
@@ -248,7 +261,6 @@ line-height: 22px;
 
 /* Style for logo */
 
-
 /* Style for details (title and subtitle) */
 .details {
   flex-grow: 1;
@@ -260,20 +272,19 @@ q-btn {
   margin-left: 10px; /* Adjust the margin-left as needed */
 }
 .icon11 {
-  background-image: url('/assets/horizontal.png'); /* Adjust the path as needed */
+  background-image: url("/assets/horizontal.png"); /* Adjust the path as needed */
 }
 
 /* Style for icon2 */
 .icon12 {
-  background-image: url('/assets/security.png'); /* Adjust the path as needed */
+  background-image: url("/assets/security.png"); /* Adjust the path as needed */
 }
 
 /* Style for icon3 */
 .icon13 {
-  background-image: url('/assets/certificate.png'); /* Adjust the path as needed */
+  background-image: url("/assets/certificate.png"); /* Adjust the path as needed */
 }
-.subtitle{
+.subtitle {
   color: red;
 }
-
 </style>
