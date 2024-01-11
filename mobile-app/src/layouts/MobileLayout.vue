@@ -8,6 +8,7 @@
       ref="myBottomSheet"
       :visible="bottomSheetVisible"
       @hide="closeBottomSheet"
+      class="vue-bottom-sheet"
     >
       <div class="q-pa-md q-gutter-sm bottom-sheet-content">
         <div
@@ -69,5 +70,15 @@ export default {
 .category-icon {
   font-size: 24px;
   color: #888;
+}
+
+/* Set bottom sheet position to fixed at the bottom */
+.vue-bottom-sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* Adjust the z-index as needed */
+  background-color: aliceblue;
 }
 </style>

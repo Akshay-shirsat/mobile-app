@@ -15,7 +15,9 @@ const routes = [
     component: () => import('layouts/MobileLayout.vue'),
     children: [
       { path: '/login', component: () => import('pages/LoginPage.vue') },
-      { path: '/DashBoard', component: () => import('pages/DashBoard.vue') }
+      { path: '/DashBoard', component: () => import('pages/DashBoard.vue') },
+      { path: '/DashBoardd', component: () => import('pages/DashBoardd.vue') },
+      { path: '/InspectionCar', component: () => import('pages/InspectionCar.vue') }
       // Add other routes for the default layout as needed
     ]
   },
