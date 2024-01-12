@@ -17,7 +17,10 @@ const routes = [
       { path: '/login', component: () => import('pages/LoginPage.vue') },
       { path: '/DashBoard', component: () => import('pages/DashBoard.vue') },
       { path: '/DashBoardd', component: () => import('pages/DashBoardd.vue') },
-      { path: '/InspectionCar', component: () => import('pages/InspectionCar.vue') }
+      { path: '/InspectionCar', component: () => import('pages/InspectionCar.vue') },
+      { path: '/InspectionDraft', component: () => import('pages/InspectionDraft.vue') },
+      { path: '/InspectionComp', component: () => import('pages/InspectionComp.vue') },
+      { path: '/InspectionOver', component: () => import('pages/InspectionOver.vue') },
       // Add other routes for the default layout as needed
     ]
   },

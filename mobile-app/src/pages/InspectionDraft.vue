@@ -89,17 +89,17 @@
   </div>
 </div>
 <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
-    <q-list bordered padding dense class="rounded-borders" style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
+    <q-list rounded  padding dense class="rounded-borders; bg-grey-2"  style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
       <q-img
         class="q-mr-sm"
-        src="/assets/Rectangle_175.png"
+        src="/assets/Rectangle_176.png"
         alt="Image description"
         width="6px"
         height="55px"
       />
-      <q-item clickable v-ripple style="flex-grow: 1;">
+      <q-item clickable v-ripple style="flex-grow: 1;" >
         <q-item-section>
-          <q-item-label class="rounded-list-subtitle text-left text-weight-medium">Pending</q-item-label>
+          <q-item-label class="rounded-list-subtitle2 text-left text-weight-medium">Draft</q-item-label>
           <q-item-label class="text-left text-bold" lines="1">Sienna, <span class="text-weight-light">due by-dd.mm.yyyy</span></q-item-label>
         </q-item-section>
 
@@ -117,17 +117,17 @@
     </q-list>
   </div>
    <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-    <q-list bordered padding dense class="rounded-borders" style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
+    <q-list rounded  padding dense class="rounded-borders; bg-grey-2"  style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
       <q-img
         class="q-mr-sm"
-        src="/assets/Rectangle_175.png"
+        src="/assets/Rectangle_176.png"
         alt="Image description"
         width="6px"
         height="55px"
       />
       <q-item clickable v-ripple style="flex-grow: 1;">
         <q-item-section>
-          <q-item-label class="rounded-list-subtitle text-left text-weight-medium">Pending</q-item-label>
+          <q-item-label class="rounded-list-subtitle2 text-left text-weight-medium">Draft</q-item-label>
           <q-item-label class="text-left text-bold" lines="1">Sienna, <span class="text-weight-light">due by-dd.mm.yyyy</span></q-item-label>
         </q-item-section>
 
@@ -145,10 +145,10 @@
     </q-list>
   </div>
    <div class="rounded-box q-pt-xs q-pa-md q-gutter-md">
-    <q-list bordered padding dense class="rounded-borders" style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
+   <q-list rounded  padding dense class="rounded-borders; bg-grey-2"  style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
       <q-img
         class="q-mr-sm"
-        src="/assets/Rectangle_175.png"
+        src="/assets/Rectangle_176.png"
         alt="Image description"
         width="6px"
         height="55px"
@@ -156,7 +156,7 @@
 
       <q-item clickable v-ripple style="flex-grow: 1;">
         <q-item-section>
-          <q-item-label class="rounded-list-subtitle text-left text-weight-medium">Pending</q-item-label>
+          <q-item-label class="rounded-list-subtitle2 text-left text-weight-medium">Draft</q-item-label>
           <q-item-label class="text-left text-bold" lines="1">Sienna, <span class="text-weight-light">due by-dd.mm.yyyy</span></q-item-label>
         </q-item-section>
 
@@ -174,7 +174,7 @@
     </q-list>
   </div>
      <div class="rounded-box q-pt-xs q-pa-md q-gutter-md">
-    <q-list bordered padding dense class="rounded-borders" style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
+    <q-list rounded  padding dense class="rounded-borders; bg-grey-2"  style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
       <q-img
         class="q-mr-sm"
         src="/assets/Rectangle_176.png"
@@ -202,7 +202,7 @@
     </q-list>
   </div>
      <div class="rounded-box q-pt-xs q-pa-md q-gutter-md">
-    <q-list bordered padding dense class="rounded-borders" style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
+    <q-list rounded  padding dense class="rounded-borders; bg-grey-2"  style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
       <q-img
         class="q-mr-sm"
         src="/assets/Rectangle_176.png"
@@ -393,12 +393,6 @@ width: 170px;
 .rounded-borders {
   border-radius: 12px; /* Set the desired border radius for the list */
   overflow: hidden; /* Hide overflow content */
-}
-.vertical-separator {
-  width: 1px;
-  height: 100%;
-  background-color: rgba(255, 251, 251, 0); /* Set the desired color for the separator */
-  margin-right: 10px;
 }
 .q-pt-sm {
   padding-top: 15px; /* Set the desired top padding for the first structure */
