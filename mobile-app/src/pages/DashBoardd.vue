@@ -68,8 +68,8 @@
         <div class="quick-actions-section">
           <div class="text-h6 q-ml-md">Quick Actions</div>
         </div>
-<div class="q-pa-sm q-gutter-md ">
-    <q-list bordered padding class="text-left" style="max-width: 370px">
+<div class="q-pa-sm q-gutter-md">
+      <q-list bordered padding class="text-left" style="max-width: 670px">
       <q-item clickable v-ripple>
         <q-item-section avatar top>
           <q-avatar square  color="grey-4" text-color="white" class="q-ml-sm" >
@@ -282,4 +282,9 @@ q-btn {
 .subtitle {
   color: red;
 }
+
+
+
+
+
 </style>

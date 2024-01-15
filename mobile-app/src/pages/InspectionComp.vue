@@ -1,19 +1,9 @@
 <template>
   <div>
-    <q-header elevated>
-      <q-bar class="q-py-lg" color="primary">
-        <q-toolbar-title class="q-ml-md">
-          Good Morning Akshay!
-        </q-toolbar-title>
-        <q-btn
-          square
-          class="outlined-button"
-          icon="notifications"
-          color="transparent"
-          text-color="white"
-          border-color="white"
-        >
-        </q-btn>
+  <q-header elevated class="bg-white text-primary">
+      <q-bar class="q-py-lg bg-white text-primary">
+        <q-toolbar-title class="q-ml-md"> Inspection </q-toolbar-title>
+        <q-btn flat round dense icon="more_vert" />
       </q-bar>
     </q-header>
     <q-page-container>
@@ -423,13 +413,19 @@ width: 170px;
   border-radius: 12px; /* Set the desired border radius for the list */
   overflow: hidden; /* Hide overflow content */
 }
-.q-pt-sm {
-  padding-top: 15px; /* Set the desired top padding for the first structure */
-}
+
 
 .q-pt-xs {
-  padding-top: 2px; /* Set the desired top padding for the second structure */
+  padding-top: 1px; /* Set the desired top padding for the second structure */
+}
+.q-pa-md.items-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.btngroup {
+  margin-top: 10px;
+}
 
 </style>

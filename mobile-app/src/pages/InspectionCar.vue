@@ -1,25 +1,14 @@
 <template>
   <div>
-    <q-header elevated>
-      <q-bar class="q-py-lg" color="primary">
-        <q-toolbar-title class="q-ml-md">
-          Good Morning Akshay!
-        </q-toolbar-title>
-        <q-btn
-          square
-          class="outlined-button"
-          icon="notifications"
-          color="transparent"
-          text-color="white"
-          border-color="white"
-        >
-        </q-btn>
+<q-header elevated class="bg-white text-primary">
+      <q-bar class="q-py-lg bg-white text-primary">
+        <q-toolbar-title class="q-ml-md"> Inspection </q-toolbar-title>
+        <q-btn flat round dense icon="more_vert" />
       </q-bar>
     </q-header>
     <q-page-container>
 
       <q-page>
-
         <div class="flex-container">
           <div class="flex-item top-section">
             <div class="text-h6 q-ml-md q-mt-sm">Selected Vehicle</div>
@@ -47,27 +36,26 @@
             <img src="/assets/image1.png" alt="Image" class="image-right"  />
           </div>
         </div>
-        <div class="q-pa-md items-start" >
-          <q-btn-group rounded>
-            <q-btn
-              color="grey-4"
-              rounded
-              text-color="black"
-              no-caps
-              label="Pending"
-              class="btngroup"
-            />
-            <q-btn
-              color="white"
-              rounded
-              text-color="black"
-              no-caps
-              label="Completed"
-              class="btngroup"
-
-            />
-          </q-btn-group>
-        </div>
+          <div class="q-pa-md items-start">
+      <q-btn-group rounded style="justify-content: center;">
+        <q-btn
+          color="grey-4"
+          rounded
+          text-color="black"
+          no-caps
+          label="Pending"
+          class="btngroup"
+        />
+        <q-btn
+          color="white"
+          rounded
+          text-color="black"
+          no-caps
+          label="Completed"
+          class="btngroup"
+        />
+      </q-btn-group>
+    </div>
  <div style="display: flex; justify-content: space-between; align-items: center;">
   <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5">Draft and Pending reports</q-item-label>
   <div class="q-pa-md">
@@ -407,5 +395,15 @@ width: 170px;
 .q-pt-xs {
   padding-top: 2px; /* Set the desired top padding for the second structure */
 }
+.q-pa-md.items-start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btngroup {
+  margin-top: 10px;
+}
+
 
 </style>

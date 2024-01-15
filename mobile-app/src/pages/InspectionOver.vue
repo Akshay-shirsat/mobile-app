@@ -1,230 +1,431 @@
 <template>
   <div>
-    <q-header elevated>
-      <q-bar class="q-py-lg" color="secondry">
-        <q-toolbar-title class="q-ml-md">
-          Inspection Overview
-        </q-toolbar-title>
-<q-btn flat round dense icon="more_vert" />
+    <q-header elevated class="bg-white text-primary">
+      <q-bar class="q-py-lg bg-white text-primary">
+        <q-toolbar-title class="q-ml-md"> Inspection Overview </q-toolbar-title>
+        <q-btn flat round dense icon="more_vert" />
       </q-bar>
     </q-header>
     <q-page-container>
-
       <q-page>
-
         <div class="flex-container">
           <div class="flex-item top-section">
-           <q-item-section class="text-weight-medium q-mt-sm q-ml-sm ">
-          <q-item-label class="text-left">Vehicle Name</q-item-label>
-          <q-item-label caption class="text-left text-caption">Maruti suzuki LXI</q-item-label>
-        </q-item-section>
-<q-item-section class="text-weight-medium q-mt-sm ">
-          <q-item-label class="text-left">Licence No</q-item-label>
-          <q-item-label caption class="text-left text-caption">ABCD12345</q-item-label>
-        </q-item-section>
-<q-item-section class="text-weight-medium q-mt-sm">
-          <q-item-label class="text-left">Vehicle No</q-item-label>
-          <q-item-label class="text-left text-caption" caption>12345</q-item-label>
-        </q-item-section>
-
+            <q-item-section class="text-weight-medium q-mt-sm q-ml-sm">
+              <q-item-label class="text-left">Vehicle Name</q-item-label>
+              <q-item-label caption class="text-left text-caption"
+                >Maruti suzuki LXI</q-item-label
+              >
+            </q-item-section>
+            <q-item-section class="text-weight-medium q-mt-sm">
+              <q-item-label class="text-left">Licence No</q-item-label>
+              <q-item-label caption class="text-left text-caption"
+                >ABCD12345</q-item-label
+              >
+            </q-item-section>
+            <q-item-section class="text-weight-medium q-mt-sm">
+              <q-item-label class="text-left">Vehicle No</q-item-label>
+              <q-item-label class="text-left text-caption" caption
+                >12345</q-item-label
+              >
+            </q-item-section>
           </div>
 
-          <div class="flex-item" >
-            <img src="/assets/image1.png" alt="Image" class="image-right"  />
+          <div class="flex-item">
+            <img src="/assets/image1.png" alt="Image" class="image-right" />
           </div>
         </div>
 
- <div style="display: flex; justify-content: space-between; align-items: center;">
-  <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5">Inspection Che</q-item-label>
-  <div class="q-pa-md">
-    <q-btn-dropdown size="12px" label="Filter">
-      <q-list>
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>Draft</q-item-label>
-          </q-item-section>
-        </q-item>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <q-item-label
+            class="q-pa-sm q-ml-sm text-weight-medium"
+            color="grey-5"
+            >Inspection Checklist</q-item-label
+          >
+          <div class="q-pa-md">
+            <q-item-label class="text-left text-bold" lines="1"
+              ><span class="text-weight-light">dd.mm.yyyy</span></q-item-label
+            >
+          </div>
+        </div>
+        <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
+          <q-list
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              max-width: 768px;
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Council Requirement</q-item-label
+                >
+              </q-item-section>
 
-        <q-item clickable v-close-popup @click="onItemClick">
-          <q-item-section>
-            <q-item-label>Completed</q-item-label>
-          </q-item-section>
-        </q-item>
-      </q-list>
-    </q-btn-dropdown>
-  </div>
-</div>
-<div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
-    <q-list rounded  padding dense class="rounded-borders; bg-grey-2"  style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
-      <q-img
-        class="q-mr-sm"
-        src="/assets/Rectangle_177.png"
-        alt="Image description"
-        width="6px"
-        height="55px"
-      />
-      <q-item clickable v-ripple style="flex-grow: 1;" >
-        <q-item-section>
-          <q-item-label class="rounded-list-subtitle2 text-left text-weight-medium">Completed</q-item-label>
-          <q-item-label class="text-left text-bold" lines="1">Sienna, <span class="text-weight-light">due by-dd.mm.yyyy</span></q-item-label>
-        </q-item-section>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              max-width: 768px;
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Interior Check</q-item-label
+                >
+              </q-item-section>
 
-        <q-item-section side>
-          <q-btn
-            class="q-mr-sm"
-            text-color="black"
-            round
-            icon="keyboard_arrow_right"
-            color="grey-4"
-            size="sm"
-          />
-        </q-item-section>
-      </q-item>
-    </q-list>
-  </div>
-   <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-    <q-list rounded  padding dense class="rounded-borders; bg-grey-2"  style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
-      <q-img
-        class="q-mr-sm"
-        src="/assets/Rectangle_177.png"
-        alt="Image description"
-        width="6px"
-        height="55px"
-      />
-      <q-item clickable v-ripple style="flex-grow: 1;">
-        <q-item-section>
-          <q-item-label class="rounded-list-subtitle2 text-left text-weight-medium">Completed</q-item-label>
-          <q-item-label class="text-left text-bold" lines="1">Sienna, <span class="text-weight-light">due by-dd.mm.yyyy</span></q-item-label>
-        </q-item-section>
+      <!-- <q-item-label class="text-right q-ml-xl">0/7</q-item-label> -->
 
-        <q-item-section side>
-          <q-btn
-            class="q-mr-sm"
-            text-color="black"
-            round
-            icon="keyboard_arrow_right"
-            color="grey-4"
-            size="sm"
-          />
-        </q-item-section>
-      </q-item>
-    </q-list>
-  </div>
-   <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-    <q-list rounded  padding dense class="rounded-borders; bg-grey-2"  style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
-      <q-img
-        class="q-mr-sm"
-        src="/assets/Rectangle_177.png"
-        alt="Image description"
-        width="6px"
-        height="55px"
-      />
-      <q-item clickable v-ripple style="flex-grow: 1;">
-        <q-item-section>
-          <q-item-label class="rounded-list-subtitle2 text-left text-weight-medium">Completed</q-item-label>
-          <q-item-label class="text-left text-bold" lines="1">Sienna, <span class="text-weight-light">due by-dd.mm.yyyy</span></q-item-label>
-        </q-item-section>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              max-width: 768px;
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Engine Fluid Level</q-item-label
+                >
+              </q-item-section>
 
-        <q-item-section side>
-          <q-btn
-            class="q-mr-sm"
-            text-color="black"
-            round
-            icon="keyboard_arrow_right"
-            color="grey-4"
-            size="sm"
-          />
-        </q-item-section>
-      </q-item>
-    </q-list>
-  </div>
-     <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-    <q-list rounded  padding dense class="rounded-borders; bg-grey-2"  style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
-      <q-img
-        class="q-mr-sm"
-        src="/assets/Rectangle_177.png"
-        alt="Image description"
-        width="6px"
-        height="55px"
-      />
-      <q-item clickable v-ripple style="flex-grow: 1;">
-        <q-item-section>
-          <q-item-label class="rounded-list-subtitle2 text-left text-weight-medium">Completed</q-item-label>
-          <q-item-label class="text-left text-bold" lines="1">Sienna, <span class="text-weight-light">due by-dd.mm.yyyy</span></q-item-label>
-        </q-item-section>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              max-width: 768px;
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Lightning Check
+                </q-item-label>
+              </q-item-section>
 
-        <q-item-section side>
-          <q-btn
-            class="q-mr-sm"
-            text-color="black"
-            round
-            icon="keyboard_arrow_right"
-            color="grey-4"
-            size="sm"
-          />
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              max-width: 768px;
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Wiper and washer</q-item-label
+                >
+              </q-item-section>
 
-        </q-item-section>
-      </q-item>
-    </q-list>
-  </div>
-       <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-    <q-list rounded  padding dense class="rounded-borders; bg-grey-2"  style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
-      <q-img
-        class="q-mr-sm"
-        src="/assets/Rectangle_177.png"
-        alt="Image description"
-        width="6px"
-        height="55px"
-      />
-      <q-item clickable v-ripple style="flex-grow: 1;">
-        <q-item-section>
-          <q-item-label class="rounded-list-subtitle2 text-left text-weight-medium">Completed</q-item-label>
-          <q-item-label class="text-left text-bold" lines="1">Sienna, <span class="text-weight-light">due by-dd.mm.yyyy</span></q-item-label>
-        </q-item-section>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
 
-        <q-item-section side>
-          <q-btn
-            class="q-mr-sm"
-            text-color="black"
-            round
-            icon="keyboard_arrow_right"
-            color="grey-4"
-            size="sm"
-          />
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              max-width: 768px;
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Completed</q-item-label
+                >
+              </q-item-section>
 
-        </q-item-section>
-      </q-item>
-    </q-list>
-  </div>
-       <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-    <q-list rounded  padding dense class="rounded-borders; bg-grey-2"  style="max-width: 768px; display: flex; align-items: center ;height:66.281px;">
-      <q-img
-        class="q-mr-sm"
-        src="/assets/Rectangle_177.png"
-        alt="Image description"
-        width="6px"
-        height="55px"
-      />
-      <q-item clickable v-ripple style="flex-grow: 1;">
-        <q-item-section>
-          <q-item-label class="rounded-list-subtitle2 text-left text-weight-medium">Completed</q-item-label>
-          <q-item-label class="text-left text-bold" lines="1">Sienna, <span class="text-weight-light">due by-dd.mm.yyyy</span></q-item-label>
-        </q-item-section>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
 
-        <q-item-section side>
-          <q-btn
-            class="q-mr-sm"
-            text-color="black"
-            round
-            icon="keyboard_arrow_right"
-            color="grey-4"
-            size="sm"
-          />
+        </div>
+          <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              max-width: 768px;
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Wiper and washer</q-item-label
+                >
+              </q-item-section>
 
-        </q-item-section>
-      </q-item>
-    </q-list>
-  </div>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+          <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              max-width: 768px;
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Wiper and washer</q-item-label
+                >
+              </q-item-section>
+
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+          <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              max-width: 768px;
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Wiper and washer</q-item-label
+                >
+              </q-item-section>
+
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
       </q-page>
     </q-page-container>
   </div>
@@ -325,15 +526,6 @@ export default {
   flex-direction: column;
   margin-top: 20px;
 }
-/*
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-} */
-
 .details {
   flex-grow: 1;
   margin-left: 10px;
@@ -354,13 +546,11 @@ q-btn {
   background-image: url("/assets/certificate.png");
 }
 .subtitle {
-  color: #53AA0F;
+  color: #0b0c0b;
 }
-.q-ml-xl {
-  margin-left: 1.5rem;
-}
-.btngroup{
-width: 170px;
+
+.btngroup {
+  width: 170px;
 }
 .rounded-list-container {
   border-radius: 12px; /* Set the desired border radius */
@@ -376,25 +566,20 @@ width: 170px;
   color: red; /* Set the desired color for subtitles */
 }
 .rounded-list-subtitle2 {
-  color: #53AA0F; /* Set the desired color for subtitles */
+  color: #191b17; /* Set the desired color for subtitles */
 }
 .rounded-box {
   border-radius: 12px; /* Set the desired border radius for the entire box */
   overflow: hidden; /* Hide overflow content */
-
 }
 
 .rounded-borders {
   border-radius: 12px; /* Set the desired border radius for the list */
   overflow: hidden; /* Hide overflow content */
 }
-.q-pt-sm {
-  padding-top: 15px; /* Set the desired top padding for the first structure */
-}
 
 .q-pt-xs {
   padding-top: 2px; /* Set the desired top padding for the second structure */
 }
-
 
 </style>

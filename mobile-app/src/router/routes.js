@@ -20,6 +20,14 @@ const routes = [
       { path: '/InspectionCar', component: () => import('pages/InspectionCar.vue') },
       { path: '/InspectionDraft', component: () => import('pages/InspectionDraft.vue') },
       { path: '/InspectionComp', component: () => import('pages/InspectionComp.vue') },
+      { path: '/CouncilReq', component: () => import('pages/CouncilReq.vue') },
+      // Add other routes for the default layout as needed
+    ]
+  },
+  {
+    path: '/',
+    component: () => import('layouts/MobileLayout2.vue'),
+    children: [
       { path: '/InspectionOver', component: () => import('pages/InspectionOver.vue') },
       // Add other routes for the default layout as needed
     ]
