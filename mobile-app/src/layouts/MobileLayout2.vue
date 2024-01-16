@@ -1,4 +1,5 @@
 <template>
+
   <q-layout view="lHh Lpr lFf">
     <q-page-container>
       <router-view />
@@ -35,9 +36,11 @@
       </div>
     </vue-bottom-sheet>
   </q-layout>
+
 </template>
 
 <script>
+import SkeletonLayout from './SkeletonLayout.vue'
 export default {
   name: "MobileLayout",
   data() {
@@ -98,7 +101,7 @@ export default {
   transform: translateX(-46.5%); /* Half of the difference between 100% and 93% */
   z-index: 999; /* Higher z-index than the bottom sheet */
   height: 49px;
- 
+
 }
 
 /* Style for the 'Emergency' category name */

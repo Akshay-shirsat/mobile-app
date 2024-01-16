@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="flag">
     <q-header elevated class="bg-white text-primary">
       <q-bar class="q-py-lg bg-white text-primary">
         <q-toolbar-title class="q-ml-md"> Inspection Overview </q-toolbar-title>
@@ -122,7 +122,7 @@
                 >
               </q-item-section>
 
-      <!-- <q-item-label class="text-right q-ml-xl">0/7</q-item-label> -->
+              <!-- <q-item-label class="text-right q-ml-xl">0/7</q-item-label> -->
 
               <q-item-section side>
                 <q-btn
@@ -301,9 +301,8 @@
               </q-item-section>
             </q-item>
           </q-list>
-
         </div>
-          <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
           <q-list
             rounded
             padding
@@ -344,7 +343,7 @@
             </q-item>
           </q-list>
         </div>
-          <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
           <q-list
             rounded
             padding
@@ -385,7 +384,7 @@
             </q-item>
           </q-list>
         </div>
-          <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
           <q-list
             rounded
             padding
@@ -429,9 +428,11 @@
       </q-page>
     </q-page-container>
   </div>
+  <SkelDash v-else />
 </template>
 
 <script>
+import SkelDash from "../components/skeleton/SkelDash.vue";
 export default {
   data() {
     return {
@@ -440,7 +441,14 @@ export default {
         { label: "Option 1", value: 1 },
         { label: "Option 2", value: 2 },
       ],
+      flag: false,
     };
+  },
+  created() {
+    setTimeout(() => {
+      // Code to be executed after the specified delay
+      this.flag = true;
+    }, 5000);
   },
   methods: {
     viewDetails() {},
@@ -581,5 +589,4 @@ q-btn {
 .q-pt-xs {
   padding-top: 2px; /* Set the desired top padding for the second structure */
 }
-
 </style>

@@ -5,7 +5,9 @@
         <q-toolbar-title class="q-ml-md">
           <q-skeleton :type="'text'" width="150px" />
         </q-toolbar-title>
-        <q-btn flat round dense icon="more_vert" />
+        <q-btn flat round dense>
+          <q-skeleton :type="'text'" width="10px" height="40px"
+        /></q-btn>
       </q-bar>
     </q-header>
     <q-page-container>
@@ -64,8 +66,7 @@
           </div>
         </div>
 
-
-         <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
+        <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
           <q-list
             rounded
             padding
@@ -94,42 +95,8 @@
                 </q-item-label>
               </q-item-section>
               <q-card-section side>
-          <q-skeleton :type="'QCheckbox'" size="30px" />
-        </q-card-section>
-            </q-item>
-          </q-list>
-        </div>
-         <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
-          <q-list
-            rounded
-            padding
-            dense
-            class="rounded-borders; bg-grey-2"
-            style="
-              max-width: 768px;
-              display: flex;
-              align-items: center;
-              height: 66.281px;
-            "
-          >
-            <q-img
-              class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
-              alt="Image description"
-              width="6px"
-              height="55px"
-            />
-            <q-item clickable v-ripple style="flex-grow: 1">
-              <q-item-section>
-                <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium"
-                >
-                  <q-skeleton :type="'text'" />
-                </q-item-label>
-              </q-item-section>
-              <q-card-section side>
-          <q-skeleton :type="'QCheckbox'" size="30px" />
-        </q-card-section>
+                <q-skeleton :type="'QCheckbox'" size="30px" />
+              </q-card-section>
             </q-item>
           </q-list>
         </div>
@@ -162,12 +129,12 @@
                 </q-item-label>
               </q-item-section>
               <q-card-section side>
-          <q-skeleton :type="'QCheckbox'" size="30px" />
-        </q-card-section>
+                <q-skeleton :type="'QCheckbox'" size="30px" />
+              </q-card-section>
             </q-item>
           </q-list>
         </div>
-         <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
+        <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
           <q-list
             rounded
             padding
@@ -196,12 +163,12 @@
                 </q-item-label>
               </q-item-section>
               <q-card-section side>
-          <q-skeleton :type="'QCheckbox'" size="30px" />
-        </q-card-section>
+                <q-skeleton :type="'QCheckbox'" size="30px" />
+              </q-card-section>
             </q-item>
           </q-list>
         </div>
-         <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
+        <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
           <q-list
             rounded
             padding
@@ -230,12 +197,12 @@
                 </q-item-label>
               </q-item-section>
               <q-card-section side>
-          <q-skeleton :type="'QCheckbox'" size="30px" />
-        </q-card-section>
+                <q-skeleton :type="'QCheckbox'" size="30px" />
+              </q-card-section>
             </q-item>
           </q-list>
         </div>
-         <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
+        <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
           <q-list
             rounded
             padding
@@ -264,33 +231,17 @@
                 </q-item-label>
               </q-item-section>
               <q-card-section side>
-          <q-skeleton :type="'QCheckbox'" size="30px" />
-        </q-card-section>
+                <q-skeleton :type="'QCheckbox'" size="30px" />
+              </q-card-section>
             </q-item>
           </q-list>
         </div>
-        <!-- Repeat similar rounded-box and q-list structure for other items -->
+
+       
       </q-page>
     </q-page-container>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      selectedOption: null,
-      dropdownOptions: [
-        { label: "Option 1", value: 1 },
-        { label: "Option 2", value: 2 },
-      ],
-    };
-  },
-  methods: {
-    viewDetails() {},
-  },
-};
-</script>
 
 <style scoped>
 /* Add any scoped styles if needed */
@@ -344,6 +295,8 @@ export default {
   margin-top: 10px;
   background-color: #f5f5f5;
   padding: 10px;
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .q-list {
@@ -359,3 +312,10 @@ export default {
   color: #53aa0f;
 }
 </style>
+
+<script>
+export default {
+  name: "SkelDash",
+
+};
+</script>
