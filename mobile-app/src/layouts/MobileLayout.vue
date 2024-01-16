@@ -10,14 +10,17 @@
       @hide="closeBottomSheet"
       class="vue-bottom-sheet"
     >
-      <div class="q-pa-md q-gutter-sm bottom-sheet-content">
-        <div
-          v-for="category in categories"
-          :key="category.name"
-          class="category-item"
-          @click="navigateTo(category.route)"
-        >
-          <img :src="category.icon" class="category-icon" />
+       <div class="q-pa-md q-gutter-sm bottom-sheet-content">
+        <div v-for="category in categories" :key="category.name" class="category-item" @click="navigateTo(category.route)">
+          <!-- Add a wrapper for the Emergency category -->
+          <div v-if="category.name === 'Emergency'" class="emergency-wrapper">
+            <img :src="category.icon" class="category-icon" />
+            <img src="/assets/Frame.png" class="emergency-frame" />
+          </div>
+          <!-- For other categories, render as usual -->
+          <div v-else>
+            <img :src="category.icon" class="category-icon" />
+          </div>
           <div>{{ category.name }}</div>
         </div>
       </div>
@@ -33,9 +36,21 @@ export default {
       bottomSheetVisible: true,
       categories: [
         { name: "Dashboard", icon: "/assets/grid.png", route: "dashboard" },
-        { name: "Inspection", icon: "/assets/calendar--tools.png", route: "inspection" },
-        { name: "Emergency", icon: "/assets/Emergency.png", route: "inspection" },
-        { name: "Accident", icon: "/assets/calendar--add.png", route: "inspection" },
+        {
+          name: "Inspection",
+          icon: "/assets/calendar--tools.png",
+          route: "inspection",
+        },
+        {
+          name: "Emergency",
+          icon: "/assets/Emergency.png",
+          route: "inspection",
+        },
+        {
+          name: "Accident",
+          icon: "/assets/calendar--add.png",
+          route: "inspection",
+        },
         { name: "Setting", icon: "/assets/settings.png", route: "inspection" },
       ],
     };
@@ -75,4 +90,16 @@ export default {
   z-index: 999; /* Adjust the z-index as needed */
   background-color: aliceblue;
 }
+.emergency-frame {
+  position: absolute;
+  top: 10px; /* Adjust the positioning as needed */
+  left: 19px;
+  width: 30px; /* Adjust the size as needed */
+  height: 15px;
+  z-index: 1; /* Place the frame below the icon */
+}
+.emergency-wrapper {
+  position: relative;
+}
+
 </style>

@@ -10,7 +10,7 @@
       rounded
       label="Start"
       @click="handleStart"
-      class="Start-button q-mt-xl"
+      class="Start-button q-mt-xl q-ml-sm"
     />
 
     <vue-bottom-sheet
@@ -19,15 +19,18 @@
       @hide="closeBottomSheet"
       class="vue-bottom-sheet"
     >
-      <div class="q-pa-md q-gutter-sm bottom-sheet-content">
-        <div
-          v-for="category in categories"
-          :key="category.name"
-          class="category-item"
-          @click="navigateTo(category.route)"
-        >
-          <img :src="category.icon" class="category-icon" />
-          <div :class="{ 'emergency-name': category.name === 'Emergency' }">{{ category.name }}</div>
+       <div class="q-pa-md q-gutter-sm bottom-sheet-content">
+        <div v-for="category in categories" :key="category.name" class="category-item" @click="navigateTo(category.route)">
+          <!-- Add a wrapper for the Emergency category -->
+          <div v-if="category.name === 'Emergency'" class="emergency-wrapper">
+            <img :src="category.icon" class="category-icon" />
+            <img src="/assets/Frame.png" class="emergency-frame" />
+          </div>
+          <!-- For other categories, render as usual -->
+          <div v-else>
+            <img :src="category.icon" class="category-icon" />
+          </div>
+          <div>{{ category.name }}</div>
         </div>
       </div>
     </vue-bottom-sheet>
@@ -89,16 +92,32 @@ export default {
 
 .Start-button {
   position: fixed;
-  width: 93%;
+  width: 95%;
   bottom: 90px;
-  left: 46%;
+  left: 47%;
   transform: translateX(-46.5%); /* Half of the difference between 100% and 93% */
   z-index: 999; /* Higher z-index than the bottom sheet */
   height: 49px;
+ 
 }
 
 /* Style for the 'Emergency' category name */
 .emergency-name {
   color: red;
 }
+.emergency-frame {
+  position: absolute;
+  top: 10px; /* Adjust the positioning as needed */
+  left: 19px;
+  width: 30px; /* Adjust the size as needed */
+  height: 15px;
+  z-index: 1; /* Place the frame below the icon */
+}
+.emergency-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 </style>

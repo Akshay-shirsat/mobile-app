@@ -21,6 +21,7 @@ const routes = [
       { path: '/InspectionDraft', component: () => import('pages/InspectionDraft.vue') },
       { path: '/InspectionComp', component: () => import('pages/InspectionComp.vue') },
       { path: '/CouncilReq', component: () => import('pages/CouncilReq.vue') },
+      { path: '/SkelDash', component: () => import('components/skeleton/SkelDash.vue') },
       // Add other routes for the default layout as needed
     ]
   },
