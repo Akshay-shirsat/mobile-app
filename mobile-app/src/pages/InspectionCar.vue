@@ -1,17 +1,15 @@
 <template>
-  <div>
-<q-header elevated class="bg-white text-primary">
-      <q-bar class="q-py-lg bg-white text-primary">
-        <q-toolbar-title class="q-ml-md"> Inspection </q-toolbar-title>
-        <q-btn flat round dense icon="more_vert" />
-      </q-bar>
-    </q-header>
-    <q-page-container>
-
       <q-page>
+        <div v-if="flag">
+            <q-header elevated class="bg-white text-primary">
+        <q-bar class="q-py-lg bg-white text-primary">
+          <q-toolbar-title class="q-ml-md"> Inspection </q-toolbar-title>
+          <q-btn flat round dense icon="more_vert" />
+        </q-bar>
+      </q-header>
         <div class="flex-container">
           <div class="flex-item top-section">
-            <div class="text-h6 q-ml-md q-mt-sm">Selected Vehicle</div>
+            <div class="text-h6 q-ml-md q-mt-xl">Selected Vehicle</div>
 
             <q-select
               outlined
@@ -219,13 +217,21 @@
       </q-item>
     </q-list>
   </div>
-      </q-page>
-    </q-page-container>
   </div>
+  <div v-else>
+<SkelDraft />
+  </div>
+      </q-page>
 </template>
 
 <script>
+import SkelDraft from '../components/skeleton/SkelDrafts.vue'
 export default {
+created(){
+  setTimeout(()=>{
+    this.flag=true
+  },3000)
+},
   data() {
     return {
       selectedOption: null,
@@ -233,7 +239,11 @@ export default {
         { label: "Option 1", value: 1 },
         { label: "Option 2", value: 2 },
       ],
+      flag:false,
     };
+  },
+  components:{
+    SkelDraft,
   },
   methods: {
     viewDetails() {},
@@ -255,8 +265,10 @@ export default {
   justify-content: space-between;
 }
 .flex-item {
-  flex: 1;
+    flex: 1;
   margin-right: 20px;
+  margin-top: 40px;
+  margin-left: 20px;
 }
 .image-right {
   width: 187.041px;
@@ -401,9 +413,7 @@ width: 170px;
   align-items: center;
 }
 
-.btngroup {
-  margin-top: 10px;
-}
+
 
 
 </style>

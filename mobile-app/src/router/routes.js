@@ -21,7 +21,7 @@ const routes = [
       { path: '/InspectionDraft', component: () => import('pages/InspectionDraft.vue') },
       { path: '/InspectionComp', component: () => import('pages/InspectionComp.vue') },
       { path: '/CouncilReq', component: () => import('pages/CouncilReq.vue') },
-      
+
 
       // Add other routes for the default layout as needed
     ]
@@ -38,7 +38,9 @@ const routes = [
     path: '/',
     component: () => import('layouts/SkeletonLayout.vue'),
     children: [
-      { path: '/SkelDash', component: () => import('components/skeleton/SkelDash.vue') },
+      { path: '/SkelOver', component: () => import('components/skeleton/SkelOver.vue') },
+      { path: '/SkelDrafts', component: () => import('components/skeleton/SkelDrafts.vue') },
+
       // Add other routes for the default layout as needed
     ]
   },

@@ -237,7 +237,7 @@
           </q-list>
         </div>
 
-       
+
       </q-page>
     </q-page-container>
   </div>
@@ -315,7 +315,7 @@
 
 <script>
 export default {
-  name: "SkelDash",
+  name: "SkelOver",
 
 };
 </script>
