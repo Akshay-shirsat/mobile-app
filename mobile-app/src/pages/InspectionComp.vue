@@ -3,13 +3,13 @@
     <div v-if="flag">
       <q-header elevated class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-primary">
-          <q-toolbar-title class="q-ml-md"> Inspection </q-toolbar-title>
+          <q-toolbar-title class="q-ml-sm"> Inspection </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
       <div class="flex-container">
         <div class="flex-item top-section">
-          <div class="text-h6 q-ml-md q-mt-xl">Selected Vehicle</div>
+          <div class="text-h6 q-ml-md q-mt-md">Selected Vehicle</div>
 
           <q-select
             outlined
@@ -93,12 +93,13 @@
           rounded
           padding
           dense
-          class="rounded-borders; bg-grey-2"
+          class="rounded-borders bg-grey-2"
           style="
             max-width: 768px;
             display: flex;
             align-items: center;
             height: 66.281px;
+            margin-top: -10px;
           "
         >
           <q-img
@@ -108,7 +109,7 @@
             :width="item.imageWidth"
             :height="item.imageHeight"
           />
-          <q-item clickable v-ripple style="flex-grow: 1">
+          <q-item clickable v-ripple style="flex-grow: 1" >
             <q-item-section>
               <q-item-label
                 class="rounded-list-subtitle2 text-left text-weight-medium"
@@ -167,7 +168,7 @@ export default {
   methods: {
     viewDetails() {},
     fetchCompletedReports() {
-      // Example: Fetch data from an API or generate dummy data
+
       const dynamicData = [
         {
           status: "Completed",
@@ -178,7 +179,16 @@ export default {
           vehicle: "Sienna",
           dueDate: "due by-dd.mm.yyyy",
         },
-        // Add more items as needed
+        {
+          status: "Completed",
+          imageSrc: "/assets/Rectangle_177.png",
+          imageAlt: "Image description",
+          imageWidth: "6px",
+          imageHeight: "55px",
+          vehicle: "BMW",
+          dueDate: "due by-dd.mm.yyyy",
+        },
+
       ];
 
       this.completedReports = dynamicData;
@@ -188,9 +198,7 @@ export default {
 </script>
 
 <style scoped>
-.q-toolbar-title {
-  font-size: 18px;
-}
+
 .text-h6 {
   font-size: 16px;
   font-weight: 500;
@@ -211,112 +219,17 @@ export default {
   height: 111.807px;
   flex-shrink: 0;
 }
-.title-container {
-  margin-left: 10px;
-}
+
 .top-section {
   margin-top: -35px;
 }
 
-.quick-actions-section {
-  margin-top: 20px;
-}
 
-.column {
-  flex: 1;
-  text-align: center;
-}
-
-.icon {
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-
-.name {
-  color: #000;
-  text-align: center;
-  font-family: DM Sans;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 22px;
-}
-.custom-icon {
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: inline-block;
-  margin-bottom: 8px;
-}
-
-.icon1 {
-  background-image: url("/assets/calendar--tools.png");
-}
-
-.icon2 {
-  background-image: url("/assets/vector.png");
-}
-
-.icon3 {
-  background-image: url("/assets/vectorr.png");
-}
-.row-structure {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-/*
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-} */
-
-.details {
-  flex-grow: 1;
-  margin-left: 10px;
-}
-
-q-btn {
-  margin-left: 10px;
-}
-.icon11 {
-  background-image: url("/assets/horizontal.png");
-}
-
-.icon12 {
-  background-image: url("/assets/security.png");
-}
-
-.icon13 {
-  background-image: url("/assets/certificate.png");
-}
-.subtitle {
-  color: #53aa0f;
-}
-.q-ml-xl {
-  margin-left: 1.5rem;
-}
 .btngroup {
   width: 170px;
 }
-.rounded-list-container {
-  border-radius: 12px; /* Set the desired border radius */
-  border: 2px solid red; /* Set the desired border color */
-  overflow: hidden; /* Hide overflow content */
-}
 
-.rounded-list-title {
-  font-weight: bold;
-}
 
-.rounded-list-subtitle {
-  color: red; /* Set the desired color for subtitles */
-}
 .rounded-list-subtitle2 {
   color: #53aa0f; /* Set the desired color for subtitles */
 }
@@ -326,13 +239,11 @@ q-btn {
 }
 
 .rounded-borders {
-  border-radius: 12px; /* Set the desired border radius for the list */
-  overflow: hidden; /* Hide overflow content */
+  border-radius: 12px;
+  overflow: hidden;
+
 }
 
-.q-pt-xs {
-  padding-top: 1px; /* Set the desired top padding for the second structure */
-}
 .q-pa-md.items-start {
   display: flex;
   flex-direction: column;
