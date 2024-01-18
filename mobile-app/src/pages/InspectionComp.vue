@@ -9,7 +9,7 @@
       </q-header>
       <div class="flex-container">
         <div class="flex-item top-section">
-          <div class="text-h6 q-ml-md q-mt-md">Selected Vehicle</div>
+          <div class="text-h6 q-ml-md q-mt-xl">Selected Vehicle</div>
 
           <q-select
             outlined
@@ -17,7 +17,8 @@
             v-model="selectedOption"
             :options="dropdownOptions"
             label="Select an option"
-            style="width: 150px; margin-left: 10px"
+            style="width: 140px; "
+            class="q-ml-md"
           ></q-select>
 
           <q-btn
