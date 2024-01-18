@@ -21,6 +21,10 @@ const routes = [
       { path: '/InspectionDraft', component: () => import('pages/InspectionDraft.vue') },
       { path: '/InspectionComp', component: () => import('pages/InspectionComp.vue') },
       { path: '/CouncilReq', component: () => import('pages/CouncilReq.vue') },
+      { path: '/ForgotPassword', component: () => import('pages/ForgotPassword.vue') },
+      { path: '/SignupUser', component: () => import('pages/SignupUser.vue') },
+      { path: '/InteriorCheck', component: () => import('pages/InteriorCheck.vue') },
+
 
 
       // Add other routes for the default layout as needed

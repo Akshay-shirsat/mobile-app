@@ -23,29 +23,32 @@
         placeholder="Password"
         class="input-field"
       ></q-input>
+
+      <!-- Keep me logged in checkbox and Forgot Password link -->
       <div class="row">
         <div class="col-md-6 col-xs-6 col-sm-6">
           <!-- Keep me logged in checkbox -->
           <q-checkbox
             v-model="keepLoggedIn"
             label="Keep me logged in"
-            class="keep-logged-in-checkbox q-mt-sm text-left"
+            class="keep-logged-in-checkbox q-mt-sm text-left q-ml-lg"
           />
         </div>
         <div class="col-md-6 col-xs-6 col-sm-6">
           <!-- Forgot Password link -->
-          <q-btn
-            flat
-            no-caps
-            color="black"
-            label="Forgot Password?"
-            class="forgot-password q-mt-sm text-right"
-          />
+          <router-link to="/ForgotPassword">
+            <q-btn
+              flat
+              no-caps
+              color="black"
+              label="Forgot Password?"
+              class="forgot-password q-mt-sm text-right"
+            />
+          </router-link>
         </div>
       </div>
-      <div class="checkbox-link-container"></div>
-      <!-- Login Button -->
 
+      <!-- Login Button -->
       <q-btn
         color="primary"
         no-caps
@@ -57,11 +60,14 @@
 
       <!-- Sign Up Option -->
       <p class="signup-option q-mt-md">
-        Don't have an account? <a href="#">Sign Up</a>
+        Don't have an account? <a href="./SignupUser">Sign Up</a>
       </p>
     </div>
   </div>
 </template>
+
+<!-- ... (rest of the code remains unchanged) ... -->
+
 
 <script>
 export default {
