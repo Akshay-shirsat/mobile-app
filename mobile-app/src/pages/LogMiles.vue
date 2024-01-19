@@ -3,7 +3,7 @@
     <div v-if="flag">
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-primary">
-          <q-toolbar-title class="q-ml-md"> Vehicle Details </q-toolbar-title>
+          <q-toolbar-title class="q-ml-md"> Log Miles </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
@@ -120,49 +120,23 @@
         class="q-pa-md"
         style="display: flex; justify-content: center; gap: 10px"
       >
-        <q-btn-dropdown outline label="Miles" style="width: 150px">
-          <q-list>
-            <q-item clickable v-close-popup @click="onItemClick">
-              <q-item-section>
-                <q-item-label>Miles</q-item-label>
-              </q-item-section>
-            </q-item>
+        <q-select
+              outlined
+              dense
+              v-model="selectedOption"
+              :options="dropdownOptions"
+              label="Miles"
+              style="width: 150px; margin-left: 10px"
+            ></q-select>
 
-            <q-item clickable v-close-popup @click="onItemClick">
-              <q-item-section>
-                <q-item-label>Miles</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-close-popup @click="onItemClick">
-              <q-item-section>
-                <q-item-label>Miles</q-item-label>
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </q-btn-dropdown>
-
-        <q-btn-dropdown outline label="100" style="width: 150px">
-          <q-list>
-            <q-item clickable v-close-popup @click="onItemClick">
-              <q-item-section>
-                <q-item-label>100</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-close-popup @click="onItemClick">
-              <q-item-section>
-                <q-item-label>200</q-item-label>
-              </q-item-section>
-            </q-item>
-
-            <q-item clickable v-close-popup @click="onItemClick">
-              <q-item-section>
-                <q-item-label>300</q-item-label>
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </q-btn-dropdown>
+        <q-select
+              outlined
+              dense
+              v-model="selectedOption"
+              :options="dropdownOptions"
+              label="100"
+              style="width: 150px; margin-left: 10px"
+            ></q-select>
       </div>
 
       <div style="display: flex; justify-content: center; bottom: 110px; position: fixed; z-index: 999; padding: 10px; width: 100%; box-sizing: border-box;">
