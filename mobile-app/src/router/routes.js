@@ -25,6 +25,8 @@ const routes = [
       { path: '/SignupUser', component: () => import('pages/SignupUser.vue') },
       { path: '/InteriorCheck', component: () => import('pages/form/InteriorCheck.vue') },
       { path: '/ExteriorCheck', component: () => import('pages/form/ExteriorCheck.vue') },
+      { path: '/VehicleDetails', component: () => import('pages/VehicleDetails.vue') },
+      { path: '/LogMiles', component: () => import('../pages/LogMiles.vue') },
 
 
 
@@ -36,9 +38,11 @@ const routes = [
     component: () => import('layouts/MobileLayout2.vue'),
     children: [
       { path: '/InspectionOver', component: () => import('pages/inspections/InspectionOver.vue') },
+
       // Add other routes for the default layout as needed
     ]
   },
+ 
   {
     path: '/',
     component: () => import('layouts/SkeletonLayout.vue'),

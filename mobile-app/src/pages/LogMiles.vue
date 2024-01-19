@@ -1,0 +1,261 @@
+<template>
+  <q-page>
+    <div v-if="flag">
+      <q-header class="bg-white text-primary">
+        <q-bar class="q-py-lg bg-white text-primary">
+          <q-toolbar-title class="q-ml-md"> Vehicle Details </q-toolbar-title>
+          <q-btn flat round dense icon="more_vert" />
+        </q-bar>
+      </q-header>
+      <div class="flex-container">
+        <div class="flex-item">
+          <img src="/assets/image1.png" alt="Image" class="image-center" />
+        </div>
+      </div>
+
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 1px;
+          font-family: DM Sans;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: normal;
+        "
+      >
+        <!-- Left side: Vehicle Name -->
+        <div>
+          <q-item-label
+            class="q-pa-sm q-ml-sm text-weight-medium"
+            color="grey-5"
+          >
+            {{ selectedVehicleName }}
+          </q-item-label>
+        </div>
+
+        <!-- Right side: Vehicle Tag -->
+        <div class="q-pa-md">
+          <q-item-label class="text-left text-bold" lines="1">
+            <span class="text-weight-light text-left">{{
+              selectedVehicleTag
+            }}</span>
+          </q-item-label>
+        </div>
+      </div>
+      <q-separator inset />
+
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 1px;
+          font-family: DM Sans;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: normal;
+        "
+      >
+        <!-- Left side: Vehicle Name -->
+        <div>
+          <q-item-label
+            class="q-pa-sm q-ml-sm text-weight-medium"
+            color="grey-5"
+          >
+            {{ Licence_number }}
+          </q-item-label>
+        </div>
+
+        <!-- Right side: Vehicle Tag -->
+        <div class="q-pa-md">
+          <q-item-label class="text-left text-bold" lines="1">
+            <span class="text-weight-light text-left">{{
+              Licence_number2
+            }}</span>
+          </q-item-label>
+        </div>
+      </div>
+      <q-separator inset />
+
+      <div
+        style="
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: 1px;
+          font-family: DM Sans;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: normal;
+        "
+      >
+        <!-- Left side: Vehicle Name -->
+        <div>
+          <q-item-label
+            class="q-pa-sm q-ml-sm text-weight-medium"
+            color="grey-5"
+          >
+            {{ Vehicle_number }}
+          </q-item-label>
+        </div>
+
+        <!-- Right side: Vehicle Tag -->
+        <div class="q-pa-md">
+          <q-item-label class="text-left text-bold" lines="1">
+            <span class="text-weight-light text-left">{{
+              Vehicle_number2
+            }}</span>
+          </q-item-label>
+        </div>
+      </div>
+      <q-separator inset />
+      <q-item-label
+        class="q-pt-md q-ml-md text-weight-regular text-caption"
+        color="grey-5"
+        >Please enter current mileage of vehicle</q-item-label
+      >
+      <div
+        class="q-pa-md"
+        style="display: flex; justify-content: center; gap: 10px"
+      >
+        <q-btn-dropdown outline label="Miles" style="width: 150px">
+          <q-list>
+            <q-item clickable v-close-popup @click="onItemClick">
+              <q-item-section>
+                <q-item-label>Miles</q-item-label>
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-close-popup @click="onItemClick">
+              <q-item-section>
+                <q-item-label>Miles</q-item-label>
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-close-popup @click="onItemClick">
+              <q-item-section>
+                <q-item-label>Miles</q-item-label>
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </q-btn-dropdown>
+
+        <q-btn-dropdown outline label="100" style="width: 150px">
+          <q-list>
+            <q-item clickable v-close-popup @click="onItemClick">
+              <q-item-section>
+                <q-item-label>100</q-item-label>
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-close-popup @click="onItemClick">
+              <q-item-section>
+                <q-item-label>200</q-item-label>
+              </q-item-section>
+            </q-item>
+
+            <q-item clickable v-close-popup @click="onItemClick">
+              <q-item-section>
+                <q-item-label>300</q-item-label>
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </q-btn-dropdown>
+      </div>
+
+      <div style="display: flex; justify-content: center; bottom: 110px; position: fixed; z-index: 999; padding: 10px; width: 100%; box-sizing: border-box;">
+  <div style="display: flex; gap: 10px;">
+    <q-btn
+      rounded
+      label="Cancel"
+      color="grey-5"
+      @click="goBack"
+      class="q-mr-md"
+      style="width: 169.224px; height: 49px"
+    />
+    <q-btn
+      rounded
+      label="Save"
+      color="primary"
+      @click="goNext"
+      style="width: 169.224px; height: 49px"
+    />
+  </div>
+</div>
+
+    </div>
+    <div v-else>
+      <SkelDash />
+    </div>
+  </q-page>
+</template>
+
+<style scoped>
+.q-toolbar-title {
+  font-size: 18px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-item {
+  margin-top: 40px;
+}
+.image-center {
+  display: block;
+  margin: 0 auto;
+}
+.vehicle-info {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.vehicle-name-tag {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.vehicle-name {
+  font-size: 16px;
+  color: #555;
+}
+</style>
+<script>
+import SkelDash from "../components/skeleton/SkelDrafts.vue";
+export default {
+  data() {
+    return {
+      selectedOption: null,
+      dropdownOptions: [
+        { label: "Option 1", value: 1 },
+        { label: "Option 2", value: 2 },
+      ],
+      flag: false,
+      selectedVehicleName: "Vehicle Name",
+      selectedVehicleTag: "Your Vehicle Tag",
+      Licence_number: "Licence number",
+      Licence_number2: "12345678",
+      Vehicle_number: "Vehicle number",
+      Vehicle_number2: "12345678",
+    };
+  },
+  components: {
+    SkelDash,
+  },
+  created() {
+    setTimeout(() => {
+      this.selectedVehicleName = "Example Vehicle";
+      this.flag = true;
+    }, 5000);
+  },
+  methods: {
+    viewDetails() {},
+  },
+};
+</script>

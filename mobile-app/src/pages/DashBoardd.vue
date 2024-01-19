@@ -1,4 +1,5 @@
 <template>
+<q-page>
   <div>
     <q-header elevated>
       <q-bar class="q-py-lg" color="primary">
@@ -146,6 +147,7 @@
       </q-page>
     </q-page-container>
   </div>
+</q-page>
 </template>
 
 <script>
