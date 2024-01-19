@@ -17,13 +17,14 @@ const routes = [
       { path: '/login', component: () => import('pages/LoginPage.vue') },
       { path: '/DashBoard', component: () => import('pages/DashBoard.vue') },
       { path: '/DashBoardd', component: () => import('pages/DashBoardd.vue') },
-      { path: '/InspectionCar', component: () => import('pages/InspectionCar.vue') },
-      { path: '/InspectionDraft', component: () => import('pages/InspectionDraft.vue') },
-      { path: '/InspectionComp', component: () => import('pages/InspectionComp.vue') },
+      { path: '/InspectionCar', component: () => import('pages/inspections/InspectionCar.vue') },
+      { path: '/InspectionDraft', component: () => import('pages/inspections/InspectionDraft.vue') },
+      { path: '/InspectionComp', component: () => import('pages/inspections/InspectionComp.vue') },
       { path: '/CouncilReq', component: () => import('pages/CouncilReq.vue') },
       { path: '/ForgotPassword', component: () => import('pages/ForgotPassword.vue') },
       { path: '/SignupUser', component: () => import('pages/SignupUser.vue') },
-      { path: '/InteriorCheck', component: () => import('pages/InteriorCheck.vue') },
+      { path: '/InteriorCheck', component: () => import('pages/form/InteriorCheck.vue') },
+      { path: '/ExteriorCheck', component: () => import('pages/form/ExteriorCheck.vue') },
 
 
 
@@ -34,7 +35,7 @@ const routes = [
     path: '/',
     component: () => import('layouts/MobileLayout2.vue'),
     children: [
-      { path: '/InspectionOver', component: () => import('pages/InspectionOver.vue') },
+      { path: '/InspectionOver', component: () => import('pages/inspections/InspectionOver.vue') },
       // Add other routes for the default layout as needed
     ]
   },

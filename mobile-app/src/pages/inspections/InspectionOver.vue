@@ -430,7 +430,7 @@
 </template>
 
 <script>
-import SkelDash from "../components/skeleton/SkelOver.vue";
+import SkelDash from "../../components/skeleton/SkelOver.vue";
 export default {
   data() {
     return {

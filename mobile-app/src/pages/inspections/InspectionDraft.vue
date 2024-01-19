@@ -144,7 +144,7 @@
 </template>
 
 <script>
-import SkelDraft from "../components/skeleton/SkelDrafts.vue";
+import SkelDraft from "../../components/skeleton/SkelDrafts.vue";
 export default {
   created() {
     setTimeout(() => {
