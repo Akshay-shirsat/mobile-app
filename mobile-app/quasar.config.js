@@ -95,7 +95,9 @@ module.exports = configure(function (/* ctx */) {
     framework: {
       config: {
         brand: {
-          mobileLayout: 'MobileLayout', // Specify your mobile layout component
+          mobileLayout: 'MobileLayout',
+           // Specify your mobile layout component
+           dark: 'auto', 
         },
         screen: {
           xs: 576, // Extra small screens (phones)

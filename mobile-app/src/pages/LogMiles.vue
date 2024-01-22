@@ -4,6 +4,9 @@
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-primary">
           <q-toolbar-title class="q-ml-md"> Log Miles </q-toolbar-title>
+          <div>
+         <DarkModeToggle/>
+          </div>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
@@ -121,44 +124,54 @@
         style="display: flex; justify-content: center; gap: 10px"
       >
         <q-select
-              outlined
-              dense
-              v-model="selectedOption"
-              :options="dropdownOptions"
-              label="Miles"
-              style="width: 150px; margin-left: 10px"
-            ></q-select>
+          outlined
+          dense
+          v-model="selectedOption"
+          :options="dropdownOptions"
+          label="Miles"
+          style="width: 150px; margin-left: 10px"
+        ></q-select>
 
         <q-select
-              outlined
-              dense
-              v-model="selectedOption"
-              :options="dropdownOptions"
-              label="100"
-              style="width: 150px; margin-left: 10px"
-            ></q-select>
+          outlined
+          dense
+          v-model="selectedOption"
+          :options="dropdownOptions"
+          label="100"
+          style="width: 150px; margin-left: 10px"
+        ></q-select>
       </div>
 
-      <div style="display: flex; justify-content: center; bottom: 110px; position: fixed; z-index: 999; padding: 10px; width: 100%; box-sizing: border-box;">
-  <div style="display: flex; gap: 10px;">
-    <q-btn
-      rounded
-      label="Cancel"
-      color="grey-5"
-      @click="goBack"
-      class="q-mr-md"
-      style="width: 169.224px; height: 49px"
-    />
-    <q-btn
-      rounded
-      label="Save"
-      color="primary"
-      @click="goNext"
-      style="width: 169.224px; height: 49px"
-    />
-  </div>
-</div>
-
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          bottom: 110px;
+          position: fixed;
+          z-index: 999;
+          padding: 10px;
+          width: 100%;
+          box-sizing: border-box;
+        "
+      >
+        <div style="display: flex; gap: 10px">
+          <q-btn
+            rounded
+            label="Cancel"
+            color="grey-5"
+            @click="goBack"
+            class="q-mr-md"
+            style="width: 169.224px; height: 49px"
+          />
+          <q-btn
+            rounded
+            label="Save"
+            color="primary"
+            @click="goNext"
+            style="width: 169.224px; height: 49px"
+          />
+        </div>
+      </div>
     </div>
     <div v-else>
       <SkelDash />
@@ -202,7 +215,11 @@
 </style>
 <script>
 import SkelDash from "../components/skeleton/SkelDrafts.vue";
+import DarkModeToggle from './DarkModeToggle.vue';
 export default {
+  components:{
+    DarkModeToggle,
+  },
   data() {
     return {
       selectedOption: null,
@@ -221,6 +238,7 @@ export default {
   },
   components: {
     SkelDash,
+    DarkModeToggle,
   },
   created() {
     setTimeout(() => {
@@ -231,5 +249,8 @@ export default {
   methods: {
     viewDetails() {},
   },
+   toggleDarkMode() {
+      this.$q.dark.toggle();
+    },
 };
 </script>

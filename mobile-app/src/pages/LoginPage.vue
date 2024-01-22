@@ -1,7 +1,8 @@
 <template>
   <div>
+    <dark-mode-toggle />
     <!-- Login Section -->
-    <div class="login-section q-mb-md">
+    <div class="login-section q-mb-md q-dark">
       <text-h1 class="login-title">Log-in</text-h1>
       <p class="sub-title">Please Sign in to continue</p>
 
@@ -70,7 +71,11 @@
 
 
 <script>
+import DarkModeToggle from './DarkModeToggle.vue';
 export default {
+  components: {
+    DarkModeToggle,
+  },
   data() {
     return {
       driverName: "",
@@ -80,15 +85,13 @@ export default {
   },
   methods: {
     handleLogin() {
-      // Implement your login logic here
+
     },
   },
 };
 </script>
 
 <style scoped>
-/* Add your custom styles here */
-
 .login-section {
   display: flex;
   flex-direction: column;
@@ -118,13 +121,13 @@ export default {
 
 .input-field {
   width: 100%;
-  max-width: 320px; /* Adjust as needed */
+  max-width: 320px;
   margin-top: 16px;
 }
 
 .forgot-password {
   font-size: 14px;
-  color: #3498db; /* Adjust the color as needed */
+  color: #3498db;
 }
 
 .login-button {
@@ -140,7 +143,7 @@ export default {
 }
 
 .signup-option a {
-  color: #3498db; /* Adjust the color as needed */
+  color: #3498db;
   text-decoration: underline;
 }
 .keep-logged-in-checkbox {
@@ -174,4 +177,5 @@ export default {
   width: 200px;
   height: 45px;
 }
+
 </style>

@@ -6,6 +6,7 @@
         <q-toolbar-title class="q-ml-md">
           Good Morning Akshay!
         </q-toolbar-title>
+         <dark-mode-toggle />
         <q-btn
           square
           class="outlined-button"
@@ -13,8 +14,10 @@
           color="transparent"
           text-color="white"
           border-color="white"
+          flat
         >
         </q-btn>
+
       </q-bar>
     </q-header>
     <q-page-container>
@@ -151,8 +154,13 @@
 </template>
 
 <script>
+import DarkModeToggle from './DarkModeToggle.vue';
 export default {
+  components: {
+    DarkModeToggle,
+  },
   data() {
+
     return {
       selectedOption: null,
       dropdownOptions: [

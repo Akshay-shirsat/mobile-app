@@ -4,8 +4,11 @@
       <q-header elevated class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-primary">
           <q-toolbar-title class="q-ml-md"> Inspection </q-toolbar-title>
+
           <q-btn flat round dense icon="more_vert" />
+
         </q-bar>
+
       </q-header>
       <div class="flex-container">
         <div class="flex-item top-section">
@@ -192,7 +195,9 @@
 
 <script>
 import SkelDraft from "../../components/skeleton/SkelDrafts.vue";
+
 export default {
+
   created() {
     setTimeout(() => {
       this.flag = true;

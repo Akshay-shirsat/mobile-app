@@ -1,5 +1,6 @@
 <template>
   <div>
+    <dark-mode-toggle />
     <!-- Forget Password Section -->
     <div class="forget-password-section q-mb-md">
       <text-h1 class="forget-password-title">Forget Password</text-h1>
@@ -33,7 +34,11 @@
 </template>
 
 <script>
+import DarkModeToggle from './DarkModeToggle.vue';
 export default {
+  components: {
+    DarkModeToggle,
+  },
   data() {
     return {
       email: "",
