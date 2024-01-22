@@ -53,7 +53,7 @@
         </q-card>
       </div>
 
-      <div style="display: flex; justify-content: center;">
+      <div style="display: flex; justify-content: center; bottom: 110px; position: fixed; z-index: 999; padding: 10px; width: 100%; box-sizing: border-box;">
         <q-btn
           rounded
           label="Back"
