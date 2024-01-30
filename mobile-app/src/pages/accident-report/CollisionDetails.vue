@@ -13,20 +13,21 @@
       </div>
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-black">
-          <q-toolbar-title class="q-ml-md"> Date, Time and Location </q-toolbar-title>
+          <q-toolbar-title class="q-ml-md"> Collision Details </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
-<q-item-label
-        class="q-pt-md q-ml-md text-weight-medium"
+      <q-item-label
+        class="q-pt-md q-ml-md text-weight-medium text-h6"
         color="grey-5"
-        >Date, Time and Location</q-item-label
-      >
-      <!-- Include your NewQuestionCard component here -->
-      <NewQuestionCard :question="dateQuestion" />
-      <NewQuestionCard :question="timeQuestion" />
-      <NewQuestionCard :question="locationQuestion" />
+        >Accident report overview
+      </q-item-label>
 
+      <QuestionCard
+        v-for="(question, index) in questions"
+        :key="index"
+        :question="question"
+      />
 
       <div
         style="
@@ -46,60 +47,65 @@
           color="grey-5"
           @click="goBack"
           class="q-mr-md"
-          style="width: 169.224px; height: 47px"
+          style="width: 169.224px; height: 49px"
         />
         <q-btn
           rounded
           label="Next"
           color="primary"
           @click="goNext"
-          style="width: 169.224px; height: 47px"
+          style="width: 169.224px; height: 49px"
         />
       </div>
     </div>
   </q-page>
 </template>
-
 <script>
+import QuestionCard from "../form/QuestionCard.vue";
+
 import { ref } from "vue";
-import NewQuestionCard from "./NewQuestionCard.vue" // Adjust the path accordingly
 
 export default {
   components: {
-    NewQuestionCard,
+    QuestionCard,
   },
   data() {
     return {
       progress: ref(0.65),
-      // Define your questions for Date, Time, and Location
-      dateQuestion: {
-        label: "Select Date",
-        date: true,
-      },
-      timeQuestion: {
-        label: "Select Time",
-        time: true,
-      },
-      locationQuestion: {
-        label: "Add Location",
-        allLocation: true,
-      },
+      questions: [
+        {
+          label: "Upload Photos of damage to Vehicle 1",
+        },
+        {
+          label: "Upload Photos of damage to Vehicle 2",
+        },
+        // Add more questions as needed
+      ],
+      newQuestions: [
+        {
+          title: "Collision Details ",
+        },
+
+        // Add more new questions as needed
+      ],
     };
   },
   methods: {
+    openFileDialog() {
+      this.$refs.fileInput.click();
+    },
+    handleFileUpload(event) {
+      // Handle file upload logic here
+      const file = event.target.files[0];
+      console.log("Selected file:", file);
+      // You can perform further actions with the selected file
+    },
     randomize() {
       this.progress = Math.random();
-    },
-    goBack() {
-      // Implement goBack method if needed
-    },
-    goNext() {
-      // Implement goNext method if needed
     },
   },
 };
 </script>
-
 <style scoped>
 .centered-container {
   display: flex;
