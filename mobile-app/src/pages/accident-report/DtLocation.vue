@@ -13,21 +13,15 @@
       </div>
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-black">
-          <q-toolbar-title class="q-ml-md"> Comments </q-toolbar-title>
+          <q-toolbar-title class="q-ml-md"> Date, Time and Location </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
-      <q-item-label
-        class="q-pt-md q-ml-md text-weight-medium text-h6"
-        color="grey-5"
-        >Comments</q-item-label
-      >
-      <QuestionCard
-        v-for="(question, index) in questions"
-        :key="index"
-        :question="question"
 
-      />
+      <!-- Include your NewQuestionCard component here -->
+      <NewQuestionCard :question="dateQuestion" />
+      <NewQuestionCard :question="timeQuestion" />
+      <NewQuestionCard :question="locationQuestion" />
 
 
       <div
@@ -48,63 +42,60 @@
           color="grey-5"
           @click="goBack"
           class="q-mr-md"
-          style="width: 101.501px; height: 47px"
+          style="width: 169.224px; height: 47px"
         />
         <q-btn
           rounded
-          label="submit checks"
-          color="positive"
+          label="Next"
+          color="primary"
           @click="goNext"
-          style="width: 233.653px; height: 47px"
+          style="width: 169.224px; height: 47px"
         />
       </div>
     </div>
   </q-page>
 </template>
+
 <script>
-import QuestionCard from "./QuestionCard.vue";
 import { ref } from "vue";
+import NewQuestionCard from "./NewQuestionCard.vue" // Adjust the path accordingly
 
 export default {
   components: {
-    QuestionCard,
+    NewQuestionCard,
   },
   data() {
     return {
       progress: ref(0.65),
-      questions: [
-        {
-          label: "Any Comments? ",
-        },
-        {
-          label: "Add Location",
-          sections: [
-            // Customize the sections for the "Add Location" question card
-            {
-              type: "text", // Assuming you have a text input for the address
-              label: "Address",
-            },
-          ],
-        },
-      ],
+      // Define your questions for Date, Time, and Location
+      dateQuestion: {
+        label: "Select Date",
+        date: true,
+      },
+      timeQuestion: {
+        label: "Select Time",
+        time: true,
+      },
+      locationQuestion: {
+        label: "Add Location",
+        allLocation: true,
+      },
     };
   },
   methods: {
-    openFileDialog() {
-      this.$refs.fileInput.click();
-    },
-    handleFileUpload(event) {
-      // Handle file upload logic here
-      const file = event.target.files[0];
-      console.log("Selected file:", file);
-      // You can perform further actions with the selected file
-    },
     randomize() {
       this.progress = Math.random();
+    },
+    goBack() {
+      // Implement goBack method if needed
+    },
+    goNext() {
+      // Implement goNext method if needed
     },
   },
 };
 </script>
+
 <style scoped>
 .centered-container {
   display: flex;

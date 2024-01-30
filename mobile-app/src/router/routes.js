@@ -41,6 +41,8 @@ const routes = [
 
 //accident report
 { path: '/AccidenntReport', component: () => import('pages/accident-report/AccidenntReport.vue') },
+{ path: '/AcciReportOver', component: () => import('pages/accident-report/AcciReportOver.vue') },
+{ path: '/DtLocation', component: () => import('pages/accident-report/DtLocation.vue') },
 
 
     ]

@@ -1,4 +1,3 @@
-<!-- QuestionCard.vue -->
 <template>
   <q-card class="q-ma-md">
     <div class="q-pa-sm" style="max-width: 650px">
