@@ -4,206 +4,77 @@
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-primary">
           <q-toolbar-title class="q-ml-md"> SoS Detail </q-toolbar-title>
+          <div>
+         <DarkModeToggle/>
+          </div>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
-      <div class="flex-container">
-      <div class="flex-item">
-        <img src="/assets/image1.png" alt="Image" class="image-center" />
-      </div>
-    </div>
+       <div class="q-pa-md q-gutter-md">
+    <q-list  padding class="rounded-borders" fullwidth>
+      <q-item clickable v-ripple>
+        <q-item-section avatar top>
+          <q-avatar  color="grey-9" text-color="white" />
+        </q-item-section>
 
-<div
-    style="
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1px;
-      font-family: DM Sans;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: normal;
-    "
-  >
-    <!-- Left side: Vehicle Name -->
-    <div>
-      <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5">
-        {{ selectedVehicleName }}
-      </q-item-label>
-    </div>
+        <q-item-section>
+          <q-item-label lines="1">Emergency Number</q-item-label>
+          <q-item-label caption>999</q-item-label>
+        </q-item-section>
 
-    <!-- Right side: Vehicle Tag -->
-    <div class="q-pa-md" >
-      <q-item-label class="text-left text-bold" lines="1">
-        <span class="text-weight-light text-left">{{ selectedVehicleTag }}</span>
-      </q-item-label>
-    </div>
+        <q-item-section side>
+          <q-btn flat round dense  icon="more_horiz" />
+        </q-item-section>
+      </q-item>
+
+      <q-item clickable v-ripple>
+        <q-item-section avatar top>
+          <q-avatar color="grey-9" text-color="white" />
+        </q-item-section>
+
+        <q-item-section>
+          <q-item-label lines="1">Hospital</q-item-label>
+          <q-item-label caption>123456789</q-item-label>
+        </q-item-section>
+
+        <q-item-section side>
+         <q-btn flat round dense icon="more_horiz" />
+        </q-item-section>
+      </q-item>
+
+      <q-item clickable v-ripple>
+        <q-item-section avatar top>
+          <q-avatar  color="grey-9" text-color="white" />
+        </q-item-section>
+
+        <q-item-section>
+          <q-item-label lines="1">Fire Department</q-item-label>
+          <q-item-label caption>1234567890</q-item-label>
+        </q-item-section>
+
+        <q-item-section side>
+          <q-btn flat round dense icon="more_horiz" />
+        </q-item-section>
+      </q-item>
+            <q-item clickable v-ripple>
+        <q-item-section avatar top>
+          <q-avatar  color="grey-9" text-color="white" />
+        </q-item-section>
+
+        <q-item-section>
+          <q-item-label lines="1">Hospital</q-item-label>
+          <q-item-label caption>1234567890</q-item-label>
+        </q-item-section>
+
+        <q-item-section side>
+          <q-btn flat round dense icon="more_horiz" />
+        </q-item-section>
+      </q-item>
+    </q-list>
+    <div class="flex-container">
+          <q-btn flat @click="addMoreContacts" label="+ Add More Contact" class="q-mb-md" color="primary" />
+        </div>
   </div>
-<q-separator inset />
-
-<div
-    style="
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1px;
-      font-family: DM Sans;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: normal;
-    "
-  >
-    <!-- Left side: Vehicle Name -->
-    <div>
-      <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5">
-        {{ Licence_number }}
-      </q-item-label>
-    </div>
-
-    <!-- Right side: Vehicle Tag -->
-    <div class="q-pa-md">
-      <q-item-label class="text-left text-bold" lines="1">
-        <span class="text-weight-light text-left">{{ Licence_number2 }}</span>
-      </q-item-label>
-    </div>
-  </div>
-<q-separator inset />
-
-<div
-    style="
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1px;
-      font-family: DM Sans;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: normal;
-    "
-  >
-    <!-- Left side: Vehicle Name -->
-    <div>
-      <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5">
-        {{ oil_type }}
-      </q-item-label>
-    </div>
-
-    <!-- Right side: Vehicle Tag -->
-    <div class="q-pa-md">
-      <q-item-label class="text-left text-bold" lines="1">
-        <span class="text-weight-light text-left">{{ info }}</span>
-      </q-item-label>
-    </div>
-  </div>
-<q-separator inset />
-<div
-    style="
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1px;
-      font-family: DM Sans;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: normal;
-    "
-  >
-    <!-- Left side: Vehicle Name -->
-    <div>
-      <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5">
-        {{ Coolant_Type }}
-      </q-item-label>
-    </div>
-
-    <!-- Right side: Vehicle Tag -->
-    <div class="q-pa-md">
-      <q-item-label class="text-left text-bold" lines="1">
-        <span class="text-weight-light text-left">{{ info }}</span>
-      </q-item-label>
-    </div>
-  </div>
-<q-separator inset />
-<div
-    style="
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1px;
-      font-family: DM Sans;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: normal;
-    "
-  >
-    <!-- Left side: Vehicle Name -->
-    <div>
-      <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5">
-        {{ PSI }}
-      </q-item-label>
-    </div>
-
-    <!-- Right side: Vehicle Tag -->
-    <div class="q-pa-md">
-      <q-item-label class="text-left text-bold" lines="1">
-        <span class="text-weight-light text-left">{{ info }}</span>
-      </q-item-label>
-    </div>
-  </div>
-<q-separator inset />
-<div
-    style="
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1px;
-      font-family: DM Sans;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: normal;
-    "
-  >
-    <!-- Left side: Vehicle Name -->
-    <div>
-      <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5">
-        {{ PSI2 }}
-      </q-item-label>
-    </div>
-
-    <!-- Right side: Vehicle Tag -->
-    <div class="q-pa-md">
-      <q-item-label class="text-left text-bold" lines="1">
-        <span class="text-weight-light text-left">{{ info }}</span>
-      </q-item-label>
-    </div>
-  </div>
-<q-separator inset />
-<div
-    style="
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 1px;
-      font-family: DM Sans;
-      font-size: 12px;
-      font-weight: 700;
-      line-height: normal;
-    "
-  >
-    <!-- Left side: Vehicle Name -->
-    <div>
-      <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5">
-        {{ mileage }}
-      </q-item-label>
-    </div>
-
-    <!-- Right side: Vehicle Tag -->
-    <div class="q-pa-md">
-      <q-item-label class="text-left text-bold" lines="1">
-        <span class="text-weight-light text-left">{{ mileageN }}</span>
-      </q-item-label>
-    </div>
-  </div>
-<q-separator inset />
     </div>
     <div v-else>
       <SkelDash />
@@ -212,6 +83,7 @@
 </template>
 
 <style scoped>
+
 .q-toolbar-title {
   font-size: 18px;
 }
@@ -225,64 +97,30 @@
 .flex-item {
   margin-top: 40px;
 }
-.image-center {
-  /* Additional styles for centering the image if needed */
-  display: block;
-  margin: 0 auto;
-}
-.vehicle-info {
-  text-align: center;
-  margin-top: 10px;
-}
 
-.vehicle-name-tag {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333; /* Adjust the color as needed */
-}
-
-.vehicle-name {
-  font-size: 16px;
-  color: #555; /* Adjust the color as needed */
-}
 </style>
 <script>
+import DarkModeToggle from './DarkModeToggle.vue';
 import SkelDash from "../components/skeleton/SkelDrafts.vue";
 export default {
   data() {
     return {
-      selectedOption: null,
-      dropdownOptions: [
-        { label: "Option 1", value: 1 },
-        { label: "Option 2", value: 2 },
-
-      ],
       flag: false,
-      selectedVehicleName: "Vehicle name",
-      selectedVehicleTag: "Maruti suzuki Lxi",
-      Licence_number:"Licence number",
-      Licence_number2:"12345678",
-      oil_type:"Oil type",
-      Coolant_Type:"Coolant Type",
-      PSI:"Front Tyre Pressures PSI",
-      PSI2:"Rear Tyre Pressures PSI",
-      info:"info",
-      mileage:"mileage",
-      mileageN:"0000"
     };
   },
   components: {
     SkelDash,
+     DarkModeToggle,
+  },
+    methods: {
+    addMoreContacts() {
+      console.log("Adding more contacts...");
+    },
   },
   created() {
     setTimeout(() => {
-      // Code to be executed after the specified delay
-
       this.flag = true;
     }, 5000);
-  },
-  methods: {
-    viewDetails() {},
   },
 };
 </script>
