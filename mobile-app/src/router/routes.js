@@ -45,7 +45,8 @@ const routes = [
 { path: '/DtLocation', component: () => import('pages/accident-report/DtLocation.vue') },
 { path: '/CollisionDetails', component: () => import('pages/accident-report/CollisionDetails.vue') },
 
-
+//insurence report
+{ path: '/InsuranceDetails', component: () => import('pages/insurence/InsuranceDetails.vue') },
 
     ]
   },
