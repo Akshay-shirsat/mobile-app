@@ -3,7 +3,7 @@
     <div v-if="flag">
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-primary">
-          <q-toolbar-title class="q-ml-md"> Log Miles </q-toolbar-title>
+          <q-toolbar-title class="q-ml-md"> SoS Detail </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>

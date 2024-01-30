@@ -16,7 +16,7 @@ const routes = [
     children: [
        // Add other routes for the default layout as needed
       { path: '/login', component: () => import('pages/LoginPage.vue') },
-      
+
       { path: '/DashBoard', component: () => import('pages/DashBoard.vue') },
       { path: '/DashBoardd', component: () => import('pages/DashBoardd.vue') },
       { path: '/InspectionCar', component: () => import('pages/inspections/InspectionCar.vue') },
@@ -27,6 +27,7 @@ const routes = [
       { path: '/SignupUser', component: () => import('pages/SignupUser.vue') },
       { path: '/VehicleDetails', component: () => import('pages/VehicleDetails.vue') },
       { path: '/LogMiles', component: () => import('../pages/LogMiles.vue') },
+      { path: '/SosDetails', component: () => import('../pages/SosDetails.vue') },
 
 // Checklist form
       { path: '/InteriorCheck', component: () => import('pages/form/InteriorCheck.vue') },
