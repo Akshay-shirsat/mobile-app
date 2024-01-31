@@ -1,171 +1,189 @@
 <template>
-<q-page>
-  <div>
-    <q-header elevated>
-      <q-bar class="q-py-lg" color="primary">
-        <q-toolbar-title class="q-ml-md">
-          Good Morning Akshay!
-        </q-toolbar-title>
-         <dark-mode-toggle />
-        <q-btn
-          square
-          class="outlined-button"
-          icon="notifications"
-          color="transparent"
-          text-color="white"
-          border-color="white"
-          flat
-        >
-        </q-btn>
-
-      </q-bar>
-    </q-header>
-    <q-page-container>
-      <q-page>
-        <div class="flex-container">
-          <div class="flex-item top-section">
-            <div class="text-h6 q-ml-md q-mt-sm">Selected Vehicle</div>
-
-            <q-select
-              outlined
-              dense
-              v-model="selectedOption"
-              :options="dropdownOptions"
-              label="Select an option"
-              style="width: 150px; margin-left: 10px"
-            ></q-select>
-
-            <q-btn
-              label="View Details"
-              color="primary"
-              no-caps
-              rounded
-              @click="viewDetails"
-              class="q-mt-lg q-ml-md"
-            />
-          </div>
-
-          <div class="flex-item">
-            <img src="/assets/image1.png" alt="Image" class="image-right" />
-          </div>
-        </div>
-        <!-- Three Columns Section -->
-        <div class="three-columns-section">
-          <!-- Column 1 -->
-          <div class="column">
-            <q-icon class="custom-icon icon1 q-ml-xl"></q-icon>
-            <div class="name">Start Inspection</div>
-          </div>
-
-          <!-- Column 2 -->
-          <div class="column">
-            <q-icon class="custom-icon icon2 q-ml-xl"></q-icon>
-            <div class="name">Accident Report</div>
-          </div>
-
-          <!-- Column 3 -->
-          <div class="column">
-            <q-icon class="custom-icon icon3 q-ml-xl"></q-icon>
-            <div class="name">Log Miles</div>
-          </div>
-        </div>
-        <div class="quick-actions-section">
-          <div class="text-h6 q-ml-md">Quick Actions</div>
-        </div>
-<div class="q-pa-sm q-gutter-md">
-      <q-list bordered padding class="text-left" style="max-width: 670px">
-      <q-item clickable v-ripple>
-        <q-item-section avatar top>
-          <q-avatar square  color="grey-4" text-color="white" class="q-ml-sm" >
-            <img src="/assets/horizontal.png" class="q-py-sm q-px-sm">
-          </q-avatar>
-        </q-item-section>
-
-        <q-item-section >
-          <q-item-label lines="1" class="text-left">Licence Due Date</q-item-label>
-          <q-item-label lines="1" caption class="subtitle text-left">Expiring in 2 days</q-item-label>
-        </q-item-section>
-
-        <q-item-section side>
+  <q-page>
+    <div>
+      <q-header elevated>
+<q-bar style="background-color:white; height:45px">
+          <q-toolbar-title style="margin-left:10px; color:black">
+            Good Morning Akshay!
+          </q-toolbar-title>
+          <dark-mode-toggle />
           <q-btn
-              class="q-mr-sm"
-              text-color="black"
-              round
-              icon="keyboard_arrow_right"
-              color="grey-4"
-              size="sm"
-            />
-        </q-item-section>
-      </q-item>
+            square
+            class="outlined-button"
+            icon="notifications"
+            color="transparent"
+            text-color="black"
+            flat
+          >
+          </q-btn>
+</q-bar>
+      </q-header>
+          <div class="flex-container">
+            <div class="flex-item ">
+              <div class="text-h6 q-ml-md q-mt-sm">Selected Vehicle</div>
 
-      <q-item clickable v-ripple>
-        <q-item-section avatar top>
-           <q-avatar square  color="grey-4" text-color="white" class="q-ml-sm" >
-            <img src="/assets/security.png" class="q-py-sm q-px-sm">
-          </q-avatar>
-        </q-item-section>
+              <q-select
+                outlined
+                dense
+                v-model="selectedOption"
+                :options="dropdownOptions"
+                label="Select an option"
+                style="width: 150px; margin-left: 10px"
+                class="no-border"
+              ></q-select>
 
-        <q-item-section>
-          <q-item-label lines="1" class="text-left">MOT Due in</q-item-label>
-          <q-item-label lines="1" caption class="subtitle text-left">5 days</q-item-label>
-        </q-item-section>
+              <q-btn
+                label="View Details"
+                color="primary"
+                no-caps
+                rounded
+                @click="viewDetails"
+                class="q-mt-lg q-ml-md"
+              />
+            </div>
 
-        <q-item-section side>
-         <q-btn
-              class="q-mr-sm"
-              text-color="black"
-              round
-              icon="keyboard_arrow_right"
-              color="grey-4"
-              size="sm"
-            />
-        </q-item-section>
-      </q-item>
+            <div class="flex-item">
+              <img src="/assets/image1.png" alt="Image" class="image-right" />
+            </div>
+          </div>
+          <q-row class="three-columns-section">
+            <q-col v-for="(icon, index) in icons" :key="index" cols="12" md="4" class="q-flex q-flex-center q-flex-column text-center q-ma-md">
+              <q-icon
+                :class="['custom-icon', 'icon' + (index + 1),]"
+              ></q-icon>
+              <div class="name">{{ icon.name }}</div>
+            </q-col>
+          </q-row>
+          <div class="quick-actions-section">
+            <div class="text-h6 q-ml-md">Quick Actions</div>
+          </div>
+          <div class="q-pa-sm q-gutter-md">
+            <q-list bordered padding class="text-left" fullwidth>
+              <q-item clickable v-ripple>
+                <q-item-section avatar top>
+                  <q-avatar
+                    square
+                    color="grey-4"
+                    text-color="white"
+                    class="q-ml-sm"
+                  >
+                    <img src="/assets/horizontal.png" class="q-py-sm q-px-sm" />
+                  </q-avatar>
+                </q-item-section>
 
-      <q-item clickable v-ripple >
-        <q-item-section avatar top >
-          <q-avatar square  color="grey-4" text-color="white" class="q-ml-sm  " >
-            <img src="/assets/certificate.png" class="q-py-sm q-px-sm">
-          </q-avatar>
-        </q-item-section>
+                <q-item-section>
+                  <q-item-label lines="1" class="text-left"
+                    >Licence Due Date</q-item-label
+                  >
+                  <q-item-label lines="1" caption class="subtitle text-left"
+                    >Expiring in 2 days</q-item-label
+                  >
+                </q-item-section>
 
-        <q-item-section>
-          <q-item-label lines="1" class="text-left" >Insurance Due</q-item-label>
-          <q-item-label  lines="1" caption class="subtitle text-left" >Expiring in 2 days</q-item-label>
-        </q-item-section>
+                <q-item-section side>
+                  <q-btn
+                    class="q-mr-sm"
+                    text-color="black"
+                    round
+                    icon="keyboard_arrow_right"
+                    color="grey-4"
+                    size="sm"
+                  />
+                </q-item-section>
+              </q-item>
 
-        <q-item-section side>
-         <q-btn
-              class="q-mr-sm"
-              text-color="black"
-              round
-              icon="keyboard_arrow_right"
-              color="grey-4"
-              size="sm"
-            />
-        </q-item-section>
-      </q-item>
-    </q-list>
-  </div>
-      </q-page>
-    </q-page-container>
-  </div>
-</q-page>
+              <q-item clickable v-ripple>
+                <q-item-section avatar top>
+                  <q-avatar
+                    square
+                    color="grey-4"
+                    text-color="white"
+                    class="q-ml-sm"
+                  >
+                    <img src="/assets/security.png" class="q-py-sm q-px-sm" />
+                  </q-avatar>
+                </q-item-section>
+
+                <q-item-section>
+                  <q-item-label lines="1" class="text-left"
+                    >MOT Due in</q-item-label
+                  >
+                  <q-item-label lines="1" caption class="subtitle text-left"
+                    >5 days</q-item-label
+                  >
+                </q-item-section>
+
+                <q-item-section side>
+                  <q-btn
+                    class="q-mr-sm"
+                    text-color="black"
+                    round
+                    icon="keyboard_arrow_right"
+                    color="grey-4"
+                    size="sm"
+                  />
+                </q-item-section>
+              </q-item>
+
+              <q-item clickable v-ripple>
+                <q-item-section avatar top>
+                  <q-avatar
+                    square
+                    color="grey-4"
+                    text-color="white"
+                    class="q-ml-sm"
+                  >
+                    <img
+                      src="/assets/certificate.png"
+                      class="q-py-sm q-px-sm"
+                    />
+                  </q-avatar>
+                </q-item-section>
+
+                <q-item-section>
+                  <q-item-label lines="1" class="text-left"
+                    >Insurance Due</q-item-label
+                  >
+                  <q-item-label lines="1" caption class="subtitle text-left"
+                    >Expiring in 2 days</q-item-label
+                  >
+                </q-item-section>
+
+                <q-item-section side>
+                  <q-btn
+                    class="q-mr-sm"
+                    text-color="black"
+                    round
+                    icon="keyboard_arrow_right"
+                    color="grey-4"
+                    size="sm"
+                  />
+                </q-item-section>
+              </q-item>
+            </q-list>
+          </div>
+    </div>
+  </q-page>
 </template>
 
 <script>
-import DarkModeToggle from './DarkModeToggle.vue';
+import DarkModeToggle from "./DarkModeToggle.vue";
 export default {
   components: {
     DarkModeToggle,
   },
   data() {
-
     return {
       selectedOption: null,
       dropdownOptions: [
         { label: "Option 1", value: 1 },
         { label: "Option 2", value: 2 },
+      ],
+      icons: [
+        { name: "Start Inspection" },
+        { name: "Accident Report" },
+        { name: "Log Miles" },
+        // Add more icons if needed
       ],
     };
   },
@@ -176,6 +194,9 @@ export default {
 </script>
 
 <style scoped>
+.no-border .q-field__bottom {
+  display: none;
+}
 .q-toolbar-title {
   font-size: 18px;
 }
@@ -200,14 +221,11 @@ export default {
 .title-container {
   margin-left: 10px;
 }
-.top-section {
-  margin-top: -35px;
-}
+
 
 .quick-actions-section {
   margin-top: 20px;
 }
-
 
 .three-columns-section {
   display: flex;
@@ -247,7 +265,6 @@ export default {
 .icon1 {
   background-image: url("/assets/calendar--tools.png");
 }
-
 
 .icon2 {
   background-image: url("/assets/vector.png");
@@ -292,9 +309,4 @@ q-btn {
 .subtitle {
   color: red;
 }
-
-
-
-
-
 </style>

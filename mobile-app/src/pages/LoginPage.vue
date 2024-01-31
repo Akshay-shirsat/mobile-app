@@ -1,6 +1,10 @@
 <template>
-  <div>
+  <div class="login-container">
     <dark-mode-toggle />
+    <div class="logo-section">
+      <!-- Replace 'your-logo.png' with the actual path to your logo -->
+      <img src="/assets/Logo.png" alt="Logo" class="logo-image" />
+    </div>
     <!-- Login Section -->
     <div class="login-section q-mb-md q-dark">
       <text-h1 class="login-title">Log-in</text-h1>
@@ -26,7 +30,7 @@
       ></q-input>
 
       <!-- Keep me logged in checkbox and Forgot Password link -->
-      <div class="row">
+      <div class="row checkbox-link-container">
         <div class="col-md-6 col-xs-6 col-sm-6">
           <!-- Keep me logged in checkbox -->
           <q-checkbox
@@ -56,7 +60,7 @@
         rounded
         label="Login"
         @click="handleLogin"
-        class="login-button q-px-lg q-py-sm q-mt-xl"
+        class="login-button q-px-lg q-py-sm q-mt-xl rounded-button"
       />
 
       <!-- Sign Up Option -->
@@ -67,11 +71,8 @@
   </div>
 </template>
 
-<!-- ... (rest of the code remains unchanged) ... -->
-
-
 <script>
-import DarkModeToggle from './DarkModeToggle.vue';
+import DarkModeToggle from "./DarkModeToggle.vue";
 export default {
   components: {
     DarkModeToggle,
@@ -84,9 +85,7 @@ export default {
     };
   },
   methods: {
-    handleLogin() {
-
-    },
+    handleLogin() {},
   },
 };
 </script>
@@ -106,11 +105,11 @@ export default {
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
-  margin-top: 55%;
   max-width: 100%;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 10%;
 }
 
 .sub-title {
@@ -177,5 +176,16 @@ export default {
   width: 200px;
   height: 45px;
 }
+.logo-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
 
+.logo-image {
+  width: 100px;
+  height: auto;
+}
 </style>

@@ -2,20 +2,13 @@
 
 const routes = [
   // Default route for larger screens
-  {
-    path: '/',
-    component: () => import('layouts/MainLayout.vue'),
-    children: [
-      { path: '/MobileIndexPage', component: () => import('pages/MobileIndexPage.vue') }
-      // Add other routes for the default layout as needed
-    ]
-  },
+
   {
     path: '/',
     component: () => import('layouts/MobileLayout.vue'),
     children: [
        // Add other routes for the default layout as needed
-      { path: '/login', component: () => import('pages/LoginPage.vue') },
+      { path: '/', component: () => import('pages/LoginPage.vue') },
 
       { path: '/DashBoard', component: () => import('pages/DashBoard.vue') },
       { path: '/DashBoardd', component: () => import('pages/DashBoardd.vue') },
