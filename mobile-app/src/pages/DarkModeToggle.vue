@@ -1,4 +1,3 @@
-<!-- DarkModeToggle.vue -->
 <template>
   <q-btn
     icon="brightness_4"

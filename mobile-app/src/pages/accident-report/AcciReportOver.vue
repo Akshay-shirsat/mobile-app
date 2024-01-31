@@ -163,31 +163,30 @@
             </q-item-section>
           </q-item>
         </q-list>
-              <div
+
+      </div>
+      <div
         style="
           display: flex;
-          justify-content: right;
+          justify-content: center;
           bottom: 110px;
           position: fixed;
           z-index: 999;
           padding: 10px;
           width: 100%;
           box-sizing: border-box;
-
         "
       >
-
-        <q-btn
-          round
-          label="+"
-          color="primary"
-          @click="goNext"
-          style="width: 63px; height: 63px; flex-shrink: 0;"
-          class="q-mr-lg"
-        />
+        <div style="display: flex; gap: 10px">
+          <q-btn
+            rounded
+            label="Save"
+            color="primary"
+            @click="goNext"
+            style="width: 357px; height: 49px"
+          />
+        </div>
       </div>
-      </div>
-
     </div>
     <div v-else>
       <SkelDraft />

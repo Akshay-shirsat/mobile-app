@@ -44,6 +44,8 @@ const routes = [
 { path: '/AcciReportOver', component: () => import('pages/accident-report/AcciReportOver.vue') },
 { path: '/DtLocation', component: () => import('pages/accident-report/DtLocation.vue') },
 { path: '/CollisionDetails', component: () => import('pages/accident-report/CollisionDetails.vue') },
+{ path: '/ContinueAcc', component: () => import('pages/accident-report/ContinueAcc.vue') },
+{ path: '/CompletedaccRepo', component: () => import('pages/accident-report/CompletedaccRepo.vue') },
 
 //insurence report
 { path: '/InsuranceDetails', component: () => import('pages/insurence/InsuranceDetails.vue') },
