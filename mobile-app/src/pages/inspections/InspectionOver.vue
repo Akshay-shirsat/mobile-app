@@ -422,6 +422,29 @@
           </q-item>
         </q-list>
       </div>
+         <div
+        style="
+          display: flex;
+          justify-content: center;
+          bottom: 88px;
+          position: fixed;
+          z-index: 999;
+          padding: 10px;
+          width: 100%;
+          box-sizing: border-box;
+        "
+      >
+        <div style="display: flex; gap: 10px">
+          <q-btn
+          
+            rounded
+            label="Start"
+            color="primary"
+            @click="goNext"
+            style="width: 357px; height: 49px"
+          />
+        </div>
+      </div>
     </div>
     <div v-else>
       <SkelDash />

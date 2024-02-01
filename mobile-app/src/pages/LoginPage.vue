@@ -2,15 +2,14 @@
   <div class="login-container">
     <dark-mode-toggle />
     <div class="logo-section">
-      <!-- Replace 'your-logo.png' with the actual path to your logo -->
+
       <img src="/assets/Logo.png" alt="Logo" class="logo-image" />
     </div>
-    <!-- Login Section -->
+
     <div class="login-section q-mb-md q-dark">
       <text-h1 class="login-title">Log-in</text-h1>
       <p class="sub-title">Please Sign in to continue</p>
 
-      <!-- Driver Name Input -->
       <q-input
         v-model="driverName"
         dense
@@ -19,7 +18,7 @@
         class="input-field q-pb-md"
       ></q-input>
 
-      <!-- Password Input -->
+
       <q-input
         v-model="password"
         outlined
@@ -29,10 +28,10 @@
         class="input-field"
       ></q-input>
 
-      <!-- Keep me logged in checkbox and Forgot Password link -->
+
       <div class="row checkbox-link-container">
         <div class="col-md-6 col-xs-6 col-sm-6">
-          <!-- Keep me logged in checkbox -->
+
           <q-checkbox
             v-model="keepLoggedIn"
             label="Keep me logged in"
@@ -40,7 +39,7 @@
           />
         </div>
         <div class="col-md-6 col-xs-6 col-sm-6">
-          <!-- Forgot Password link -->
+
           <router-link to="/ForgotPassword">
             <q-btn
               flat
@@ -53,7 +52,6 @@
         </div>
       </div>
 
-      <!-- Login Button -->
       <q-btn
         color="primary"
         no-caps
@@ -61,9 +59,10 @@
         label="Login"
         @click="handleLogin"
         class="login-button q-px-lg q-py-sm q-mt-xl rounded-button"
+        to="/dashboardd"
       />
 
-      <!-- Sign Up Option -->
+
       <p class="signup-option q-mt-md">
         Don't have an account? <a href="./SignupUser">Sign Up</a>
       </p>

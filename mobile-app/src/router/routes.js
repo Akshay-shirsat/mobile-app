@@ -4,54 +4,57 @@ const routes = [
   // Default route for larger screens
 
   {
-    path: '/',
+    path: '/auth',
     component: () => import('layouts/MobileLayout.vue'),
     children: [
        // Add other routes for the default layout as needed
-      { path: '/', component: () => import('pages/LoginPage.vue') },
 
-      { path: '/DashBoard', component: () => import('pages/DashBoard.vue') },
-      { path: '/DashBoardd', component: () => import('pages/DashBoardd.vue') },
-      { path: '/InspectionCar', component: () => import('pages/inspections/InspectionCar.vue') },
-      { path: '/InspectionDraft', component: () => import('pages/inspections/InspectionDraft.vue') },
-      { path: '/InspectionComp', component: () => import('pages/inspections/InspectionComp.vue') },
-      { path: '/CouncilReq', component: () => import('pages/CouncilReq.vue') },
-      { path: '/ForgotPassword', component: () => import('pages/ForgotPassword.vue') },
-      { path: '/SignupUser', component: () => import('pages/SignupUser.vue') },
-      { path: '/VehicleDetails', component: () => import('pages/VehicleDetails.vue') },
-      { path: '/LogMiles', component: () => import('../pages/LogMiles.vue') },
-      { path: '/SosDetails', component: () => import('../pages/SosDetails.vue') },
 
-// Checklist form
-      { path: '/InteriorCheck', component: () => import('pages/form/InteriorCheck.vue') },
-      { path: '/ExteriorCheck', component: () => import('pages/form/ExteriorCheck.vue') },
-      { path: '/LightingCheck', component: () => import('pages/form/LightingCheck.vue') },
-      { path: '/Wiper&WsherCheck', component: () => import('pages/form/Wiper&WsherCheck.vue') },
-      { path: '/TyreCheck', component: () => import('pages/form/TyreCheck.vue') },
-      { path: '/BodyWork', component: () => import('pages/form/BodyWork.vue') },
-      { path: '/OdoMeter', component: () => import('pages/form/OdoMeter.vue') },
-      { path: '/CommentsD', component: () => import('pages/form/CommentsD.vue') },
+      { path: '/dashboard',name: 'dashboard', component: () => import('pages/DashBoardd.vue') },
+      { path: '/inspectionCar',name: 'inspectionCar', component: () => import('pages/inspections/InspectionCar.vue') },
+      { path: '/inspectionOver', component: () => import('pages/inspections/InspectionOver.vue') },
+      { path: '/inspectionDraft', component: () => import('pages/inspections/InspectionDraft.vue') },
+      { path: '/inspectionComp', component: () => import('pages/inspections/InspectionComp.vue') },
+
+
+      { path: '/signupUser', component: () => import('pages/SignupUser.vue') },
+      { path: '/vehicleDetails', component: () => import('pages/VehicleDetails.vue') },
+      { path: '/logMiles', name:"logMile" ,component: () => import('../pages/LogMiles.vue') },
+      { path: '/sosDetails',name: "Emergency", component: () => import('../pages/SosDetails.vue') },
+
+
 
 //accident report
-{ path: '/AccidenntReport', component: () => import('pages/accident-report/AccidenntReport.vue') },
-{ path: '/AcciReportOver', component: () => import('pages/accident-report/AcciReportOver.vue') },
-{ path: '/DtLocation', component: () => import('pages/accident-report/DtLocation.vue') },
-{ path: '/CollisionDetails', component: () => import('pages/accident-report/CollisionDetails.vue') },
-{ path: '/ContinueAcc', component: () => import('pages/accident-report/ContinueAcc.vue') },
-{ path: '/CompletedaccRepo', component: () => import('pages/accident-report/CompletedaccRepo.vue') },
+{ path: '/accidenntReport',name: "Accident", component: () => import('pages/accident-report/AccidenntReport.vue') },
+{ path: '/acciReportOver', component: () => import('pages/accident-report/AcciReportOver.vue') },
+{ path: '/dtLocation', component: () => import('pages/accident-report/DtLocation.vue') },
+{ path: '/collisionDetails', component: () => import('pages/accident-report/CollisionDetails.vue') },
+{ path: '/continueAcc', component: () => import('pages/accident-report/ContinueAcc.vue') },
+{ path: '/completedaccRepo', component: () => import('pages/accident-report/CompletedaccRepo.vue') },
 
 //insurence report
-{ path: '/InsuranceDetails', component: () => import('pages/insurence/InsuranceDetails.vue') },
+{ path: '/insuranceDetails', component: () => import('pages/insurence/InsuranceDetails.vue') },
 
 //settings
-{ path: '/SettingPage', component: () => import('pages/settings/SettingPage.vue') },
+{ path: '/settingPage',name: "setting", component: () => import('pages/settings/SettingPage.vue') },
     ]
   },
   {
     path: '/',
     component: () => import('layouts/MobileLayout2.vue'),
     children: [
-      { path: '/InspectionOver', component: () => import('pages/inspections/InspectionOver.vue') },
+      { path: '/', component: () => import('pages/LoginPage.vue') },
+      { path: '/ForgotPassword', component: () => import('pages/ForgotPassword.vue') },
+      // Checklist form
+{ path: '/councilReq', component: () => import('pages/form/CouncilReq.vue') },
+{ path: '/interiorCheck', component: () => import('pages/form/InteriorCheck.vue') },
+{ path: '/exteriorCheck', component: () => import('pages/form/ExteriorCheck.vue') },
+{ path: '/lightingCheck', component: () => import('pages/form/LightingCheck.vue') },
+{ path: '/wiper&WsherCheck', component: () => import('pages/form/Wiper&WsherCheck.vue') },
+{ path: '/tyreCheck', component: () => import('pages/form/TyreCheck.vue') },
+{ path: '/bodyWork', component: () => import('pages/form/BodyWork.vue') },
+{ path: '/odoMeter', component: () => import('pages/form/OdoMeter.vue') },
+{ path: '/commentsD', component: () => import('pages/form/CommentsD.vue') },
 
       // Add other routes for the default layout as needed
     ]
@@ -61,8 +64,8 @@ const routes = [
     path: '/',
     component: () => import('layouts/SkeletonLayout.vue'),
     children: [
-      { path: '/SkelOver', component: () => import('components/skeleton/SkelOver.vue') },
-      { path: '/SkelDrafts', component: () => import('components/skeleton/SkelDrafts.vue') },
+      { path: '/skelOver', component: () => import('components/skeleton/SkelOver.vue') },
+      { path: '/skelDrafts', component: () => import('components/skeleton/SkelDrafts.vue') },
 
       // Add other routes for the default layout as needed
     ]

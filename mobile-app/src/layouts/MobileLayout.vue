@@ -10,8 +10,13 @@
       @hide="closeBottomSheet"
       class="vue-bottom-sheet"
     >
-       <div class="q-pa-md q-gutter-sm bottom-sheet-content">
-        <div v-for="category in categories" :key="category.name" class="category-item" @click="navigateTo(category.route)">
+      <div class="q-pa-md q-gutter-sm bottom-sheet-content">
+        <div
+          v-for="category in categories"
+          :key="category.name"
+          class="category-item"
+          @click="navigateTo(category.route)"
+        >
           <!-- Add a wrapper for the Emergency category -->
           <div v-if="category.name === 'Emergency'" class="emergency-wrapper">
             <img :src="category.icon" class="category-icon" />
@@ -35,23 +40,25 @@ export default {
     return {
       bottomSheetVisible: true,
       categories: [
-        { name: "Dashboard", icon: "/assets/grid.png", route: "dashboard" },
+        { name: "Dashboard",
+         icon: "/assets/grid.png", 
+         route: "dashboard" },
         {
           name: "Inspection",
           icon: "/assets/calendar--tools.png",
-          route: "inspection",
+          route: "inspectionCar",
         },
         {
           name: "Emergency",
           icon: "/assets/Emergency.png",
-          route: "inspection",
+          route: "Emergency",
         },
         {
           name: "Accident",
           icon: "/assets/calendar--add.png",
-          route: "inspection",
+          route: "Accident",
         },
-        { name: "Setting", icon: "/assets/settings.png", route: "inspection" },
+        { name: "setting", icon: "/assets/settings.png", route: "setting" },
       ],
     };
   },
@@ -60,6 +67,7 @@ export default {
       this.bottomSheetVisible = false;
     },
     navigateTo(page) {
+      this.$router.push({ name: page });
       console.log(`Navigating to ${page}`);
     },
   },
@@ -101,5 +109,4 @@ export default {
 .emergency-wrapper {
   position: relative;
 }
-
 </style>

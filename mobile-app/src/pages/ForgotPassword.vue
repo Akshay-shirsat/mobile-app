@@ -1,7 +1,10 @@
 <template>
   <div>
     <dark-mode-toggle />
-    <!-- Forget Password Section -->
+ <div class="logo-section">
+
+      <img src="/assets/Logo.png" alt="Logo" class="logo-image" />
+    </div>
     <div class="forget-password-section q-mb-md">
       <text-h1 class="forget-password-title">Forget Password</text-h1>
       <p class="sub-title">Enter your email to reset your password</p>
@@ -70,7 +73,7 @@ export default {
   font-style: normal;
   font-weight: 700;
   line-height: 22px;
-  margin-top: 55%;
+  margin-top: 15%;
   max-width: 100%;
   width: 90%;
   margin-left: auto;
@@ -106,5 +109,16 @@ export default {
   color: #777777;
   margin-top: 16px;
   text-decoration: underline;
+}
+.logo-image {
+  width: 100px;
+  height: auto;
+}
+.logo-section {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
 }
 </style>

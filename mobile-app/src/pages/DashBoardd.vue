@@ -47,11 +47,15 @@
             </div>
           </div>
           <q-row class="three-columns-section">
+            
             <q-col v-for="(icon, index) in icons" :key="index" cols="12" md="4" class="q-flex q-flex-center q-flex-column text-center q-ma-md">
+              <router-link :to="{ name: icon.route }">
               <q-icon
                 :class="['custom-icon', 'icon' + (index + 1),]"
               ></q-icon>
+              </router-link>
               <div class="name">{{ icon.name }}</div>
+               
             </q-col>
           </q-row>
           <div class="quick-actions-section">
@@ -180,9 +184,9 @@ export default {
         { label: "Option 2", value: 2 },
       ],
       icons: [
-        { name: "Start Inspection" },
-        { name: "Accident Report" },
-        { name: "Log Miles" },
+        { name: "Start Inspection",route: "inspectionCar" },
+        { name: "Accident Report",route:"Accident" },
+        { name: "Log Miles",route:"logMile" },
         // Add more icons if needed
       ],
     };
