@@ -3,7 +3,7 @@
     <div>
       <q-header  class="bg-white text-primary">
 <q-bar style="background-color:white; height:45px">
-          <q-toolbar-title style="margin-left:10px; color:black">
+          <q-toolbar-title style="margin-left:3px; color:black">
             Good Morning Akshay!
           </q-toolbar-title>
           <dark-mode-toggle />
@@ -45,15 +45,15 @@
                 style="width:137px;"
               />
             </div>
-
-            <div class="flex-item">
-              <img src="/assets/image1.png" alt="Image" class="image-right" />
+ <div class="flex-item image-container">
+              <img src="/assets/image1.png" alt="Image" class="image-right"/>
             </div>
           </div>
+
            <q-item-label class="q-pa-md q-ml-sm text-weight-medium" color="grey-5"
           >Quick Actions</q-item-label
         >
-          <q-row class="three-columns-section q-pa-md" >
+          <q-row class="three-columns-section q-pa-sm  q-mx-md" >
             <q-col v-for="(icon, index) in icons" :key="index" cols="12" md="4" class="q-flex q-flex-center q-flex-column text-center ">
               <router-link :to="{ name: icon.route }">
               <q-icon
@@ -67,6 +67,7 @@
  <q-item-label class="q-pa-sm q-ml-md text-weight-medium"
           >Need Your Attention</q-item-label
         >
+        <q-scroll-area style="height: 600px;">
           <div class="q-pa-sm q-gutter-md">
             <q-list fullwidth>
               <q-item clickable v-ripple>
@@ -75,8 +76,9 @@
                     square
                     color="grey-4"
                     text-color="white"
+
                   >
-                    <img src="/assets/horizontal.png" class="q-py-sm q-px-sm" />
+                    <img src="/assets/horizontal.png" class="q-py-sm q-px-sm"  />
                   </q-avatar>
                 </q-item-section>
 
@@ -169,6 +171,7 @@
               </q-item>
             </q-list>
           </div>
+          </q-scroll-area>
     </div>
   </q-page>
 </template>
@@ -201,9 +204,7 @@ export default {
 </script>
 
 <style scoped>
-.image-right{
-  margin-right: 10px;
-}
+
 .flex-container {
   display: flex;
   justify-content: space-between;
@@ -221,7 +222,8 @@ margin-top: 10px;
 .three-columns-section {
   display: flex;
   justify-content: space-between;
-  gap: 10px;
+  align-items: center;
+
 }
 
 
@@ -275,4 +277,5 @@ margin-top: 10px;
 .subtitle {
   color: red;
 }
+
 </style>

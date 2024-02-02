@@ -7,36 +7,39 @@
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
-      <div class="flex-container">
-        <div class="flex-item top-section">
-          <div class="text-h6 q-ml-md q-mt-xl">Selected Vehicle</div>
+       <div class="flex-container">
+            <div class="flex-item ">
+                <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"
+          >Selected Vehicle
+ </q-item-label
+        >
 
-          <q-select
-            outlined
-            dense
-            v-model="selectedOption"
-            :options="dropdownOptions"
-            label="Select an option"
-            style="width: 140px; "
-            class="q-ml-md"
-          ></q-select>
+              <q-select
+                outlined
+                dense
+                v-model="selectedOption"
+                :options="dropdownOptions"
+                label="Select an option"
+                style="width: 162px;height:35px; "
+                class="q-ml-md  "
+              ></q-select>
 
-          <q-btn
-            label="View Details"
-            color="primary"
-            no-caps
-            rounded
-            @click="viewDetails"
-            class="q-mt-lg q-ml-md"
-          />
-        </div>
-
-        <div class="flex-item">
-          <img src="/assets/image1.png" alt="Image" class="image-right" />
-        </div>
-      </div>
-      <div class="q-pa-md items-start">
-        <q-btn-group rounded>
+              <q-btn
+                label="View Details"
+                color="primary"
+                no-caps
+                rounded
+                @click="viewDetails"
+                class="q-mt-lg q-ml-md"
+                style="width:137px;"
+              />
+            </div>
+ <div class="flex-item image-container">
+              <img src="/assets/image1.png" alt="Image" class="image-right"/>
+            </div>
+          </div>
+         <div class="q-pa-md q-mt-sm items-start">
+        <q-btn-group rounded style="justify-content: center">
           <q-btn
             color="white"
             rounded
@@ -44,7 +47,6 @@
             no-caps
             label="Pending"
             class="btngroup"
-            fullwidth
           />
           <q-btn
             color="grey-4"
@@ -53,7 +55,6 @@
             no-caps
             label="Completed"
             class="btngroup"
-            fullwidth
           />
         </q-btn-group>
       </div>
@@ -68,7 +69,7 @@
           >Completed and Pending reports</q-item-label
         >
         <div class="q-pa-md">
-          <q-btn-dropdown size="12px" label="Filter">
+          <q-btn-dropdown size="12px" label="Filter" flat>
             <q-list>
               <q-item clickable v-close-popup @click="onItemClick">
                 <q-item-section>
@@ -91,12 +92,12 @@
         :key="index"
       >
         <q-list
+        fullwidth
           rounded
           padding
           dense
           class="rounded-borders bg-grey-2"
           style="
-            max-width: 768px;
             display: flex;
             align-items: center;
             height: 66.281px;
@@ -151,7 +152,7 @@ export default {
     setTimeout(() => {
       this.flag = true;
       this.fetchCompletedReports();
-    }, 3000);
+    }, 1000);
   },
   data() {
     return {
@@ -205,16 +206,7 @@ export default {
   font-weight: 500;
   margin-bottom: 8px;
 }
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-}
-.flex-item {
-  flex: 1;
-  margin-right: 20px;
-  margin-left: 10px;
-  margin-top: 40px;
-}
+
 .image-right {
   width: 187.041px;
   height: 111.807px;
@@ -232,17 +224,17 @@ export default {
 
 
 .rounded-list-subtitle2 {
-  color: #53aa0f; /* Set the desired color for subtitles */
+  color: #53aa0f;
 }
 .rounded-box {
-  border-radius: 12px; /* Set the desired border radius for the entire box */
-  overflow: hidden; /* Hide overflow content */
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .rounded-borders {
   border-radius: 12px;
   overflow: hidden;
-
+margin-top: -10px;
 }
 
 .q-pa-md.items-start {

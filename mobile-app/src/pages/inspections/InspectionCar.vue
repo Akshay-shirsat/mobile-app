@@ -10,34 +10,38 @@
         </q-bar>
 
       </q-header>
-      <div class="flex-container">
-        <div class="flex-item top-section">
-          <div class="text-h6 q-ml-md q-mt-xl">Selected Vehicle</div>
+   <div class="flex-container">
+            <div class="flex-item ">
+                <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"
+          >Selected Vehicle
+ </q-item-label
+        >
 
-          <q-select
-            outlined
-            dense
-            v-model="selectedOption"
-            :options="dropdownOptions"
-            label="Select an option"
-            style="width: 150px; margin-left: 10px"
-          ></q-select>
+              <q-select
+                outlined
+                dense
+                v-model="selectedOption"
+                :options="dropdownOptions"
+                label="Select an option"
+                style="width: 162px;height:35px; "
+                class="q-ml-md  "
+              ></q-select>
 
-          <q-btn
-            label="View Details"
-            color="primary"
-            no-caps
-            rounded
-            @click="viewDetails"
-            class="q-mt-lg q-ml-md"
-          />
-        </div>
-
-        <div class="flex-item">
-          <img src="/assets/image1.png" alt="Image" class="image-right" />
-        </div>
-      </div>
-      <div class="q-pa-md items-start">
+              <q-btn
+                label="View Details"
+                color="primary"
+                no-caps
+                rounded
+                @click="viewDetails"
+                class="q-mt-lg q-ml-md"
+                style="width:137px;"
+              />
+            </div>
+ <div class="flex-item image-container">
+              <img src="/assets/image1.png" alt="Image" class="image-right"/>
+            </div>
+          </div>
+      <div class="q-pa-md q-mt-sm items-start">
         <q-btn-group rounded style="justify-content: center">
           <q-btn
             color="grey-4"
@@ -62,13 +66,14 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
+
         "
       >
         <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5"
           >Draft and Pending reports</q-item-label
         >
         <div class="q-pa-md">
-          <q-btn-dropdown size="12px" label="Filter">
+          <q-btn-dropdown size="12px" flat label="Filter">
             <q-list>
               <q-item clickable v-close-popup @click="onItemClick">
                 <q-item-section>
@@ -86,20 +91,22 @@
         </div>
       </div>
       <div
-        class="rounded-box q-pt-sm q-pa-md q-gutter-sm"
+        class="rounded-box  q-pa-md q-gutter-sm"
         v-for="(item, index) in completedReports"
         :key="index"
       >
         <q-list
+        fullwidth
           bordered
           padding
           dense
           class="rounded-borders"
           style="
-            max-width: 768px;
+
             display: flex;
             align-items: center;
             height: 66.281px;
+             margin-top: -10px;
           "
         >
           <q-img
@@ -202,7 +209,7 @@ export default {
     setTimeout(() => {
       this.flag = true;
       this.fetchCompletedReports();
-    }, 3000);
+    }, 1000);
   },
   data() {
     return {
@@ -253,8 +260,7 @@ export default {
 .flex-item {
   flex: 1;
   margin-right: 20px;
-  margin-top: 40px;
-  margin-left: 20px;
+margin-top: 10px;
 }
 .image-right {
   width: 187.041px;
@@ -271,23 +277,23 @@ export default {
 }
 
 .rounded-list-subtitle {
-  color: red; /* Set the desired color for subtitles */
+  color: red; 
 }
 .rounded-list-subtitle2 {
-  color: rgb(72, 43, 150); /* Set the desired color for subtitles */
+  color: rgb(72, 43, 150);
 }
 .rounded-box {
-  border-radius: 12px; /* Set the desired border radius for the entire box */
-  overflow: hidden; /* Hide overflow content */
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .rounded-borders {
-  border-radius: 12px; /* Set the desired border radius for the list */
-  overflow: hidden; /* Hide overflow content */
+  border-radius: 12px;
+  margin-top: -10px;
 }
 
 .q-pt-sm {
-  padding-top: 15px; /* Set the desired top padding for the first structure */
+  padding-top: 15px;
 }
 
 .q-pa-md.items-start {

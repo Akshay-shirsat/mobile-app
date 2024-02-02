@@ -13,6 +13,7 @@
       </div>
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-black">
+          <q-btn flat round dense icon="arrow_back" @click="goBack" />
           <q-toolbar-title class="q-ml-md">
             Odometer
           </q-toolbar-title>
@@ -24,7 +25,42 @@
         color="grey-5"
         >Odometer</q-item-label
       >
-<QuestionCard v-for="(question, index) in questions" :key="index" :question="question" />
+ <div class="q-pa-md" fullwidth>
+        <q-list bordered class="rounded-borders">
+          <q-expansion-item
+            expand-separator
+            label="Please enter current mileage of vehicle"
+            style="background-color: white"
+          >
+            <q-card>
+              <q-card-section>
+                 <div
+        class="q-pa-md"
+        style="display: flex; justify-content: center; gap: 10px"
+      >
+        <q-select
+          outlined
+          dense
+          v-model="selectedOption"
+          :options="dropdownOptions"
+          label="Miles"
+          style="width: 150px; margin-left: 10px"
+        ></q-select>
+
+        <q-select
+          outlined
+          dense
+          v-model="selectedOption"
+          :options="dropdownOptions"
+          label="100"
+          style="width: 150px; margin-left: 10px"
+        ></q-select>
+      </div>
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+        </q-list>
+      </div>
 
   <div style="display: flex; justify-content: center; bottom: 110px; position: fixed; z-index: 999; padding: 10px; width: 100%; box-sizing: border-box;">
         <q-btn
@@ -47,13 +83,11 @@
   </q-page>
 </template>
 <script>
-import QuestionCard from './QuestionCard.vue';
+
 import { ref } from "vue";
 
 export default {
-  components: {
-    QuestionCard,
-  },
+
   data() {
     return {
       progress: ref(0.65),
@@ -62,7 +96,7 @@ export default {
           label: "Council vehicle licence plate(s) clearly displayed and not obsured? *",
           options: ["Yes", "No", "N/A"],
         },
-        // Add more questions as needed
+
       ],
     };
   },
@@ -71,14 +105,17 @@ export default {
       this.$refs.fileInput.click();
     },
     handleFileUpload(event) {
-      // Handle file upload logic here
+
       const file = event.target.files[0];
       console.log("Selected file:", file);
-      // You can perform further actions with the selected file
+
     },
     randomize() {
       this.progress = Math.random();
     },
+    goBack() {
+this.$router.go(-1);
+  },
   },
 };
 </script>

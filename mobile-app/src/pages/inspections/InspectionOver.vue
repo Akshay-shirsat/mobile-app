@@ -3,6 +3,7 @@
     <div v-if="flag">
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-primary">
+          <q-btn flat round dense icon="arrow_back" @click="goBack" />
           <q-toolbar-title class="q-ml-md"> Inspection </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
@@ -50,379 +51,390 @@
           >
         </div>
       </div>
-      <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
-        <q-list
-          rounded
-          padding
-          dense
-          class="rounded-borders; bg-grey-2"
-          style="
-            max-width: 768px;
-            display: flex;
-            align-items: center;
-            height: 66.281px;
-          "
-        >
-          <q-img
-            class="q-mr-sm"
-            src="/assets/Rectangle_186.png"
-            alt="Image description"
-            width="6px"
-            height="55px"
-          />
-          <q-item clickable v-ripple style="flex-grow: 1">
-            <q-item-section>
-              <q-item-label
-                class="rounded-list-subtitle2 text-left text-weight-medium"
-                >Council Requirement</q-item-label
-              >
-            </q-item-section>
+      <q-scroll-area style="height: 900px">
+        <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
+          <q-list
+            fullwidth
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+              margin-top: -10px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Council Requirement</q-item-label
+                >
+              </q-item-section>
 
-            <q-item-section side>
-              <q-btn
-                class="q-mr-sm"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-4"
-                size="sm"
-              />
-            </q-item-section>
-          </q-item>
-        </q-list>
-      </div>
-      <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-        <q-list
-          rounded
-          padding
-          dense
-          class="rounded-borders; bg-grey-2"
-          style="
-            max-width: 768px;
-            display: flex;
-            align-items: center;
-            height: 66.281px;
-          "
-        >
-          <q-img
-            class="q-mr-sm"
-            src="/assets/Rectangle_186.png"
-            alt="Image description"
-            width="6px"
-            height="55px"
-          />
-          <q-item clickable v-ripple style="flex-grow: 1">
-            <q-item-section>
-              <q-item-label
-                class="rounded-list-subtitle2 text-left text-weight-medium"
-                >Interior Check</q-item-label
-              >
-            </q-item-section>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            fullwidth
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+              margin-top: -10px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Interior Check</q-item-label
+                >
+              </q-item-section>
 
-            <!-- <q-item-label class="text-right q-ml-xl">0/7</q-item-label> -->
+              <!-- <q-item-label class="text-right q-ml-xl">0/7</q-item-label> -->
 
-            <q-item-section side>
-              <q-btn
-                class="q-mr-sm"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-4"
-                size="sm"
-              />
-            </q-item-section>
-          </q-item>
-        </q-list>
-      </div>
-      <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-        <q-list
-          rounded
-          padding
-          dense
-          class="rounded-borders; bg-grey-2"
-          style="
-            max-width: 768px;
-            display: flex;
-            align-items: center;
-            height: 66.281px;
-          "
-        >
-          <q-img
-            class="q-mr-sm"
-            src="/assets/Rectangle_186.png"
-            alt="Image description"
-            width="6px"
-            height="55px"
-          />
-          <q-item clickable v-ripple style="flex-grow: 1">
-            <q-item-section>
-              <q-item-label
-                class="rounded-list-subtitle2 text-left text-weight-medium"
-                >Engine Fluid Level</q-item-label
-              >
-            </q-item-section>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            fullwidth
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+              margin-top: -10px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Engine Fluid Level</q-item-label
+                >
+              </q-item-section>
 
-            <q-item-section side>
-              <q-btn
-                class="q-mr-sm"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-4"
-                size="sm"
-              />
-            </q-item-section>
-          </q-item>
-        </q-list>
-      </div>
-      <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-        <q-list
-          rounded
-          padding
-          dense
-          class="rounded-borders; bg-grey-2"
-          style="
-            max-width: 768px;
-            display: flex;
-            align-items: center;
-            height: 66.281px;
-          "
-        >
-          <q-img
-            class="q-mr-sm"
-            src="/assets/Rectangle_186.png"
-            alt="Image description"
-            width="6px"
-            height="55px"
-          />
-          <q-item clickable v-ripple style="flex-grow: 1">
-            <q-item-section>
-              <q-item-label
-                class="rounded-list-subtitle2 text-left text-weight-medium"
-                >Lightning Check
-              </q-item-label>
-            </q-item-section>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            fullwidth
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+              margin-top: -10px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Lightning Check
+                </q-item-label>
+              </q-item-section>
 
-            <q-item-section side>
-              <q-btn
-                class="q-mr-sm"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-4"
-                size="sm"
-              />
-            </q-item-section>
-          </q-item>
-        </q-list>
-      </div>
-      <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-        <q-list
-          rounded
-          padding
-          dense
-          class="rounded-borders; bg-grey-2"
-          style="
-            max-width: 768px;
-            display: flex;
-            align-items: center;
-            height: 66.281px;
-          "
-        >
-          <q-img
-            class="q-mr-sm"
-            src="/assets/Rectangle_186.png"
-            alt="Image description"
-            width="6px"
-            height="55px"
-          />
-          <q-item clickable v-ripple style="flex-grow: 1">
-            <q-item-section>
-              <q-item-label
-                class="rounded-list-subtitle2 text-left text-weight-medium"
-                >Wiper and washer</q-item-label
-              >
-            </q-item-section>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            fullwidth
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+              margin-top: -10px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Wiper and washer</q-item-label
+                >
+              </q-item-section>
 
-            <q-item-section side>
-              <q-btn
-                class="q-mr-sm"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-4"
-                size="sm"
-              />
-            </q-item-section>
-          </q-item>
-        </q-list>
-      </div>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
 
-      <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-        <q-list
-          rounded
-          padding
-          dense
-          class="rounded-borders; bg-grey-2"
-          style="
-            max-width: 768px;
-            display: flex;
-            align-items: center;
-            height: 66.281px;
-          "
-        >
-          <q-img
-            class="q-mr-sm"
-            src="/assets/Rectangle_186.png"
-            alt="Image description"
-            width="6px"
-            height="55px"
-          />
-          <q-item clickable v-ripple style="flex-grow: 1">
-            <q-item-section>
-              <q-item-label
-                class="rounded-list-subtitle2 text-left text-weight-medium"
-                >Completed</q-item-label
-              >
-            </q-item-section>
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            fullwidth
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+              margin-top: -10px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Completed</q-item-label
+                >
+              </q-item-section>
 
-            <q-item-section side>
-              <q-btn
-                class="q-mr-sm"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-4"
-                size="sm"
-              />
-            </q-item-section>
-          </q-item>
-        </q-list>
-      </div>
-      <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-        <q-list
-          rounded
-          padding
-          dense
-          class="rounded-borders; bg-grey-2"
-          style="
-            max-width: 768px;
-            display: flex;
-            align-items: center;
-            height: 66.281px;
-          "
-        >
-          <q-img
-            class="q-mr-sm"
-            src="/assets/Rectangle_186.png"
-            alt="Image description"
-            width="6px"
-            height="55px"
-          />
-          <q-item clickable v-ripple style="flex-grow: 1">
-            <q-item-section>
-              <q-item-label
-                class="rounded-list-subtitle2 text-left text-weight-medium"
-                >Wiper and washer</q-item-label
-              >
-            </q-item-section>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            fullwidth
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+              margin-top: -10px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Wiper and washer</q-item-label
+                >
+              </q-item-section>
 
-            <q-item-section side>
-              <q-btn
-                class="q-mr-sm"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-4"
-                size="sm"
-              />
-            </q-item-section>
-          </q-item>
-        </q-list>
-      </div>
-      <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-        <q-list
-          rounded
-          padding
-          dense
-          class="rounded-borders; bg-grey-2"
-          style="
-            max-width: 768px;
-            display: flex;
-            align-items: center;
-            height: 66.281px;
-          "
-        >
-          <q-img
-            class="q-mr-sm"
-            src="/assets/Rectangle_186.png"
-            alt="Image description"
-            width="6px"
-            height="55px"
-          />
-          <q-item clickable v-ripple style="flex-grow: 1">
-            <q-item-section>
-              <q-item-label
-                class="rounded-list-subtitle2 text-left text-weight-medium"
-                >Wiper and washer</q-item-label
-              >
-            </q-item-section>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            fullwidth
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+              margin-top: -10px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Wiper and washer</q-item-label
+                >
+              </q-item-section>
 
-            <q-item-section side>
-              <q-btn
-                class="q-mr-sm"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-4"
-                size="sm"
-              />
-            </q-item-section>
-          </q-item>
-        </q-list>
-      </div>
-      <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-        <q-list
-          rounded
-          padding
-          dense
-          class="rounded-borders; bg-grey-2"
-          style="
-            max-width: 768px;
-            display: flex;
-            align-items: center;
-            height: 66.281px;
-          "
-        >
-          <q-img
-            class="q-mr-sm"
-            src="/assets/Rectangle_186.png"
-            alt="Image description"
-            width="6px"
-            height="55px"
-          />
-          <q-item clickable v-ripple style="flex-grow: 1">
-            <q-item-section>
-              <q-item-label
-                class="rounded-list-subtitle2 text-left text-weight-medium"
-                >Wiper and washer</q-item-label
-              >
-            </q-item-section>
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <q-list
+            fullwidth
+            rounded
+            padding
+            dense
+            class="rounded-borders; bg-grey-2"
+            style="
+              display: flex;
+              align-items: center;
+              height: 66.281px;
+              margin-top: -10px;
+            "
+          >
+            <q-img
+              class="q-mr-sm"
+              src="/assets/Rectangle_186.png"
+              alt="Image description"
+              width="6px"
+              height="55px"
+            />
+            <q-item clickable v-ripple style="flex-grow: 1">
+              <q-item-section>
+                <q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  >Wiper and washer</q-item-label
+                >
+              </q-item-section>
 
-            <q-item-section side>
-              <q-btn
-                class="q-mr-sm"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-4"
-                size="sm"
-              />
-            </q-item-section>
-          </q-item>
-        </q-list>
-      </div>
-         <div
+              <q-item-section side>
+                <q-btn
+                  class="q-mr-sm"
+                  text-color="black"
+                  round
+                  icon="keyboard_arrow_right"
+                  color="grey-4"
+                  size="sm"
+                />
+              </q-item-section>
+            </q-item>
+          </q-list>
+        </div>
+      </q-scroll-area>
+      <div
         style="
           display: flex;
           justify-content: center;
@@ -436,7 +448,6 @@
       >
         <div style="display: flex; gap: 10px">
           <q-btn
-          
             rounded
             label="Start"
             color="primary"
@@ -470,12 +481,14 @@ export default {
   },
   created() {
     setTimeout(() => {
-      // Code to be executed after the specified delay
       this.flag = true;
     }, 5000);
   },
   methods: {
     viewDetails() {},
+    goBack() {
+      this.$router.go(-1);
+    },
   },
 };
 </script>
@@ -489,16 +502,7 @@ export default {
   font-weight: 500;
   margin-bottom: 8px;
 }
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-}
-.flex-item {
-  flex: 1;
-  margin-right: 20px;
-  margin-left: 10px;
-  margin-top: 40px;
-}
+
 .image-right {
   width: 187.041px;
   height: 111.807px;
@@ -509,6 +513,7 @@ export default {
 }
 .top-section {
   margin-top: -35px;
+  margin-left: 10px;
 }
 
 .quick-actions-section {

@@ -13,18 +13,21 @@
       </div>
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-black">
+          <q-btn flat round dense icon="arrow_back" @click="goBack" />
           <q-toolbar-title class="q-ml-md"> InsuranceDetails </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
-      <q-item-label
-        class="q-pt-md q-ml-lg "
-        color="grey-5"
+      <q-item-label class="q-pt-md q-ml-lg" color="grey-5"
         >Accident report overview
       </q-item-label>
       <div class="q-pa-md" fullwidth>
         <q-list bordered class="rounded-borders">
-          <q-expansion-item expand-separator label="Insurence Details" style="background-color:white">
+          <q-expansion-item
+            expand-separator
+            label="Insurence Details"
+            style="background-color: white"
+          >
             <q-card>
               <q-card-section>
                 <div><q-label>1st Driver Information</q-label></div>
@@ -125,9 +128,9 @@ export default {
         {
           label: "Add Location",
           sections: [
-            // Customize the sections for the "Add Location" question card
+
             {
-              type: "text", // Assuming you have a text input for the address
+              type: "text",
               label: "Address",
             },
           ],
@@ -140,13 +143,14 @@ export default {
       this.$refs.fileInput.click();
     },
     handleFileUpload(event) {
-      // Handle file upload logic here
       const file = event.target.files[0];
       console.log("Selected file:", file);
-      // You can perform further actions with the selected file
     },
     randomize() {
       this.progress = Math.random();
+    },
+    goBack() {
+      this.$router.go(-1);
     },
   },
 };

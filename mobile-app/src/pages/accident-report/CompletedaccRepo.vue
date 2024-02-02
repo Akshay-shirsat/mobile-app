@@ -4,6 +4,7 @@
 
       <q-header elevated class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-primary">
+          <q-btn flat round dense icon="arrow_back" @click="goBack" />
           <q-toolbar-title class="q-ml-sm" style="color: black">
             Accident Report
           </q-toolbar-title>
@@ -107,6 +108,9 @@ export default {
   },
   methods: {
     viewDetails() {},
+    goBack() {
+this.$router.go(-1);
+  },
     fetchCompletedReports() {
       const dynamicData = [
         {

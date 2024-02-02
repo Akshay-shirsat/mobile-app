@@ -13,6 +13,7 @@
       </div>
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-black">
+          <q-btn flat round dense icon="arrow_back" @click="goBackk" />
           <q-toolbar-title class="q-ml-md"> Date, Time and Location </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
@@ -87,6 +88,7 @@ export default {
     };
   },
   methods: {
+
     randomize() {
       this.progress = Math.random();
     },
@@ -96,6 +98,9 @@ export default {
     goNext() {
       // Implement goNext method if needed
     },
+    goBackk() {
+this.$router.go(-1);
+  },
   },
 };
 </script>

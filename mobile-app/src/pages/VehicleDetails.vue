@@ -3,6 +3,7 @@
     <div v-if="flag">
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-primary">
+          <q-btn flat round dense icon="arrow_back" @click="goBack" />
           <q-toolbar-title class="q-ml-md"> Vehicle Details </q-toolbar-title>
 
           <div>
@@ -315,6 +316,9 @@ export default {
   },
   methods: {
     viewDetails() {},
+    goBack() {
+this.$router.go(-1);
+  },
   },
 };
 </script>

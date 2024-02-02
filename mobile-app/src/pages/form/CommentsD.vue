@@ -13,6 +13,7 @@
       </div>
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-black">
+          <q-btn flat round dense icon="arrow_back" @click="goBack" />
           <q-toolbar-title class="q-ml-md"> Comments </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
@@ -102,6 +103,9 @@ export default {
     randomize() {
       this.progress = Math.random();
     },
+    goBack() {
+this.$router.go(-1);
+  },
   },
 };
 </script>
