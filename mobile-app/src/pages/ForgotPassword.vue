@@ -29,7 +29,7 @@
       />
 
       <!-- Back to Login link -->
-      <router-link to="/login" class="back-to-login q-mt-md">
+      <router-link to="/" class="back-to-login q-mt-md">
         Back to Login
       </router-link>
     </div>

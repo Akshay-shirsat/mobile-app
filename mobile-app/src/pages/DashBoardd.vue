@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <div>
-      <q-header elevated>
+      <q-header  class="bg-white text-primary">
 <q-bar style="background-color:white; height:45px">
           <q-toolbar-title style="margin-left:10px; color:black">
             Good Morning Akshay!
@@ -20,7 +20,10 @@
       </q-header>
           <div class="flex-container">
             <div class="flex-item ">
-              <div class="text-h6 q-ml-md q-mt-sm">Selected Vehicle</div>
+                <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"
+          >Selected Vehicle
+ </q-item-label
+        >
 
               <q-select
                 outlined
@@ -28,8 +31,8 @@
                 v-model="selectedOption"
                 :options="dropdownOptions"
                 label="Select an option"
-                style="width: 150px; margin-left: 10px"
-                class="no-border"
+                style="width: 162px;height:35px; "
+                class="q-ml-md  "
               ></q-select>
 
               <q-btn
@@ -39,6 +42,7 @@
                 rounded
                 @click="viewDetails"
                 class="q-mt-lg q-ml-md"
+                style="width:137px;"
               />
             </div>
 
@@ -46,30 +50,31 @@
               <img src="/assets/image1.png" alt="Image" class="image-right" />
             </div>
           </div>
-          <q-row class="three-columns-section">
-            
-            <q-col v-for="(icon, index) in icons" :key="index" cols="12" md="4" class="q-flex q-flex-center q-flex-column text-center q-ma-md">
+           <q-item-label class="q-pa-md q-ml-sm text-weight-medium" color="grey-5"
+          >Quick Actions</q-item-label
+        >
+          <q-row class="three-columns-section q-pa-md" >
+            <q-col v-for="(icon, index) in icons" :key="index" cols="12" md="4" class="q-flex q-flex-center q-flex-column text-center ">
               <router-link :to="{ name: icon.route }">
               <q-icon
                 :class="['custom-icon', 'icon' + (index + 1),]"
               ></q-icon>
               </router-link>
               <div class="name">{{ icon.name }}</div>
-               
+
             </q-col>
           </q-row>
-          <div class="quick-actions-section">
-            <div class="text-h6 q-ml-md">Quick Actions</div>
-          </div>
+ <q-item-label class="q-pa-sm q-ml-md text-weight-medium"
+          >Need Your Attention</q-item-label
+        >
           <div class="q-pa-sm q-gutter-md">
-            <q-list bordered padding class="text-left" fullwidth>
+            <q-list fullwidth>
               <q-item clickable v-ripple>
                 <q-item-section avatar top>
                   <q-avatar
                     square
                     color="grey-4"
                     text-color="white"
-                    class="q-ml-sm"
                   >
                     <img src="/assets/horizontal.png" class="q-py-sm q-px-sm" />
                   </q-avatar>
@@ -86,7 +91,6 @@
 
                 <q-item-section side>
                   <q-btn
-                    class="q-mr-sm"
                     text-color="black"
                     round
                     icon="keyboard_arrow_right"
@@ -102,7 +106,7 @@
                     square
                     color="grey-4"
                     text-color="white"
-                    class="q-ml-sm"
+
                   >
                     <img src="/assets/security.png" class="q-py-sm q-px-sm" />
                   </q-avatar>
@@ -119,7 +123,7 @@
 
                 <q-item-section side>
                   <q-btn
-                    class="q-mr-sm"
+
                     text-color="black"
                     round
                     icon="keyboard_arrow_right"
@@ -135,7 +139,7 @@
                     square
                     color="grey-4"
                     text-color="white"
-                    class="q-ml-sm"
+
                   >
                     <img
                       src="/assets/certificate.png"
@@ -155,7 +159,6 @@
 
                 <q-item-section side>
                   <q-btn
-                    class="q-mr-sm"
                     text-color="black"
                     round
                     icon="keyboard_arrow_right"
@@ -187,7 +190,7 @@ export default {
         { name: "Start Inspection",route: "inspectionCar" },
         { name: "Accident Report",route:"Accident" },
         { name: "Log Miles",route:"logMile" },
-        // Add more icons if needed
+
       ],
     };
   },
@@ -198,16 +201,8 @@ export default {
 </script>
 
 <style scoped>
-.no-border .q-field__bottom {
-  display: none;
-}
-.q-toolbar-title {
-  font-size: 18px;
-}
-.text-h6 {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 8px;
+.image-right{
+  margin-right: 10px;
 }
 .flex-container {
   display: flex;
@@ -216,31 +211,19 @@ export default {
 .flex-item {
   flex: 1;
   margin-right: 20px;
+margin-top: 10px;
 }
-.image-right {
-  width: 187.041px;
-  height: 111.807px;
-  flex-shrink: 0;
-}
+
 .title-container {
   margin-left: 10px;
-}
-
-
-.quick-actions-section {
-  margin-top: 20px;
 }
 
 .three-columns-section {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
+  gap: 10px;
 }
 
-.column {
-  flex: 1;
-  text-align: center;
-}
 
 .icon {
   font-size: 24px;
@@ -277,28 +260,7 @@ export default {
 .icon3 {
   background-image: url("/assets/vectorr.png");
 }
-.row-structure {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
 
-.row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #ddd;
-  padding: 10px 0;
-}
-
-.details {
-  flex-grow: 1;
-  margin-left: 10px;
-}
-
-q-btn {
-  margin-left: 10px;
-}
 .icon11 {
   background-image: url("/assets/horizontal.png");
 }

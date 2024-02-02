@@ -59,7 +59,7 @@
         label="Login"
         @click="handleLogin"
         class="login-button q-px-lg q-py-sm q-mt-xl rounded-button"
-        to="/dashboardd"
+        to="/dashboard"
       />
 
 
@@ -119,7 +119,7 @@ export default {
 
 .input-field {
   width: 100%;
-  max-width: 320px;
+  max-width: 420px;
   margin-top: 16px;
 }
 
@@ -130,7 +130,7 @@ export default {
 
 .login-button {
   margin-top: 56px;
-  width: 215px;
+  width: 265px;
   height: auto;
 }
 
@@ -172,7 +172,7 @@ export default {
 }
 .rounded-button {
   border-radius: 16px;
-  width: 200px;
+  width: 265px;
   height: 45px;
 }
 .logo-section {
