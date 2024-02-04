@@ -47,6 +47,7 @@
             no-caps
             label="Pending"
             class="btngroup"
+            to="/inspectionCar"
           />
           <q-btn
             color="grey-4"
@@ -55,6 +56,7 @@
             no-caps
             label="Completed"
             class="btngroup"
+            to="/inspectionComp"
           />
         </q-btn-group>
       </div>
@@ -69,15 +71,15 @@
           >Completed and Pending reports</q-item-label
         >
         <div class="q-pa-md">
-          <q-btn-dropdown size="12px" label="Filter" flat>
+          <q-btn-dropdown size="12px" flat label="Filter">
             <q-list>
-              <q-item clickable v-close-popup @click="onItemClick">
+              <q-item clickable v-close-popup to="/inspectionDraft" >
                 <q-item-section>
-                  <q-item-label>Draft</q-item-label>
+                  <q-item-label >Draft</q-item-label>
                 </q-item-section>
               </q-item>
 
-              <q-item clickable v-close-popup @click="onItemClick">
+              <q-item clickable v-close-popup to="/inspectionComp">
                 <q-item-section>
                   <q-item-label>Completed</q-item-label>
                 </q-item-section>

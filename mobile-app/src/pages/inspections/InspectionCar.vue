@@ -6,41 +6,38 @@
           <q-toolbar-title class="q-ml-md"> Inspection </q-toolbar-title>
 
           <q-btn flat round dense icon="more_vert" />
-
         </q-bar>
-
       </q-header>
-   <div class="flex-container">
-            <div class="flex-item ">
-                <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"
-          >Selected Vehicle
- </q-item-label
-        >
+      <div class="flex-container">
+        <div class="flex-item">
+          <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"
+            >Selected Vehicle
+          </q-item-label>
 
-              <q-select
-                outlined
-                dense
-                v-model="selectedOption"
-                :options="dropdownOptions"
-                label="Select an option"
-                style="width: 162px;height:35px; "
-                class="q-ml-md  "
-              ></q-select>
+          <q-select
+            outlined
+            dense
+            v-model="selectedOption"
+            :options="dropdownOptions"
+            label="Select an option"
+            style="width: 162px; height: 35px"
+            class="q-ml-md"
+          ></q-select>
 
-              <q-btn
-                label="View Details"
-                color="primary"
-                no-caps
-                rounded
-                @click="viewDetails"
-                class="q-mt-lg q-ml-md"
-                style="width:137px;"
-              />
-            </div>
- <div class="flex-item image-container">
-              <img src="/assets/image1.png" alt="Image" class="image-right"/>
-            </div>
-          </div>
+          <q-btn
+            label="View Details"
+            color="primary"
+            no-caps
+            rounded
+            @click="viewDetails"
+            class="q-mt-lg q-ml-md"
+            style="width: 137px"
+          />
+        </div>
+        <div class="flex-item image-container">
+          <img src="/assets/image1.png" alt="Image" class="image-right" />
+        </div>
+      </div>
       <div class="q-pa-md q-mt-sm items-start">
         <q-btn-group rounded style="justify-content: center">
           <q-btn
@@ -50,6 +47,7 @@
             no-caps
             label="Pending"
             class="btngroup"
+            to="/inspectionCar"
           />
           <q-btn
             color="white"
@@ -58,6 +56,7 @@
             no-caps
             label="Completed"
             class="btngroup"
+            to="/inspectionComp"
           />
         </q-btn-group>
       </div>
@@ -66,7 +65,6 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
-
         "
       >
         <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5"
@@ -75,13 +73,13 @@
         <div class="q-pa-md">
           <q-btn-dropdown size="12px" flat label="Filter">
             <q-list>
-              <q-item clickable v-close-popup @click="onItemClick">
+              <q-item clickable v-close-popup to="/inspectionDraft" >
                 <q-item-section>
-                  <q-item-label>Draft</q-item-label>
+                  <q-item-label >Draft</q-item-label>
                 </q-item-section>
               </q-item>
 
-              <q-item clickable v-close-popup @click="onItemClick">
+              <q-item clickable v-close-popup to="/inspectionComp">
                 <q-item-section>
                   <q-item-label>Completed</q-item-label>
                 </q-item-section>
@@ -91,22 +89,21 @@
         </div>
       </div>
       <div
-        class="rounded-box  q-pa-md q-gutter-sm"
+        class="rounded-box q-pa-md q-gutter-sm"
         v-for="(item, index) in completedReports"
         :key="index"
       >
         <q-list
-        fullwidth
+          fullwidth
           bordered
           padding
           dense
           class="rounded-borders"
           style="
-
             display: flex;
             align-items: center;
             height: 66.281px;
-             margin-top: -10px;
+            margin-top: -10px;
           "
         >
           <q-img
@@ -204,7 +201,6 @@
 import SkelDraft from "../../components/skeleton/SkelDrafts.vue";
 
 export default {
-
   created() {
     setTimeout(() => {
       this.flag = true;
@@ -248,11 +244,6 @@ export default {
 </script>
 
 <style scoped>
-.text-h6 {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
 .flex-container {
   display: flex;
   justify-content: space-between;
@@ -260,7 +251,7 @@ export default {
 .flex-item {
   flex: 1;
   margin-right: 20px;
-margin-top: 10px;
+  margin-top: 10px;
 }
 .image-right {
   width: 187.041px;
@@ -268,16 +259,13 @@ margin-top: 10px;
   flex-shrink: 0;
 }
 
-.top-section {
-  margin-top: -35px;
-}
 
 .btngroup {
   width: 170px;
 }
 
 .rounded-list-subtitle {
-  color: red; 
+  color: red;
 }
 .rounded-list-subtitle2 {
   color: rgb(72, 43, 150);

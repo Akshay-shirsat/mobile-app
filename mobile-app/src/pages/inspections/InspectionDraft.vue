@@ -47,6 +47,7 @@
             no-caps
             label="Pending"
             class="btngroup"
+            to="/inspectionCar"
           />
           <q-btn
             color="white"
@@ -55,6 +56,7 @@
             no-caps
             label="Completed"
             class="btngroup"
+            to="/inspectionComp"
           />
         </q-btn-group>
       </div>
@@ -69,15 +71,15 @@
           >Draft and Pending reports</q-item-label
         >
         <div class="q-pa-md">
-          <q-btn-dropdown size="12px" label="Filter" flat>
+          <q-btn-dropdown size="12px" flat label="Filter">
             <q-list>
-              <q-item clickable v-close-popup @click="onItemClick">
+              <q-item clickable v-close-popup to="/inspectionDraft" >
                 <q-item-section>
-                  <q-item-label>Draft</q-item-label>
+                  <q-item-label >Draft</q-item-label>
                 </q-item-section>
               </q-item>
 
-              <q-item clickable v-close-popup @click="onItemClick">
+              <q-item clickable v-close-popup to="/inspectionComp">
                 <q-item-section>
                   <q-item-label>Completed</q-item-label>
                 </q-item-section>
@@ -206,115 +208,24 @@ this.completedReports = dynamicData;
 
 <style scoped>
 
-.text-h6 {
-  font-size: 16px;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
+
 
 .image-right {
   width: 187.041px;
   height: 111.807px;
   flex-shrink: 0;
 }
-.title-container {
-  margin-left: 10px;
-}
-.top-section {
-  margin-top: -35px;
-}
 
-.quick-actions-section {
-  margin-top: 20px;
-}
-
-.column {
-  flex: 1;
-  text-align: center;
-}
-
-.icon {
-  font-size: 24px;
-  margin-bottom: 8px;
-}
-
-.name {
-  color: #000;
-  text-align: center;
-  font-family: DM Sans;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 22px;
-}
-.custom-icon {
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: inline-block;
-  margin-bottom: 8px;
-}
-
-.icon1 {
-  background-image: url("/assets/calendar--tools.png");
-}
-
-.icon2 {
-  background-image: url("/assets/vector.png");
-}
-
-.icon3 {
-  background-image: url("/assets/vectorr.png");
-}
-.row-structure {
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-}
-
-.details {
-  flex-grow: 1;
-  margin-left: 10px;
-}
 
 q-btn {
   margin-left: 10px;
 }
-.icon11 {
-  background-image: url("/assets/horizontal.png");
-}
 
-.icon12 {
-  background-image: url("/assets/security.png");
-}
-
-.icon13 {
-  background-image: url("/assets/certificate.png");
-}
-.subtitle {
-  color: red;
-}
-.q-ml-xl {
-  margin-left: 1.5rem;
-}
 .btngroup {
   width: 170px;
 }
-.rounded-list-container {
-  border-radius: 12px;
-  border: 2px solid red;
-  overflow: hidden;
-}
 
-.rounded-list-title {
-  font-weight: bold;
-}
 
-.rounded-list-subtitle {
-  color: red;
-}
 .rounded-list-subtitle2 {
   color: rgb(72, 43, 150);
 }
@@ -329,10 +240,6 @@ q-btn {
 }
 .q-pt-sm {
   padding-top: 15px;
-}
-
-.q-pt-xs {
-  padding-top: 2px;
 }
 .q-pa-md.items-start {
   display: flex;
