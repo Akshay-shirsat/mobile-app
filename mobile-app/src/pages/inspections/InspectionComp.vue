@@ -37,6 +37,7 @@
           <img src="/assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>
+      <q-separator class="q-mt-md"/>
       <div class="q-pa-md q-mt-sm items-start">
         <q-btn-group rounded style="justify-content: center">
           <q-btn
@@ -97,7 +98,7 @@
           rounded
           padding
           dense
-          class="rounded-borders bg-grey-2"
+          class="rounded-borders bg-light-green-1"
           style="
             display: flex;
             align-items: center;
@@ -132,7 +133,7 @@
                 text-color="black"
                 round
                 icon="keyboard_arrow_right"
-                color="grey-4"
+                color="light-green-2"
                 size="sm"
               />
             </q-item-section>

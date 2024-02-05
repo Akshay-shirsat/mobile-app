@@ -104,7 +104,7 @@ export default {
 
   data() {
     return {
-      progress: ref(0.65),
+       progress: 0.77,
       questions: [
         {
           label: "Council vehicle licence plate(s) clearly displayed and not obsured? *",

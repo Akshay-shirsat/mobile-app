@@ -74,7 +74,7 @@ export default {
   },
   data() {
     return {
-      progress: ref(0.65),
+       progress: 0.55,
       questions: [
         {
           label:

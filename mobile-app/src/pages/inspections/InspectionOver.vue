@@ -2,16 +2,17 @@
   <q-page>
     <div v-if="flag">
       <q-header class="bg-white text-primary">
-        <q-bar class="q-py-lg bg-white text-primary">
+        <q-bar class="q-py-lg bg-white " >
           <q-btn flat round dense icon="arrow_back" @click="goBack" />
-          <q-toolbar-title class="q-ml-md"> Inspection </q-toolbar-title>
+          <q-toolbar-title class="q-ml-md" style="color:black"> Inspection </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
+       <q-separator />
       <div class="flex-container">
         <div class="flex-item top-section">
           <q-item-section class="text-weight-medium q-mt-xl q-ml-sm">
-            <q-item-label class="text-left">Vehicle Name</q-item-label>
+            <q-item-label class="text-left ">Vehicle Name</q-item-label>
             <q-item-label caption class="text-left text-caption"
               >Maruti suzuki LXI</q-item-label
             >
@@ -34,7 +35,7 @@
           <img src="/assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>
-
+<q-separator />
       <div
         style="
           display: flex;
@@ -438,10 +439,9 @@
         style="
           display: flex;
           justify-content: center;
-
           position: fixed;
           z-index: 999;
-          padding: 10px;
+          padding: 15px;
           width: 100%;
           box-sizing: border-box;
           background-color:white;
@@ -450,11 +450,12 @@
       >
         <div style="display: flex; gap: 10px">
           <q-btn
+          no-caps
             rounded
             label="Start"
             color="primary"
             @click="goNext"
-            style="width: 357px; height: 49px"
+            style="width: 357px; height: 49px; "
             to="/councilReq"
           />
         </div>

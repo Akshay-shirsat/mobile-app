@@ -94,7 +94,7 @@ import { ref } from "vue";
 export default {
   data() {
     return {
-      progress: ref(0.65),
+      progress: 0.44,
       expanded: [],
       questions: [
         {

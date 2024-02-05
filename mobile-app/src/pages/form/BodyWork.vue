@@ -2,14 +2,14 @@
   <q-page style="background-color: #f4f4f4">
     <div class="container">
       <div>
-        <q-linear-progress
-          v-for="size in ['md']"
-          :key="size"
-          :size="size"
-          :value="progress"
-          color="primary"
-          @click="randomize"
-        />
+          <q-linear-progress
+            v-for="size in ['md']"
+            :key="size"
+            :size="size"
+            :value="progress"
+            color="primary"
+            @click="randomize"
+          />
       </div>
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-black">
@@ -72,7 +72,7 @@ export default {
   },
   data() {
     return {
-      progress: ref(0.65),
+       progress: 0.66,
       questions: [
         {
           label:

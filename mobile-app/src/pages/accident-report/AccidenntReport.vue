@@ -73,7 +73,7 @@
           bordered
           padding
           dense
-          class="rounded-borders"
+          class="rounded-borders bg-light-green-1"
           style="
             max-width: 768px;
             display: flex;
@@ -103,11 +103,11 @@
 
             <q-item-section side>
               <q-btn
-                class="q-mr-sm"
+                class="q-mr-sm bg-light-green-2"
                 text-color="black"
                 round
                 icon="keyboard_arrow_right"
-                color="grey-4"
+
                 size="sm"
               />
             </q-item-section>
@@ -123,7 +123,7 @@
           bordered
           padding
           dense
-          class="rounded-borders"
+          class="rounded-borders bg-light-green-1"
           style="
             max-width: 768px;
             display: flex;

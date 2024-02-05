@@ -8,7 +8,7 @@
           :size="size"
           :value="progress"
           color="primary"
-          @click="randomize"
+
         />
       </div>
       <q-header class="bg-white text-primary">
@@ -70,7 +70,8 @@ export default {
   },
   data() {
     return {
-      progress: ref(0.65),
+
+      progress: 0.11,
       questions: [
         {
           label: "Council vehicle licence plate(s) clearly displayed and not obsured? *",
@@ -90,13 +91,17 @@ export default {
       console.log("Selected file:", file);
 
     },
-    randomize() {
-      this.progress = Math.random();
+
     },
     goBack() {
 this.$router.go(-1);
   },
-  },
+  goNext(){
+     if (this.progress < 100) {
+        this.progress += 10;
+      }
+  }
+
 };
 </script>
 <style scoped>

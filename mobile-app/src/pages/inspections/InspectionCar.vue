@@ -38,6 +38,7 @@
           <img src="/assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>
+       <q-separator class="q-mt-md"/>
       <div class="q-pa-md q-mt-sm items-start">
         <q-btn-group rounded style="justify-content: center">
           <q-btn
@@ -60,6 +61,7 @@
           />
         </q-btn-group>
       </div>
+
       <div
         style="
           display: flex;
@@ -78,7 +80,7 @@
             label="Filter"
             icon="filter_list"
           >
-            <q-list>
+            <q-list >
               <q-item clickable v-close-popup to="/inspectionDraft">
                 <q-item-section>
                   <q-item-label>Draft</q-item-label>
@@ -104,7 +106,7 @@
           bordered
           padding
           dense
-          class="rounded-borders"
+          class="rounded-borders bg-red-1"
           style="
             display: flex;
             align-items: center;
@@ -138,7 +140,7 @@
                 text-color="black"
                 round
                 icon="keyboard_arrow_right"
-                color="grey-4"
+                color="bg-red-1"
                 size="sm"
               />
             </q-item-section>
@@ -154,7 +156,7 @@
           bordered
           padding
           dense
-          class="rounded-borders"
+          class="rounded-borders bg-grey-1"
           style="
             max-width: 768px;
             display: flex;
