@@ -12,28 +12,27 @@ const routes = [
 
       { path: '/dashboard',name: 'dashboard', component: () => import('pages/DashBoardd.vue') },
       { path: '/inspectionCar',name: 'inspectionCar', component: () => import('pages/inspections/InspectionCar.vue') },
-
+      { path: '/inspectionOver',name: "inspectionOver", component: () => import('pages/inspections/InspectionOver.vue') },
       { path: '/inspectionDraft',name: 'draft', component: () => import('pages/inspections/InspectionDraft.vue') },
       { path: '/inspectionComp',name: 'completed', component: () => import('pages/inspections/InspectionComp.vue') },
 
 
       { path: '/signupUser', component: () => import('pages/SignupUser.vue') },
       { path: '/vehicleDetails', component: () => import('pages/VehicleDetails.vue') },
-      { path: '/logMiles', name:"logMile" ,component: () => import('../pages/LogMiles.vue') },
+
       { path: '/sosDetails',name: "Emergency", component: () => import('../pages/SosDetails.vue') },
 
 
 
 //accident report
-{ path: '/accidenntReport',name: "Accident", component: () => import('pages/accident-report/AccidenntReport.vue') },
-{ path: '/acciReportOver', component: () => import('pages/accident-report/AcciReportOver.vue') },
-{ path: '/dtLocation', component: () => import('pages/accident-report/DtLocation.vue') },
-{ path: '/collisionDetails', component: () => import('pages/accident-report/CollisionDetails.vue') },
+{ path: '/accidenntReport', component: () => import('pages/accident-report/AccidenntReport.vue') },
+
+
+
 { path: '/continueAcc', component: () => import('pages/accident-report/ContinueAcc.vue') },
 { path: '/completedaccRepo', component: () => import('pages/accident-report/CompletedaccRepo.vue') },
 
-//insurence report
-{ path: '/insuranceDetails', component: () => import('pages/insurence/InsuranceDetails.vue') },
+
 
 //settings
 { path: '/settingPage',name: "setting", component: () => import('pages/settings/SettingPage.vue') },
@@ -46,6 +45,7 @@ const routes = [
       { path: '/', component: () => import('pages/LoginPage.vue') },
       { path: '/ForgotPassword', component: () => import('pages/ForgotPassword.vue') },
       // Checklist form
+
       { path: '/inspectionOver',name: "inspectionOver", component: () => import('pages/inspections/InspectionOver.vue') },
 { path: '/councilReq', component: () => import('pages/form/CouncilReq.vue') },
 { path: '/interiorCheck', component: () => import('pages/form/InteriorCheck.vue') },
@@ -57,7 +57,19 @@ const routes = [
 { path: '/odoMeter', component: () => import('pages/form/OdoMeter.vue') },
 { path: '/commentsD', component: () => import('pages/form/CommentsD.vue') },
 
-      // Add other routes for the default layout as needed
+      // Accident checklist
+      { path: '/acciReportOver',name: "Accident", component: () => import('pages/accident-report/AcciReportOver.vue') },
+      { path: '/dtLocation', component: () => import('pages/accident-report/DtLocation.vue') },
+      { path: '/collisionDetails', component: () => import('pages/accident-report/CollisionDetails.vue') },
+
+
+      //insurence report
+{ path: '/insuranceDetails', component: () => import('pages/insurence/InsuranceDetails.vue') },
+
+
+
+//logmiles
+{ path: '/logMiles', name:"logMile" ,component: () => import('../pages/LogMiles.vue') },
     ]
   },
 

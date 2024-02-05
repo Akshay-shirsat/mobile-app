@@ -30,16 +30,18 @@
         :question="question"
       />
 
-      <div
+        <div
         style="
           display: flex;
           justify-content: center;
-          bottom: 110px;
+
           position: fixed;
           z-index: 999;
           padding: 10px;
           width: 100%;
           box-sizing: border-box;
+          background-color:white;
+          bottom: 0px;
         "
       >
         <q-btn
@@ -56,6 +58,7 @@
           color="primary"
           @click="goNext"
           style="width: 169.224px; height: 49px"
+           to="/insuranceDetails"
         />
       </div>
     </div>
@@ -80,14 +83,12 @@ export default {
         {
           label: "Upload Photos of damage to Vehicle 2",
         },
-        // Add more questions as needed
+
       ],
       newQuestions: [
         {
           title: "Collision Details ",
         },
-
-        // Add more new questions as needed
       ],
     };
   },
@@ -96,10 +97,10 @@ export default {
       this.$refs.fileInput.click();
     },
     handleFileUpload(event) {
-      // Handle file upload logic here
+
       const file = event.target.files[0];
       console.log("Selected file:", file);
-      // You can perform further actions with the selected file
+
     },
     randomize() {
       this.progress = Math.random();

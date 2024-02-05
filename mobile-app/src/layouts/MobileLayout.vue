@@ -41,12 +41,12 @@ export default {
       bottomSheetVisible: true,
       categories: [
         { name: "Dashboard",
-         icon: "/assets/grid.png", 
+         icon: "/assets/grid.png",
          route: "dashboard" },
         {
           name: "Inspection",
           icon: "/assets/calendar--tools.png",
-          route: "inspectionCar",
+          route: "inspectionComp",
         },
         {
           name: "Emergency",

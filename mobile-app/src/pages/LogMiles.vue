@@ -143,16 +143,18 @@
         ></q-select>
       </div>
 
-      <div
+       <div
         style="
           display: flex;
           justify-content: center;
-          bottom: 110px;
+
           position: fixed;
           z-index: 999;
           padding: 10px;
           width: 100%;
           box-sizing: border-box;
+          background-color:white;
+          bottom: 0px;
         "
       >
         <div style="display: flex; gap: 10px">
@@ -249,12 +251,13 @@ export default {
   },
   methods: {
     viewDetails() {},
-  },
-   toggleDarkMode() {
+    toggleDarkMode() {
       this.$q.dark.toggle();
     },
     goBack() {
 this.$router.go(-1);
   },
+  },
+
 };
 </script>

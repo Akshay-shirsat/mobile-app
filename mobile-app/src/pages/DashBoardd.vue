@@ -6,7 +6,7 @@
           <q-toolbar-title style="margin-left:3px; color:black">
             Good Morning Akshay!
           </q-toolbar-title>
-          <dark-mode-toggle />
+          <!-- <dark-mode-toggle /> -->
           <q-btn
             square
             class="outlined-button"
@@ -54,7 +54,7 @@
           >Quick Actions</q-item-label
         >
           <q-row class="three-columns-section q-pa-sm  q-mx-md" >
-            <q-col v-for="(icon, index) in icons" :key="index" cols="12" md="4" class="q-flex q-flex-center q-flex-column text-center ">
+            <q-col v-for="(icon, index) in icons" :key="index" cols="12" md="4" class="q-flex q-flex-center q-flex-column text-center " :rounded="true">
               <router-link :to="{ name: icon.route }">
               <q-icon
                 :class="['custom-icon', 'icon' + (index + 1),]"
@@ -177,11 +177,11 @@
 </template>
 
 <script>
-import DarkModeToggle from "./DarkModeToggle.vue";
+// import DarkModeToggle from "./DarkModeToggle.vue";
 export default {
-  components: {
-    DarkModeToggle,
-  },
+  // components: {
+  //   DarkModeToggle,
+  // },
   data() {
     return {
       selectedOption: null,

@@ -35,7 +35,7 @@
           <q-checkbox
             v-model="keepLoggedIn"
             label="Keep me logged in"
-            class="keep-logged-in-checkbox q-mt-sm text-left q-ml-lg"
+            class="keep-logged-in-checkbox q-mt-sm text-left q-ml-sm q-mr-sm"
           />
         </div>
         <div class="col-md-6 col-xs-6 col-sm-6">
@@ -46,7 +46,7 @@
               no-caps
               color="black"
               label="Forgot Password?"
-              class="forgot-password q-mt-sm text-right"
+              class="forgot-password q-mt-sm"
             />
           </router-link>
         </div>
@@ -123,10 +123,7 @@ export default {
   margin-top: 16px;
 }
 
-.forgot-password {
-  font-size: 14px;
-  color: #3498db;
-}
+
 
 .login-button {
   margin-top: 56px;
@@ -154,7 +151,9 @@ export default {
   width: 200px;
   height: 20px;
   flex-shrink: 0;
-  margin-top: 15%;
+  margin-top: 12%;
+  margin-left: -8px;
+
 }
 .forgot-password {
   font-family: "DM Sans", sans-serif;
@@ -165,6 +164,8 @@ export default {
   height: 20px;
   flex-shrink: 0;
   margin-top: 12%;
+  margin-left: 10px;
+
 }
 .checkbox-link-container {
   display: flex;

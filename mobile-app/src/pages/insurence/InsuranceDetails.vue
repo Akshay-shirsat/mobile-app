@@ -83,16 +83,18 @@
         </q-list>
       </div>
 
-      <div
+<div
         style="
           display: flex;
           justify-content: center;
-          bottom: 110px;
+
           position: fixed;
           z-index: 999;
           padding: 10px;
           width: 100%;
           box-sizing: border-box;
+          background-color:white;
+          bottom: 0px;
         "
       >
         <q-btn
@@ -109,6 +111,7 @@
           color="positive"
           @click="goNext"
           style="width: 233.653px; height: 47px"
+          to="/accidenntReport"
         />
       </div>
     </div>
