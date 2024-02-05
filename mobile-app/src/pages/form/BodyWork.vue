@@ -33,7 +33,8 @@
         style="
           display: flex;
           justify-content: center;
-          bottom: 110px;
+         background-color:white;
+          bottom: 0px;
           position: fixed;
           z-index: 999;
           padding: 10px;
@@ -55,6 +56,7 @@
           color="primary"
           @click="goNext"
           style="width: 169.224px; height: 49px"
+           to="/odoMeter"
         />
       </div>
     </div>

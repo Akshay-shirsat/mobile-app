@@ -35,7 +35,8 @@
         style="
           display: flex;
           justify-content: center;
-          bottom: 110px;
+          background-color:white;
+          bottom: 0px;
           position: fixed;
           z-index: 999;
           padding: 10px;
@@ -57,6 +58,7 @@
           color="positive"
           @click="goNext"
           style="width: 233.653px; height: 47px"
+          to="/inspectionComp"
         />
       </div>
     </div>

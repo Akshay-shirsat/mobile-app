@@ -7,38 +7,37 @@
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
-       <div class="flex-container">
-            <div class="flex-item ">
-                <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"
-          >Selected Vehicle
- </q-item-label
-        >
+      <div class="flex-container">
+        <div class="flex-item">
+          <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"
+            >Selected Vehicle
+          </q-item-label>
 
-              <q-select
-                outlined
-                dense
-                v-model="selectedOption"
-                :options="dropdownOptions"
-                label="Select an option"
-                style="width: 162px;height:35px; "
-                class="q-ml-md  "
-              ></q-select>
+          <q-select
+            outlined
+            dense
+            v-model="selectedOption"
+            :options="dropdownOptions"
+            label="Select an option"
+            style="width: 162px; height: 35px"
+            class="q-ml-md"
+          ></q-select>
 
-              <q-btn
-                label="View Details"
-                color="primary"
-                no-caps
-                rounded
-                @click="viewDetails"
-                class="q-mt-lg q-ml-md"
-                style="width:137px;"
-              />
-            </div>
- <div class="flex-item image-container">
-              <img src="/assets/image1.png" alt="Image" class="image-right"/>
-            </div>
-          </div>
-         <div class="q-pa-md q-mt-sm items-start">
+          <q-btn
+            label="View Details"
+            color="primary"
+            no-caps
+            rounded
+            @click="viewDetails"
+            class="q-mt-lg q-ml-md"
+            style="width: 137px"
+          />
+        </div>
+        <div class="flex-item image-container">
+          <img src="/assets/image1.png" alt="Image" class="image-right" />
+        </div>
+      </div>
+      <div class="q-pa-md q-mt-sm items-start">
         <q-btn-group rounded style="justify-content: center">
           <q-btn
             color="white"
@@ -70,7 +69,7 @@
         <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5"
           >Completed and Pending reports</q-item-label
         >
-        <div class="q-pa-md">
+        <!-- <div class="q-pa-md">
           <q-btn-dropdown size="12px" flat label="Filter">
             <q-list>
               <q-item clickable v-close-popup to="/inspectionDraft" >
@@ -86,7 +85,7 @@
               </q-item>
             </q-list>
           </q-btn-dropdown>
-        </div>
+        </div> -->
       </div>
       <div
         class="rounded-box q-pt-sm q-pa-md q-gutter-sm"
@@ -94,7 +93,7 @@
         :key="index"
       >
         <q-list
-        fullwidth
+          fullwidth
           rounded
           padding
           dense
@@ -113,7 +112,7 @@
             :width="item.imageWidth"
             :height="item.imageHeight"
           />
-          <q-item clickable v-ripple style="flex-grow: 1" >
+          <q-item clickable v-ripple style="flex-grow: 1">
             <q-item-section>
               <q-item-label
                 class="rounded-list-subtitle2 text-left text-weight-medium"
@@ -172,7 +171,6 @@ export default {
   methods: {
     viewDetails() {},
     fetchCompletedReports() {
-
       const dynamicData = [
         {
           status: "Completed",
@@ -192,7 +190,6 @@ export default {
           vehicle: "BMW",
           dueDate: "due by-dd.mm.yyyy",
         },
-
       ];
 
       this.completedReports = dynamicData;
@@ -202,7 +199,6 @@ export default {
 </script>
 
 <style scoped>
-
 .text-h6 {
   font-size: 16px;
   font-weight: 500;
@@ -215,15 +211,9 @@ export default {
   flex-shrink: 0;
 }
 
-.top-section {
-  margin-top: -35px;
-}
-
-
 .btngroup {
   width: 170px;
 }
-
 
 .rounded-list-subtitle2 {
   color: #53aa0f;
@@ -236,7 +226,7 @@ export default {
 .rounded-borders {
   border-radius: 12px;
   overflow: hidden;
-margin-top: -10px;
+  margin-top: -10px;
 }
 
 .q-pa-md.items-start {

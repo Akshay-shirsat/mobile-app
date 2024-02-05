@@ -31,11 +31,12 @@
         :question="question"
       />
 
-      <div
+            <div
         style="
           display: flex;
           justify-content: center;
-          bottom: 110px;
+          background-color:white;
+          bottom: 0px;
           position: fixed;
           z-index: 999;
           padding: 10px;
@@ -57,6 +58,7 @@
           color="primary"
           @click="goNext"
           style="width: 169.224px; height: 49px"
+          to="/bodyWork"
         />
       </div>
     </div>
@@ -79,7 +81,7 @@ export default {
             "Council vehicle licence plate(s) clearly displayed and not obsured? *",
           options: ["Yes", "No", "N/A"],
         },
-        // Add more questions as needed
+
       ],
     };
   },
@@ -88,10 +90,10 @@ export default {
       this.$refs.fileInput.click();
     },
     handleFileUpload(event) {
-      // Handle file upload logic here
+
       const file = event.target.files[0];
       console.log("Selected file:", file);
-      // You can perform further actions with the selected file
+
     },
     randomize() {
       this.progress = Math.random();

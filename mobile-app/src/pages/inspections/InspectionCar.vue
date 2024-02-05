@@ -71,11 +71,17 @@
           >Draft and Pending reports</q-item-label
         >
         <div class="q-pa-md">
-          <q-btn-dropdown size="12px" flat label="Filter">
+          <q-btn-dropdown
+            size="12px"
+            flat
+            no-caps
+            label="Filter"
+            icon="filter_list"
+          >
             <q-list>
-              <q-item clickable v-close-popup to="/inspectionDraft" >
+              <q-item clickable v-close-popup to="/inspectionDraft">
                 <q-item-section>
-                  <q-item-label >Draft</q-item-label>
+                  <q-item-label>Draft</q-item-label>
                 </q-item-section>
               </q-item>
 
@@ -259,7 +265,6 @@ export default {
   flex-shrink: 0;
 }
 
-
 .btngroup {
   width: 170px;
 }
@@ -277,11 +282,8 @@ export default {
 
 .rounded-borders {
   border-radius: 12px;
+  overflow: hidden;
   margin-top: -10px;
-}
-
-.q-pt-sm {
-  padding-top: 15px;
 }
 
 .q-pa-md.items-start {

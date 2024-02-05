@@ -190,7 +190,7 @@ export default {
         { label: "Option 2", value: 2 },
       ],
       icons: [
-        { name: "Start Inspection",route: "inspectionCar" },
+        { name: "Start Inspection",route: "inspectionOver" },
         { name: "Accident Report",route:"Accident" },
         { name: "Log Miles",route:"logMile" },
 

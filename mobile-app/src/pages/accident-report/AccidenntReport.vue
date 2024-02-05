@@ -46,16 +46,16 @@
         <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5"
           >Reports</q-item-label
         >
-        <div class="q-pa-md">
-          <q-btn-dropdown size="12px" label="Filter">
+ <div class="q-pa-md">
+          <q-btn-dropdown size="12px" flat  no-caps label="Filter" icon="filter_list">
             <q-list>
-              <q-item clickable v-close-popup @click="onItemClick">
+              <q-item clickable v-close-popup to="/inspectionDraft" >
                 <q-item-section>
-                  <q-item-label>Draft</q-item-label>
+                  <q-item-label >Draft</q-item-label>
                 </q-item-section>
               </q-item>
 
-              <q-item clickable v-close-popup @click="onItemClick">
+              <q-item clickable v-close-popup to="/inspectionComp">
                 <q-item-section>
                   <q-item-label>Completed</q-item-label>
                 </q-item-section>

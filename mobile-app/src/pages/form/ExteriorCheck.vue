@@ -27,7 +27,19 @@
       >
 <QuestionCard v-for="(question, index) in questions" :key="index" :question="question" />
 
-  <div style="display: flex; justify-content: center; bottom: 110px; position: fixed; z-index: 999; padding: 10px; width: 100%; box-sizing: border-box;">
+       <div
+        style="
+          display: flex;
+          justify-content: center;
+          background-color:white;
+          bottom: 0px;
+          position: fixed;
+          z-index: 999;
+          padding: 10px;
+          width: 100%;
+          box-sizing: border-box;
+        "
+      >
         <q-btn
           rounded
           label="Back"
@@ -42,6 +54,7 @@
           color="primary"
           @click="goNext"
           style="width: 169.224px;height: 49px;"
+          to="/lightingCheck"
         />
       </div>
     </div>

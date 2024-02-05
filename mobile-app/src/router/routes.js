@@ -12,7 +12,7 @@ const routes = [
 
       { path: '/dashboard',name: 'dashboard', component: () => import('pages/DashBoardd.vue') },
       { path: '/inspectionCar',name: 'inspectionCar', component: () => import('pages/inspections/InspectionCar.vue') },
-      { path: '/inspectionOver', component: () => import('pages/inspections/InspectionOver.vue') },
+
       { path: '/inspectionDraft',name: 'draft', component: () => import('pages/inspections/InspectionDraft.vue') },
       { path: '/inspectionComp',name: 'completed', component: () => import('pages/inspections/InspectionComp.vue') },
 
@@ -46,6 +46,7 @@ const routes = [
       { path: '/', component: () => import('pages/LoginPage.vue') },
       { path: '/ForgotPassword', component: () => import('pages/ForgotPassword.vue') },
       // Checklist form
+      { path: '/inspectionOver',name: "inspectionOver", component: () => import('pages/inspections/InspectionOver.vue') },
 { path: '/councilReq', component: () => import('pages/form/CouncilReq.vue') },
 { path: '/interiorCheck', component: () => import('pages/form/InteriorCheck.vue') },
 { path: '/exteriorCheck', component: () => import('pages/form/ExteriorCheck.vue') },
