@@ -135,7 +135,6 @@
                   <img src="/assets/certificate.png" class="q-py-sm q-px-sm" />
                 </q-avatar>
               </q-item-section>
-
               <q-item-section>
                 <q-item-label lines="1" class="text-left q-ml-sm"
                   >Insurance Due</q-item-label

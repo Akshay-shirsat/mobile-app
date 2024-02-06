@@ -2,17 +2,19 @@
   <q-page>
     <div v-if="flag">
       <q-header class="bg-white text-primary">
-        <q-bar class="q-py-lg bg-white " >
-          <q-btn flat round dense icon="arrow_back" @click="goBack" />
-          <q-toolbar-title class="q-ml-md" style="color:black"> Inspection </q-toolbar-title>
+        <q-bar class="q-py-lg bg-white">
+          <q-btn flat dense icon="arrow_back" style="color: black" @click="goBack" />
+          <q-toolbar-title class="q-ml-md" style="color: black">
+            Inspection
+          </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
-       <q-separator />
+      <q-separator />
       <div class="flex-container">
         <div class="flex-item top-section">
           <q-item-section class="text-weight-medium q-mt-xl q-ml-sm">
-            <q-item-label class="text-left ">Vehicle Name</q-item-label>
+            <q-item-label class="text-left">Vehicle Name</q-item-label>
             <q-item-label caption class="text-left text-caption"
               >Maruti suzuki LXI</q-item-label
             >
@@ -35,7 +37,7 @@
           <img src="/assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>
-<q-separator />
+      <q-separator class="q-mt-sm" />
       <div
         style="
           display: flex;
@@ -48,11 +50,13 @@
         >
         <div class="q-pa-md">
           <q-item-label class="text-left text-bold" lines="1"
-            ><span class="text-weight-light">dd.mm.yyyy</span></q-item-label
+            ><span class="text-weight-light text-grey-5"
+              >DD/MM/YYYY</span
+            ></q-item-label
           >
         </div>
       </div>
-      <q-scroll-area style="height: 900px">
+      <q-scroll-area style="height: 590px">
         <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
           <q-list
             fullwidth
@@ -81,17 +85,20 @@
                   >Council Requirement</q-item-label
                 >
               </q-item-section>
-
               <q-item-section side>
-                <q-btn
-                  class="q-mr-sm"
-                  text-color="black"
-                  round
-                  icon="keyboard_arrow_right"
-                  color="grey-4"
-                  size="sm"
-                />
+                <q-item-label class="text-weight-medium q-mr-sm"
+                  >0/7</q-item-label
+                >
               </q-item-section>
+
+              <q-btn
+                class="q-mr-sm"
+                text-color="black"
+                round
+                icon="keyboard_arrow_right"
+                color="grey-4"
+                size="sm"
+              />
             </q-item>
           </q-list>
         </div>
@@ -119,23 +126,25 @@
             <q-item clickable v-ripple style="flex-grow: 1">
               <q-item-section>
                 <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  class="rounded-list-subtitle2 text-left text-weight-medium text-grey-5"
                   >Interior Check</q-item-label
                 >
               </q-item-section>
 
-              <!-- <q-item-label class="text-right q-ml-xl">0/7</q-item-label> -->
-
               <q-item-section side>
-                <q-btn
-                  class="q-mr-sm"
-                  text-color="black"
-                  round
-                  icon="keyboard_arrow_right"
-                  color="grey-4"
-                  size="sm"
-                />
+                <q-item-label class="text-weight-medium q-mr-sm text-grey"
+                  >0/4</q-item-label
+                >
               </q-item-section>
+
+              <q-btn
+                class="q-mr-sm text-grey"
+                text-color="black"
+                round
+                icon="keyboard_arrow_right"
+                color="grey-2"
+                size="sm"
+              />
             </q-item>
           </q-list>
         </div>
@@ -163,67 +172,29 @@
             <q-item clickable v-ripple style="flex-grow: 1">
               <q-item-section>
                 <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium"
+                  class="rounded-list-subtitle2 text-left text-weight-medium text-grey-5"
                   >Engine Fluid Level</q-item-label
                 >
               </q-item-section>
 
               <q-item-section side>
-                <q-btn
-                  class="q-mr-sm"
-                  text-color="black"
-                  round
-                  icon="keyboard_arrow_right"
-                  color="grey-4"
-                  size="sm"
-                />
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </div>
-        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-          <q-list
-            fullwidth
-            rounded
-            padding
-            dense
-            class="rounded-borders; bg-grey-2"
-            style="
-              display: flex;
-              align-items: center;
-              height: 66.281px;
-              margin-top: -10px;
-            "
-          >
-            <q-img
-              class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
-              alt="Image description"
-              width="6px"
-              height="55px"
-            />
-            <q-item clickable v-ripple style="flex-grow: 1">
-              <q-item-section>
-                <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium"
-                  >Lightning Check
-                </q-item-label>
+                <q-item-label class="text-weight-medium q-mr-sm text-grey"
+                  >0/4</q-item-label
+                >
               </q-item-section>
 
-              <q-item-section side>
-                <q-btn
-                  class="q-mr-sm"
-                  text-color="black"
-                  round
-                  icon="keyboard_arrow_right"
-                  color="grey-4"
-                  size="sm"
-                />
-              </q-item-section>
+              <q-btn
+                class="q-mr-sm text-grey"
+                text-color="black"
+                round
+                icon="keyboard_arrow_right"
+                color="grey-2"
+                size="sm"
+              />
             </q-item>
           </q-list>
         </div>
-        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+         <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
           <q-list
             fullwidth
             rounded
@@ -247,26 +218,29 @@
             <q-item clickable v-ripple style="flex-grow: 1">
               <q-item-section>
                 <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium"
-                  >Wiper and washer</q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium text-grey-5"
+                  >Lightning Check</q-item-label
                 >
               </q-item-section>
 
               <q-item-section side>
-                <q-btn
-                  class="q-mr-sm"
-                  text-color="black"
-                  round
-                  icon="keyboard_arrow_right"
-                  color="grey-4"
-                  size="sm"
-                />
+                <q-item-label class="text-weight-medium q-mr-sm text-grey"
+                  >0/4</q-item-label
+                >
               </q-item-section>
+
+              <q-btn
+                class="q-mr-sm text-grey"
+                text-color="black"
+                round
+                icon="keyboard_arrow_right"
+                color="grey-2"
+                size="sm"
+              />
             </q-item>
           </q-list>
         </div>
-
-        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+         <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
           <q-list
             fullwidth
             rounded
@@ -290,25 +264,29 @@
             <q-item clickable v-ripple style="flex-grow: 1">
               <q-item-section>
                 <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium"
-                  >Completed</q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium text-grey-5"
+                  >Wiper and Washers</q-item-label
                 >
               </q-item-section>
 
               <q-item-section side>
-                <q-btn
-                  class="q-mr-sm"
-                  text-color="black"
-                  round
-                  icon="keyboard_arrow_right"
-                  color="grey-4"
-                  size="sm"
-                />
+                <q-item-label class="text-weight-medium q-mr-sm text-grey"
+                  >0/4</q-item-label
+                >
               </q-item-section>
+
+              <q-btn
+                class="q-mr-sm text-grey"
+                text-color="black"
+                round
+                icon="keyboard_arrow_right"
+                color="grey-2"
+                size="sm"
+              />
             </q-item>
           </q-list>
         </div>
-        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+          <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
           <q-list
             fullwidth
             rounded
@@ -332,105 +310,25 @@
             <q-item clickable v-ripple style="flex-grow: 1">
               <q-item-section>
                 <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium"
-                  >Wiper and washer</q-item-label
+                  class="rounded-list-subtitle2 text-left text-weight-medium text-grey-5"
+                  >Tyre Check</q-item-label
                 >
               </q-item-section>
 
               <q-item-section side>
-                <q-btn
-                  class="q-mr-sm"
-                  text-color="black"
-                  round
-                  icon="keyboard_arrow_right"
-                  color="grey-4"
-                  size="sm"
-                />
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </div>
-        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-          <q-list
-            fullwidth
-            rounded
-            padding
-            dense
-            class="rounded-borders; bg-grey-2"
-            style="
-              display: flex;
-              align-items: center;
-              height: 66.281px;
-              margin-top: -10px;
-            "
-          >
-            <q-img
-              class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
-              alt="Image description"
-              width="6px"
-              height="55px"
-            />
-            <q-item clickable v-ripple style="flex-grow: 1">
-              <q-item-section>
-                <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium"
-                  >Wiper and washer</q-item-label
+                <q-item-label class="text-weight-medium q-mr-sm text-grey"
+                  >0/4</q-item-label
                 >
               </q-item-section>
 
-              <q-item-section side>
-                <q-btn
-                  class="q-mr-sm"
-                  text-color="black"
-                  round
-                  icon="keyboard_arrow_right"
-                  color="grey-4"
-                  size="sm"
-                />
-              </q-item-section>
-            </q-item>
-          </q-list>
-        </div>
-        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-          <q-list
-            fullwidth
-            rounded
-            padding
-            dense
-            class="rounded-borders; bg-grey-2"
-            style="
-              display: flex;
-              align-items: center;
-              height: 66.281px;
-              margin-top: -10px;
-            "
-          >
-            <q-img
-              class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
-              alt="Image description"
-              width="6px"
-              height="55px"
-            />
-            <q-item clickable v-ripple style="flex-grow: 1">
-              <q-item-section>
-                <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium"
-                  >Wiper and washer</q-item-label
-                >
-              </q-item-section>
-
-              <q-item-section side>
-                <q-btn
-                  class="q-mr-sm"
-                  text-color="black"
-                  round
-                  icon="keyboard_arrow_right"
-                  color="grey-4"
-                  size="sm"
-                />
-              </q-item-section>
+              <q-btn
+                class="q-mr-sm text-grey"
+                text-color="black"
+                round
+                icon="keyboard_arrow_right"
+                color="grey-2"
+                size="sm"
+              />
             </q-item>
           </q-list>
         </div>
@@ -444,18 +342,18 @@
           padding: 15px;
           width: 100%;
           box-sizing: border-box;
-          background-color:white;
+          background-color: white;
           bottom: 0px;
         "
       >
         <div style="display: flex; gap: 10px">
           <q-btn
-          no-caps
+            no-caps
             rounded
             label="Start"
             color="primary"
             @click="goNext"
-            style="width: 357px; height: 49px; "
+            style="width: 357px; height: 49px"
             to="/councilReq"
           />
         </div>
@@ -596,9 +494,9 @@ export default {
   width: 170px;
 }
 .rounded-list-container {
-  border-radius: 12px; /* Set the desired border radius */
-  border: 2px solid red; /* Set the desired border color */
-  overflow: hidden; /* Hide overflow content */
+  border-radius: 12px;
+  border: 2px solid red;
+  overflow: hidden;
 }
 
 .rounded-list-title {
@@ -606,22 +504,22 @@ export default {
 }
 
 .rounded-list-subtitle {
-  color: red; /* Set the desired color for subtitles */
+  color: red;
 }
 .rounded-list-subtitle2 {
-  color: #191b17; /* Set the desired color for subtitles */
+  color: #191b17;
 }
 .rounded-box {
-  border-radius: 12px; /* Set the desired border radius for the entire box */
-  overflow: hidden; /* Hide overflow content */
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .rounded-borders {
-  border-radius: 12px; /* Set the desired border radius for the list */
-  overflow: hidden; /* Hide overflow content */
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .q-pt-xs {
-  padding-top: 2px; /* Set the desired top padding for the second structure */
+  padding-top: 2px;
 }
 </style>
