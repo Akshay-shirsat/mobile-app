@@ -45,7 +45,7 @@
                       style="width: 78px"
                     />
                   </div>
-                  <!-- ... other elements ... -->
+
                 </q-card-section>
               </q-card>
             </q-expansion-item>
@@ -71,6 +71,7 @@
           rounded
           label="Back"
           color="grey-5"
+          text-color="black"
           @click="goBack"
           class="q-ma-sm"
           style="width: 200.224px; height: 49px"

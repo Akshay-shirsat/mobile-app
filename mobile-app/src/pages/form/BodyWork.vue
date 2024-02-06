@@ -46,6 +46,7 @@
           label="Back"
           color="grey-5"
           @click="goBack"
+          text-color="black"
           class="q-ma-sm"
           style="width: 200.224px; height: 49px"
         />
@@ -80,7 +81,7 @@ export default {
             "Council vehicle licence plate(s) clearly displayed and not obsured? *",
           options: ["Yes", "No", "N/A"],
         },
-        // Add more questions as needed
+
       ],
     };
   },
@@ -89,10 +90,10 @@ export default {
       this.$refs.fileInput.click();
     },
     handleFileUpload(event) {
-      // Handle file upload logic here
+
       const file = event.target.files[0];
       console.log("Selected file:", file);
-      // You can perform further actions with the selected file
+
     },
     randomize() {
       this.progress = Math.random();

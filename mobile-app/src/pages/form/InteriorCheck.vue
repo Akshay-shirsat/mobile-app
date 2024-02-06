@@ -42,6 +42,7 @@
           no-caps
           rounded
           label="Back"
+          text-color="black"
           color="grey-5"
           @click="goBack"
           class="q-ma-sm"

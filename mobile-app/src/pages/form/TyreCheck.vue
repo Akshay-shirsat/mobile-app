@@ -46,6 +46,7 @@
           @click="goBack"
           class="q-ma-sm"
           style="width: 200.224px; height: 49px"
+          text-color="black"
         />
         <q-btn
           no-caps

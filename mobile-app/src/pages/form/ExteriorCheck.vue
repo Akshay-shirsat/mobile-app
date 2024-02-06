@@ -41,6 +41,7 @@
         <q-btn
           no-caps
           rounded
+          text-color="black"
           label="Back"
           color="grey-5"
           @click="goBack"

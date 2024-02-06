@@ -46,6 +46,7 @@
           rounded
           label="Back"
           color="grey-5"
+          text-color="black"
           @click="goBack"
           class="q-ma-sm"
           style="width: 200.224px; height: 49px"
@@ -97,8 +98,7 @@ export default {
       const file = event.target.files[0];
       console.log("Selected file:", file);
     },
-  },
-  goBack() {
+      goBack() {
     this.$router.go(-1);
   },
   goNext() {
@@ -106,6 +106,8 @@ export default {
       this.progress += 10;
     }
   },
+  },
+
 };
 </script>
 <style scoped>

@@ -81,6 +81,7 @@
           color="grey-5"
           @click="goBack"
           class="q-ma-sm"
+          text-color="black"
           style="width: 200.224px; height: 49px"
         />
         <q-btn

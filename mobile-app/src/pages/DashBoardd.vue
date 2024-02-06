@@ -2,18 +2,17 @@
   <q-page>
     <div>
       <q-header class="text-primary">
-        <q-bar style="background-color: primary; height: 45px">
-          <q-toolbar-title style="margin-left: 3px; color: white">
+        <q-bar style="background-color: white; height: 45px">
+          <q-toolbar-title style="margin-left: 3px" class="text-primary text-bold">
             Good Morning Dan!
           </q-toolbar-title>
 
           <q-btn
             square
-            
             class="outlined-button"
             icon="notifications"
             color="transparent"
-            text-color="white"
+            text-color="primary"
             flat
           >
           </q-btn>
@@ -25,16 +24,15 @@
             class="q-pa-sm q-ml-sm text-weight-medium"
             style="
               color: #4e4d4f;
-              font-family: DM Sans;
               font-size: 16px;
               font-weight: 700;
               line-height: 21px;
               letter-spacing: 0px;
               text-align: left;
               width: 134px
-height: 22.95px
-top: 128.05px
-left: 18px
+              height: 22.95px
+              top: 128.05px
+              left: 18px
 
             "
             >Selected Vehicle
@@ -64,10 +62,10 @@ left: 18px
           <img src="/assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>
- <q-separator class="q-mt-md" />
+      <q-separator class="q-mt-md" />
       <q-item-label
         class="q-pa-md q-ml-sm text-weight-medium"
-        style="color: #4e4d4f;font-family: DM Sans;
+        style="color: #4e4d4f;font-family: Roboto;
 font-size: 16px;
 font-weight: 700;
 line-height: 22px;
@@ -87,18 +85,21 @@ left: 17px
           :key="index"
           cols="12"
           md="4"
-          class="q-flex q-flex-center q-flex-column text-center border-rounded"
+          class="q-flex q-flex-center q-flex-column text-center  "
           size="4rem"
         >
-          <router-link :to="{ name: icon.route }">
-            <q-icon :class="['custom-icon', 'icon' + (index + 1)]"></q-icon>
-          </router-link>
+          <div class="border-rounded shadow-2 quickActionDisc">
+            <router-link :to="{ name: icon.route }">
+              <q-icon :class="['custom-icon', 'icon' + (index + 1)]"></q-icon>
+            </router-link>
+          </div>
+
           <div class="name">{{ icon.name }}</div>
         </q-col>
       </q-row>
       <q-item-label
         class="q-pa-sm q-ml-md text-weight-medium"
-        style="color: #4e4d4f;font-family: DM Sans;
+        style="color: #4e4d4f;
 font-size: 16px;
 font-weight: 700;
 line-height: 22px;
@@ -230,9 +231,9 @@ export default {
         { label: "Option 2", value: 2 },
       ],
       icons: [
-        { name: "Start Inspection", route: "inspectionOver" },
-        { name: "Accident Report", route: "Accident" },
-        { name: "LogMiles ", route: "logMile" },
+        { name: "Start Inspection", route: "inspectionOver",url:"/assets/calendar--tools.png" },
+        { name: "Accident Report", route: "Accident",url:"/assets/vector.png" },
+        { name: "Log Miles ", route: "logMile",url:"/assets/vectorr.png" },
       ],
     };
   },
@@ -270,26 +271,6 @@ export default {
   margin-bottom: 8px;
 }
 
-.name {
-  color: #000;
-  text-align: center;
-  font-family: DM Sans;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 22px;
-  width: 95px;
-}
-.custom-icon {
-  width: 24px;
-  height: 24px;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: inline-block;
-  margin-bottom: 8px;
-  margin-top: 12px;
-}
 
 .icon1 {
   background-image: url("/assets/calendar--tools.png");

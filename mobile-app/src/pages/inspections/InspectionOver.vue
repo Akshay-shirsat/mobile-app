@@ -32,13 +32,13 @@ left: 16.5px
               >Maruti suzuki LXI</q-item-label
             >
           </q-item-section>
-          <q-item-section class="text-weight-medium q-mt-sm">
+          <q-item-section class="text-weight-medium q-my-md">
             <q-item-label class="text-left">Licence No</q-item-label>
             <q-item-label caption class="text-left text-caption text-dark"
               >ABCD12345</q-item-label
             >
           </q-item-section>
-          <q-item-section class="text-weight-medium q-mt-sm">
+          <q-item-section class="text-weight-medium q-my-md">
             <q-item-label class="text-left">Vehicle No</q-item-label>
             <q-item-label class="text-left text-caption text-dark" caption
               >12345</q-item-label
@@ -65,7 +65,7 @@ left: 16.5px
         >
         <div class="q-pa-md">
           <q-item-label class="text-left text-bold" lines="1"
-            ><span class="text-weight-light text-grey-5"
+            ><span class="text-weight-light text-grey-5 ft-12"
               >DD/MM/YYYY</span
             ></q-item-label
           >
@@ -360,6 +360,7 @@ left: 16.5px
           background-color: white;
           bottom: 0px;
         "
+        class="shadow-5"
       >
         <div style="display: flex">
           <q-btn

@@ -39,8 +39,9 @@
       </div>
       <q-separator class="q-mt-md"/>
       <div class="q-pa-md q-mt-sm items-start">
-        <q-btn-group rounded style="justify-content: center">
+        <q-btn-group rounded style="justify-content: center" >
           <q-btn
+
             color="white"
             rounded
             text-color="black"
@@ -50,6 +51,7 @@
             to="/inspectionCar"
           />
           <q-btn
+
             color="grey-4"
             rounded
             text-color="black"
@@ -70,23 +72,7 @@
         <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5"
           >Completed and Pending reports</q-item-label
         >
-        <!-- <div class="q-pa-md">
-          <q-btn-dropdown size="12px" flat label="Filter">
-            <q-list>
-              <q-item clickable v-close-popup to="/inspectionDraft" >
-                <q-item-section>
-                  <q-item-label >Draft</q-item-label>
-                </q-item-section>
-              </q-item>
 
-              <q-item clickable v-close-popup to="/inspectionComp">
-                <q-item-section>
-                  <q-item-label>Completed</q-item-label>
-                </q-item-section>
-              </q-item>
-            </q-list>
-          </q-btn-dropdown>
-        </div> -->
       </div>
       <div
         class="rounded-box q-pt-sm q-pa-md q-gutter-sm"

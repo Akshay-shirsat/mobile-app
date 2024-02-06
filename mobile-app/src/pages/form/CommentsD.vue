@@ -48,6 +48,7 @@
           icon="arrow_back"
           label="Back"
           color="grey-5"
+          text-color="black"
           @click="goBack"
           class="q-ma-sm"
           style="width: 101.501px; height: 49px;"
@@ -84,9 +85,9 @@ export default {
         {
           label: "Add Location",
           sections: [
-            // Customize the sections for the "Add Location" question card
+
             {
-              type: "text", // Assuming you have a text input for the address
+              type: "text",
               label: "Address",
             },
           ],
