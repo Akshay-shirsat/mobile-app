@@ -18,9 +18,7 @@
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
-      <q-item-label
-        class="q-pt-md q-ml-md text-weight-medium text-h6"
-        color="grey-5"
+    <q-item-label class="q-pt-md q-ml-md text-weight-medium" color="grey-5"
         >Comments</q-item-label
       >
       <QuestionCard
@@ -45,20 +43,24 @@
         "
       >
         <q-btn
+        no-caps
           rounded
+          icon="arrow_back"
           label="Back"
           color="grey-5"
           @click="goBack"
-          class="q-mr-md"
-          style="width: 101.501px; height: 47px"
+          class="q-ma-sm"
+          style="width: 101.501px; height: 49px;"
         />
         <q-btn
+        no-caps
           rounded
           label="submit checks"
           color="positive"
           @click="goNext"
-          style="width: 233.653px; height: 47px"
+          style="width: 233.653px; height: 49px"
           to="/inspectionComp"
+          class="q-ma-sm"
         />
       </div>
     </div>

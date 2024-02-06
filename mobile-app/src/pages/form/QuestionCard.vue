@@ -14,7 +14,10 @@
               <q-btn text-color="black" label="+ Upload" @click="openFileDialog" style="width: 324px; background-color: #d9d9d9; margin-top: 10px" />
               <input type="file" ref="fileInput" style="display: none" @change="handleFileUpload" />
             </div>
+            <q-item-section icon>
+            
             <q-item-label class="q-pt-md text-weight-medium text-caption q-ml-md" color="blue-grey-6">Notes</q-item-label>
+            </q-item-section>
             <div class="q-pa-md" fullwidth>
               <q-input dense type="textarea" label="type here" outlined style="width: 100%" />
             </div>

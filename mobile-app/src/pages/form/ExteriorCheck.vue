@@ -20,18 +20,16 @@
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
-      <q-item-label
-        class="q-pt-md q-ml-md text-weight-medium text-h6"
-        color="grey-5"
+  <q-item-label class="q-pt-md q-ml-md text-weight-medium" color="grey-5"
         >Questions</q-item-label
       >
 <QuestionCard v-for="(question, index) in questions" :key="index" :question="question" />
 
-       <div
+ <div
         style="
           display: flex;
           justify-content: center;
-          background-color:white;
+          background-color: white;
           bottom: 0px;
           position: fixed;
           z-index: 999;
@@ -41,20 +39,23 @@
         "
       >
         <q-btn
+          no-caps
           rounded
           label="Back"
           color="grey-5"
           @click="goBack"
-          class="q-mr-md"
-          style="width: 169.224px;height: 49px;"
+          class="q-ma-sm"
+          style="width: 200.224px; height: 49px"
         />
         <q-btn
+          no-caps
           rounded
           label="Next"
           color="primary"
           @click="goNext"
-          style="width: 169.224px;height: 49px;"
-          to="/lightingCheck"
+          style="width: 200.224px; height: 49px"
+          to="/LightingCheck"
+          class="q-ma-sm"
         />
       </div>
     </div>

@@ -3,8 +3,21 @@
     <div v-if="flag">
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white">
-          <q-btn flat dense icon="arrow_back" style="color: black" @click="goBack" />
-          <q-toolbar-title class="q-ml-md" style="color: black">
+          <q-btn
+            flat
+            dense
+            icon="arrow_back"
+            style="color: black"
+            @click="goBack"
+          />
+          <q-toolbar-title
+            class="q-ml-md"
+            style="color: black;width: 104px
+height: 33px
+top: 132.29px
+left: 16.5px
+"
+          >
             Inspection
           </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
@@ -15,19 +28,19 @@
         <div class="flex-item top-section">
           <q-item-section class="text-weight-medium q-mt-xl q-ml-sm">
             <q-item-label class="text-left">Vehicle Name</q-item-label>
-            <q-item-label caption class="text-left text-caption"
+            <q-item-label caption class="text-left text-caption text-dark"
               >Maruti suzuki LXI</q-item-label
             >
           </q-item-section>
           <q-item-section class="text-weight-medium q-mt-sm">
             <q-item-label class="text-left">Licence No</q-item-label>
-            <q-item-label caption class="text-left text-caption"
+            <q-item-label caption class="text-left text-caption text-dark"
               >ABCD12345</q-item-label
             >
           </q-item-section>
           <q-item-section class="text-weight-medium q-mt-sm">
             <q-item-label class="text-left">Vehicle No</q-item-label>
-            <q-item-label class="text-left text-caption" caption
+            <q-item-label class="text-left text-caption text-dark" caption
               >12345</q-item-label
             >
           </q-item-section>
@@ -45,7 +58,9 @@
           align-items: center;
         "
       >
-        <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5"
+        <q-item-label
+          class="q-pa-sm q-ml-sm text-weight-medium"
+          style="color: #4e4d4f"
           >Inspection Checklist</q-item-label
         >
         <div class="q-pa-md">
@@ -194,7 +209,7 @@
             </q-item>
           </q-list>
         </div>
-         <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
           <q-list
             fullwidth
             rounded
@@ -240,7 +255,7 @@
             </q-item>
           </q-list>
         </div>
-         <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
           <q-list
             fullwidth
             rounded
@@ -286,7 +301,7 @@
             </q-item>
           </q-list>
         </div>
-          <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
+        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
           <q-list
             fullwidth
             rounded
@@ -346,7 +361,7 @@
           bottom: 0px;
         "
       >
-        <div style="display: flex; gap: 10px">
+        <div style="display: flex">
           <q-btn
             no-caps
             rounded
@@ -355,6 +370,7 @@
             @click="goNext"
             style="width: 357px; height: 49px"
             to="/councilReq"
+            class="q-ma-sm"
           />
         </div>
       </div>

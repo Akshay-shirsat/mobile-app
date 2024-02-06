@@ -9,18 +9,34 @@
 
           <q-btn
             square
+            
             class="outlined-button"
             icon="notifications"
             color="transparent"
-            text-color="black"
+            text-color="white"
             flat
           >
           </q-btn>
         </q-bar>
       </q-header>
       <div class="flex-container">
-        <div class="flex-item">
-          <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"
+        <div class="flex-item q-ml-sm">
+          <q-item-label
+            class="q-pa-sm q-ml-sm text-weight-medium"
+            style="
+              color: #4e4d4f;
+              font-family: DM Sans;
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 21px;
+              letter-spacing: 0px;
+              text-align: left;
+              width: 134px
+height: 22.95px
+top: 128.05px
+left: 18px
+
+            "
             >Selected Vehicle
           </q-item-label>
 
@@ -48,8 +64,21 @@
           <img src="/assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>
+ <q-separator class="q-mt-md" />
+      <q-item-label
+        class="q-pa-md q-ml-sm text-weight-medium"
+        style="color: #4e4d4f;font-family: DM Sans;
+font-size: 16px;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: 0px;
+text-align: left;
+width: 154px
+height: 21px
+top: 298.28px
+left: 17px
 
-      <q-item-label class="q-pa-md q-ml-sm text-weight-medium" color="grey-5"
+"
         >Quick Actions</q-item-label
       >
       <q-row class="three-columns-section q-pa-sm q-mx-md">
@@ -58,8 +87,8 @@
           :key="index"
           cols="12"
           md="4"
-          class=" q-flex q-flex-center q-flex-column text-center border-rounded "
-         size="4rem"
+          class="q-flex q-flex-center q-flex-column text-center border-rounded"
+          size="4rem"
         >
           <router-link :to="{ name: icon.route }">
             <q-icon :class="['custom-icon', 'icon' + (index + 1)]"></q-icon>
@@ -67,97 +96,122 @@
           <div class="name">{{ icon.name }}</div>
         </q-col>
       </q-row>
-      <q-item-label class="q-pa-sm q-ml-md text-weight-medium"
+      <q-item-label
+        class="q-pa-sm q-ml-md text-weight-medium"
+        style="color: #4e4d4f;font-family: DM Sans;
+font-size: 16px;
+font-weight: 700;
+line-height: 22px;
+letter-spacing: 0px;
+text-align: left;
+width: 186px
+height: 18px
+top: 478px
+left: 18px
+"
         >Need Your Attention</q-item-label
       >
 
-        <div class="q-pa-sm q-gutter-md ">
-          <q-list fullwidth class="bg-grey-2 " style="height:auto" >
-            <q-item clickable v-ripple>
-              <q-item-section avatar top class="q-pa-none" >
-                <q-avatar rounded color="grey-4" size="68px" text-color="white" >
-                  <img src="/assets/horizontal.png" class="q-py-sm q-px-sm" />
-                </q-avatar>
-              </q-item-section>
+      <div class="q-px-lg q-gutter-md q-mt-sm">
+        <q-list fullwidth class="bg-accent" style="height: auto">
+          <q-item clickable v-ripple>
+            <q-item-section avatar top class="q-pa-none">
+              <q-avatar
+                rounded
+                color="secondary"
+                size="68px"
+                text-color="white"
+              >
+                <img src="/assets/horizontal.png" class="q-py-sm q-px-sm" />
+              </q-avatar>
+            </q-item-section>
 
-              <q-item-section>
-                <q-item-label lines="1" class="text-left q-ml-sm"
-                  >Licence Due Date</q-item-label
-                >
-                <q-item-label lines="1" caption class="subtitle text-left q-ml-sm"
-                  >Expiring in 2 days</q-item-label
-                >
-              </q-item-section>
+            <q-item-section>
+              <q-item-label lines="1" class="text-left q-ml-sm"
+                >Licence Due Date</q-item-label
+              >
+              <q-item-label lines="1" caption class="subtitle text-left q-ml-sm"
+                >Expiring in 2 days</q-item-label
+              >
+            </q-item-section>
 
-              <q-item-section side>
-                <q-btn
-                  text-color="black"
-                  round
-                  icon="keyboard_arrow_right"
-                  color="grey-4"
-                  size="sm"
-                />
-              </q-item-section>
-            </q-item>
-          </q-list>
-           <q-list fullwidth class="bg-grey-2 " style="height:auto" >
-            <q-item clickable v-ripple>
-              <q-item-section avatar top class="q-pa-none">
-                <q-avatar rounded color="grey-4" size="68px" text-color="white">
-                  <img src="/assets/security.png" class="q-py-sm q-px-sm" />
-                </q-avatar>
-              </q-item-section>
+            <q-item-section side>
+              <q-btn
+                text-color="black"
+                round
+                icon="keyboard_arrow_right"
+                color="secondary"
+                size="sm"
+              />
+            </q-item-section>
+          </q-item>
+        </q-list>
+        <q-list fullwidth class="bg-accent" style="height: auto">
+          <q-item clickable v-ripple>
+            <q-item-section avatar top class="q-pa-none">
+              <q-avatar
+                rounded
+                color="secondary"
+                size="68px"
+                text-color="white"
+              >
+                <img src="/assets/security.png" class="q-py-sm q-px-sm" />
+              </q-avatar>
+            </q-item-section>
 
-              <q-item-section>
-                <q-item-label lines="1" class="text-left q-ml-sm"
-                  >MOT Due in</q-item-label
-                >
-                <q-item-label lines="1" caption class="subtitle text-left q-ml-sm"
-                  >5 days</q-item-label
-                >
-              </q-item-section>
+            <q-item-section>
+              <q-item-label lines="1" class="text-left q-ml-sm"
+                >MOT Due in</q-item-label
+              >
+              <q-item-label lines="1" caption class="subtitle text-left q-ml-sm"
+                >5 days</q-item-label
+              >
+            </q-item-section>
 
-              <q-item-section side>
-                <q-btn
-                  text-color="black"
-                  round
-                  icon="keyboard_arrow_right"
-                  color="grey-4"
-                  size="sm"
-                />
-              </q-item-section>
-            </q-item>
-          </q-list>
-         <q-list fullwidth class="bg-grey-2 " style="height:auto" >
-            <q-item clickable v-ripple>
-              <q-item-section avatar top class="q-pa-none">
-                <q-avatar rounded color="grey-4" size="68px" text-color="white">
-                  <img src="/assets/certificate.png" class="q-py-sm q-px-sm" />
-                </q-avatar>
-              </q-item-section>
-              <q-item-section>
-                <q-item-label lines="1" class="text-left q-ml-sm"
-                  >Insurance Due</q-item-label
-                >
-                <q-item-label lines="1" caption class="subtitle text-left q-ml-sm"
-                  >Expiring in 2 days</q-item-label
-                >
-              </q-item-section>
+            <q-item-section side>
+              <q-btn
+                text-color="black"
+                round
+                icon="keyboard_arrow_right"
+                color="secondary"
+                size="sm"
+              />
+            </q-item-section>
+          </q-item>
+        </q-list>
+        <q-list fullwidth class="bg-accent" style="height: auto">
+          <q-item clickable v-ripple>
+            <q-item-section avatar top class="q-pa-none">
+              <q-avatar
+                rounded
+                color="secondary"
+                size="68px"
+                text-color="white"
+              >
+                <img src="/assets/certificate.png" class="q-py-sm q-px-sm" />
+              </q-avatar>
+            </q-item-section>
+            <q-item-section>
+              <q-item-label lines="1" class="text-left q-ml-sm"
+                >Insurance Due</q-item-label
+              >
+              <q-item-label lines="1" caption class="subtitle text-left q-ml-sm"
+                >Expiring in 2 days</q-item-label
+              >
+            </q-item-section>
 
-              <q-item-section side>
-                <q-btn
-                  text-color="black"
-                  round
-                  icon="keyboard_arrow_right"
-                  color="grey-4"
-                  size="sm"
-                />
-              </q-item-section>
-            </q-item>
-          </q-list>
-
-        </div>
-
+            <q-item-section side>
+              <q-btn
+                text-color="black"
+                round
+                icon="keyboard_arrow_right"
+                color="secondary"
+                size="sm"
+              />
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </div>
     </div>
   </q-page>
 </template>
@@ -209,7 +263,6 @@ export default {
   align-items: center;
   border-radius: 12px;
   overflow: hidden;
-
 }
 
 .icon {
@@ -264,14 +317,12 @@ export default {
 .subtitle {
   color: red;
 }
-.q-item{
+.q-item {
   padding: 0 10px 0 0 !important;
 }
 .border-rounded {
   border: 1px solid #ccc;
   border-radius: 8px;
   overflow: hidden;
-
 }
-
 </style>

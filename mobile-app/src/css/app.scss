@@ -11,3 +11,56 @@ margin-top: 10px;
 body {
   font-family: 'DM Sans';
 }
+
+.btnDisc{
+  text-align: center;
+    margin: auto;
+    display: block;
+}
+
+.topCard{
+  margin-top: 5rem;
+}
+
+.loginTitleHead{
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.titleHead{
+  color: #4A4A4A;
+}
+
+.titleHeadCaption{
+  color: #919191;
+    font-size: 16px;
+    padding-top: 8px;;
+}
+
+.q-placeholder{
+  color: #C9C8C8;
+}
+
+.keep-logged-in-checkbox .q-checkbox__inner{
+  color: #C9C8C8;
+}
+
+.keep-logged-in-checkbox {
+  color: #C9C8C8;
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  float: left;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+.forgot-password {
+  font-family: "DM Sans", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  float: right;
+  padding-right: 0px;
+  margin-top: 12px;
+}
+
