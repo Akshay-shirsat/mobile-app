@@ -58,8 +58,8 @@
           :key="index"
           cols="12"
           md="4"
-          class="q-flex q-flex-center q-flex-column text-center"
-          :rounded="true"
+          class=" q-flex q-flex-center q-flex-column text-center border-rounded "
+         size="4rem"
         >
           <router-link :to="{ name: icon.route }">
             <q-icon :class="['custom-icon', 'icon' + (index + 1)]"></q-icon>
@@ -70,21 +70,21 @@
       <q-item-label class="q-pa-sm q-ml-md text-weight-medium"
         >Need Your Attention</q-item-label
       >
-      <q-scroll-area style="height: 600px">
-        <div class="q-pa-sm q-gutter-md">
-          <q-list fullwidth class="bg-grey-2">
+
+        <div class="q-pa-sm q-gutter-md ">
+          <q-list fullwidth class="bg-grey-2 " style="height:auto" >
             <q-item clickable v-ripple>
-              <q-item-section avatar top class="q-pa-none">
-                <q-avatar square color="grey-4" size="48px" text-color="white">
+              <q-item-section avatar top class="q-pa-none" >
+                <q-avatar rounded color="grey-4" size="68px" text-color="white" >
                   <img src="/assets/horizontal.png" class="q-py-sm q-px-sm" />
                 </q-avatar>
               </q-item-section>
 
               <q-item-section>
-                <q-item-label lines="1" class="text-left"
+                <q-item-label lines="1" class="text-left q-ml-sm"
                   >Licence Due Date</q-item-label
                 >
-                <q-item-label lines="1" caption class="subtitle text-left"
+                <q-item-label lines="1" caption class="subtitle text-left q-ml-sm"
                   >Expiring in 2 days</q-item-label
                 >
               </q-item-section>
@@ -100,19 +100,19 @@
               </q-item-section>
             </q-item>
           </q-list>
-          <q-list fullwidth class="bg-grey-2">
+           <q-list fullwidth class="bg-grey-2 " style="height:auto" >
             <q-item clickable v-ripple>
               <q-item-section avatar top class="q-pa-none">
-                <q-avatar square color="grey-4" size="48px" text-color="white">
+                <q-avatar rounded color="grey-4" size="68px" text-color="white">
                   <img src="/assets/security.png" class="q-py-sm q-px-sm" />
                 </q-avatar>
               </q-item-section>
 
               <q-item-section>
-                <q-item-label lines="1" class="text-left"
+                <q-item-label lines="1" class="text-left q-ml-sm"
                   >MOT Due in</q-item-label
                 >
-                <q-item-label lines="1" caption class="subtitle text-left"
+                <q-item-label lines="1" caption class="subtitle text-left q-ml-sm"
                   >5 days</q-item-label
                 >
               </q-item-section>
@@ -128,19 +128,19 @@
               </q-item-section>
             </q-item>
           </q-list>
-       <q-list fullwidth class="bg-grey-2">
+         <q-list fullwidth class="bg-grey-2 " style="height:auto" >
             <q-item clickable v-ripple>
               <q-item-section avatar top class="q-pa-none">
-                <q-avatar square color="grey-4" size="48px" text-color="white">
+                <q-avatar rounded color="grey-4" size="68px" text-color="white">
                   <img src="/assets/certificate.png" class="q-py-sm q-px-sm" />
                 </q-avatar>
               </q-item-section>
 
               <q-item-section>
-                <q-item-label lines="1" class="text-left"
+                <q-item-label lines="1" class="text-left q-ml-sm"
                   >Insurance Due</q-item-label
                 >
-                <q-item-label lines="1" caption class="subtitle text-left"
+                <q-item-label lines="1" caption class="subtitle text-left q-ml-sm"
                   >Expiring in 2 days</q-item-label
                 >
               </q-item-section>
@@ -158,7 +158,7 @@
           </q-list>
 
         </div>
-      </q-scroll-area>
+
     </div>
   </q-page>
 </template>
@@ -179,7 +179,7 @@ export default {
       icons: [
         { name: "Start Inspection", route: "inspectionOver" },
         { name: "Accident Report", route: "Accident" },
-        { name: "Log Miles", route: "logMile" },
+        { name: "LogMiles ", route: "logMile" },
       ],
     };
   },
@@ -208,6 +208,9 @@ export default {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+
 }
 
 .icon {
@@ -223,6 +226,7 @@ export default {
   font-style: normal;
   font-weight: 500;
   line-height: 22px;
+  width: 95px;
 }
 .custom-icon {
   width: 24px;
@@ -232,6 +236,7 @@ export default {
   background-repeat: no-repeat;
   display: inline-block;
   margin-bottom: 8px;
+  margin-top: 12px;
 }
 
 .icon1 {
@@ -263,4 +268,11 @@ export default {
 .q-item{
   padding: 0 10px 0 0 !important;
 }
+.border-rounded {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+
+}
+
 </style>

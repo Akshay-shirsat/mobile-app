@@ -10,19 +10,19 @@
       @hide="closeBottomSheet"
       class="vue-bottom-sheet"
     >
-      <div class="q-pa-md q-gutter-sm bottom-sheet-content">
+      <div class="q-pa-sm q-gutter-sm bottom-sheet-content">
         <div
           v-for="category in categories"
           :key="category.name"
           class="category-item"
           @click="navigateTo(category.route)"
         >
-          <!-- Add a wrapper for the Emergency category -->
+
           <div v-if="category.name === 'Emergency'" class="emergency-wrapper">
             <img :src="category.icon" class="category-icon" />
             <img src="/assets/Frame.png" class="emergency-frame" />
           </div>
-          <!-- For other categories, render as usual -->
+
           <div v-else>
             <img :src="category.icon" class="category-icon" />
           </div>
@@ -75,13 +75,15 @@ export default {
 </script>
 
 <style scoped>
+q-layout{
+  position: fixed;
+}
 .bottom-sheet-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-/* Style for each category */
 .category-item {
   text-align: center;
   margin: 4px;
@@ -89,22 +91,20 @@ export default {
   color: #888;
 }
 
-/* Set bottom sheet position to fixed at the bottom */
 .vue-bottom-sheet {
   position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
-  z-index: 999; /* Adjust the z-index as needed */
+  z-index: 999;
   background-color: aliceblue;
 }
 .emergency-frame {
   position: absolute;
-  top: 10px; /* Adjust the positioning as needed */
+  top: 10px;
   left: 19px;
-  width: 30px; /* Adjust the size as needed */
-  height: 15px;
-  z-index: 1; /* Place the frame below the icon */
+  width: 30px;
+  z-index: 1;
 }
 .emergency-wrapper {
   position: relative;

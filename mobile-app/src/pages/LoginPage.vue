@@ -2,7 +2,6 @@
   <div class="login-container">
     <dark-mode-toggle />
     <div class="logo-section">
-
       <img src="/assets/Logo.png" alt="Logo" class="logo-image" />
     </div>
 
@@ -18,7 +17,6 @@
         class="input-field q-pb-md"
       ></q-input>
 
-
       <q-input
         v-model="password"
         outlined
@@ -28,27 +26,23 @@
         class="input-field"
       ></q-input>
 
-
-      <div class="row checkbox-link-container">
-        <div class="col-md-6 col-xs-6 col-sm-6">
-
+      <div class="row full-width" >
+        <div class="col-md-6 col-sm-6 col-xs-6">
           <q-checkbox
             v-model="keepLoggedIn"
             label="Keep me logged in"
-            class="keep-logged-in-checkbox q-mt-sm text-left q-ml-sm q-mr-sm"
+            class="keep-logged-in-checkbox"
           />
         </div>
-        <div class="col-md-6 col-xs-6 col-sm-6">
-
-          <router-link to="/ForgotPassword">
+        <div class="col-md-6 col-sm-6 col-xs-6">
             <q-btn
               flat
+              to="/ForgotPassword"
               no-caps
               color="black"
               label="Forgot Password?"
               class="forgot-password q-mt-sm"
             />
-          </router-link>
         </div>
       </div>
 
@@ -61,7 +55,6 @@
         class="login-button q-px-lg q-py-sm q-mt-xl rounded-button"
         to="/dashboard"
       />
-
 
       <p class="signup-option q-mt-md">
         Don't have an account? <a href="./SignupUser">Sign Up</a>
@@ -123,8 +116,6 @@ export default {
   margin-top: 16px;
 }
 
-
-
 .login-button {
   margin-top: 56px;
   width: 265px;
@@ -147,12 +138,6 @@ export default {
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 22px;
-  width: 200px;
-  height: 20px;
-  flex-shrink: 0;
-  margin-top: 12%;
-  margin-left: -8px;
 
 }
 .forgot-password {
@@ -160,12 +145,11 @@ export default {
   font-size: 12px;
   color: #3498db;
   font-style: normal;
-  width: 212px;
-  height: 20px;
+
   flex-shrink: 0;
   margin-top: 12%;
   margin-left: 10px;
-
+  padding-right: 0px;
 }
 .checkbox-link-container {
   display: flex;
@@ -185,7 +169,7 @@ export default {
 }
 
 .logo-image {
-  width: 100px;
+  width: 150px;
   height: auto;
 }
 </style>

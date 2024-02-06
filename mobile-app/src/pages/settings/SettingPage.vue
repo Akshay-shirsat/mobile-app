@@ -51,6 +51,7 @@
           </q-item>
         </q-list>
       </div>
+      
 <q-separator  inset />
     </div>
     <div v-else>
@@ -117,6 +118,11 @@ this.$router.go(-1);
         },
           {
           status: "Support",
+          imageWidth: "6px",
+          imageHeight: "5px",
+        },
+           {
+          status: "Night-Mode",
           imageWidth: "6px",
           imageHeight: "5px",
         },
