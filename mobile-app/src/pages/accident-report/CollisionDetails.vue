@@ -19,7 +19,7 @@
         </q-bar>
       </q-header>
       <q-item-label
-        class="q-pt-md q-ml-md text-weight-medium text-h6"
+        class="q-pt-md q-ml-md text-weight-medium "
         color="grey-5"
         >Accident report overview
       </q-item-label>
@@ -30,35 +30,38 @@
         :question="question"
       />
 
-        <div
+         <div
         style="
           display: flex;
           justify-content: center;
-
+          background-color: white;
+          bottom: 0px;
           position: fixed;
           z-index: 999;
           padding: 10px;
           width: 100%;
           box-sizing: border-box;
-          background-color:white;
-          bottom: 0px;
         "
       >
         <q-btn
+          no-caps
           rounded
           label="Back"
           color="grey-5"
+          text-color="black"
           @click="goBack"
-          class="q-mr-md"
-          style="width: 169.224px; height: 49px"
+          class="q-ma-sm"
+          style="width: 200.224px; height: 49px"
         />
         <q-btn
+          no-caps
           rounded
           label="Next"
           color="primary"
           @click="goNext"
-          style="width: 169.224px; height: 49px"
-           to="/insuranceDetails"
+          style="width: 200.224px; height: 49px"
+          to="/InsuranceDetails"
+          class="q-ma-sm"
         />
       </div>
     </div>

@@ -13,10 +13,10 @@
           <q-toolbar-title
             class="q-ml-md"
             style="color: black;width: 104px
-height: 33px
-top: 132.29px
-left: 16.5px
-"
+                height: 33px
+                 top: 132.29px
+              left: 16.5px
+            "
           >
             Inspection
           </q-toolbar-title>
@@ -71,283 +71,302 @@ left: 16.5px
           >
         </div>
       </div>
-      <q-scroll-area style="height: 590px">
-        <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
-          <q-list
-            fullwidth
-            rounded
-            padding
-            dense
-            class="rounded-borders; bg-grey-2"
-            style="
-              display: flex;
-              align-items: center;
-              height: 66.281px;
-              margin-top: -10px;
-            "
+
+
+      <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
+        <q-list
+          fullwidth
+          rounded
+          padding
+          dense
+          class="rounded-borders; bg-grey-2"
+          style="
+            overflow: hidden;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            height: 55.281px;
+            margin-top: -10px;
+          "
+        >
+          <div class="leftBorderDefault"></div>
+
+          <q-item
+            v-for="(item, index) in items"
+            :key="index"
+            clickable
+            v-ripple
+            style="flex-grow: 1"
           >
-            <q-img
+            <q-item-section>
+              <q-item-label
+                class="rounded-list-subtitle2 text-left text-weight-medium"
+                >{{ item.title }}</q-item-label
+              >
+            </q-item-section>
+            <q-item-section side>
+              <q-item-label class="text-weight-medium q-mr-sm">{{
+                item.progress
+              }}</q-item-label>
+            </q-item-section>
+            <q-btn
               class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
-              alt="Image description"
-              width="6px"
-              height="55px"
+              text-color="black"
+              round
+              icon="keyboard_arrow_right"
+              color="grey-4"
+              size="sm"
+              to="/councilReq"
             />
-            <q-item clickable v-ripple style="flex-grow: 1">
-              <q-item-section>
-                <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium"
-                  >Council Requirement</q-item-label
-                >
-              </q-item-section>
-              <q-item-section side>
-                <q-item-label class="text-weight-medium q-mr-sm"
-                  >0/7</q-item-label
-                >
-              </q-item-section>
+          </q-item>
+        </q-list>
+      </div>
+      <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
+        <q-list
+          fullwidth
+          rounded
+          padding
+          dense
+          class="rounded-borders; bg-grey-2"
+          style="
+             overflow: hidden;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            height: 55.281px;
+            margin-top: -10px;
+          "
+        >
+          <div class="leftBorderDefault"></div>
 
-              <q-btn
-                class="q-mr-sm"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-4"
-                size="sm"
-              />
-            </q-item>
-          </q-list>
-        </div>
-        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-          <q-list
-            fullwidth
-            rounded
-            padding
-            dense
-            class="rounded-borders; bg-grey-2"
-            style="
-              display: flex;
-              align-items: center;
-              height: 66.281px;
-              margin-top: -10px;
-            "
+
+          <q-item
+            v-for="(item, index) in secondListItems"
+            :disabled="isSecondListDisabled"
+            :key="index"
+            clickable
+            v-ripple
+            style="flex-grow: 1"
           >
-            <q-img
+            <q-item-section>
+              <q-item-label
+                class="rounded-list-subtitle2 text-left text-weight-medium "
+                >{{ item.title }}</q-item-label
+              >
+            </q-item-section>
+            <q-item-section side>
+              <q-item-label class="text-weight-medium q-mr-sm">{{
+                item.progress
+              }}</q-item-label>
+            </q-item-section>
+            <q-btn
               class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
-              alt="Image description"
-              width="6px"
-              height="55px"
+              text-color="black"
+              round
+              icon="keyboard_arrow_right"
+              color="grey-4"
+              size="sm"
             />
-            <q-item clickable v-ripple style="flex-grow: 1">
-              <q-item-section>
-                <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium text-grey-5"
-                  >Interior Check</q-item-label
-                >
-              </q-item-section>
+          </q-item>
+        </q-list>
+      </div>
+       <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
+        <q-list
+          fullwidth
+          rounded
+          padding
+          dense
+          class="rounded-borders; bg-grey-2"
+          style="
+             overflow: hidden;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            height: 55.281px;
+            margin-top: -10px;
+          "
+        >
+          <div class="leftBorderDefault"></div>
 
-              <q-item-section side>
-                <q-item-label class="text-weight-medium q-mr-sm text-grey"
-                  >0/4</q-item-label
-                >
-              </q-item-section>
 
-              <q-btn
-                class="q-mr-sm text-grey"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-2"
-                size="sm"
-              />
-            </q-item>
-          </q-list>
-        </div>
-        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-          <q-list
-            fullwidth
-            rounded
-            padding
-            dense
-            class="rounded-borders; bg-grey-2"
-            style="
-              display: flex;
-              align-items: center;
-              height: 66.281px;
-              margin-top: -10px;
-            "
+          <q-item
+          :disabled="isSecondListDisabled"
+            v-for="(item, index) in thirdListItems"
+            :key="index"
+            clickable
+            v-ripple
+            style="flex-grow: 1"
           >
-            <q-img
+            <q-item-section>
+              <q-item-label
+                class="rounded-list-subtitle2 text-left text-weight-medium"
+                >{{ item.title }}</q-item-label
+              >
+            </q-item-section>
+            <q-item-section side>
+              <q-item-label class="text-weight-medium q-mr-sm">{{
+                item.progress
+              }}</q-item-label>
+            </q-item-section>
+            <q-btn
               class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
-              alt="Image description"
-              width="6px"
-              height="55px"
+              text-color="black"
+              round
+              icon="keyboard_arrow_right"
+              color="grey-4"
+              size="sm"
             />
-            <q-item clickable v-ripple style="flex-grow: 1">
-              <q-item-section>
-                <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium text-grey-5"
-                  >Engine Fluid Level</q-item-label
-                >
-              </q-item-section>
+          </q-item>
+        </q-list>
+      </div>
+ <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
+        <q-list
+          fullwidth
+          rounded
+          padding
+          dense
+          class="rounded-borders; bg-grey-2"
+          style="
+             overflow: hidden;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            height: 55.281px;
+            margin-top: -10px;
+          "
+        >
+          <div class="leftBorderDefault"></div>
 
-              <q-item-section side>
-                <q-item-label class="text-weight-medium q-mr-sm text-grey"
-                  >0/4</q-item-label
-                >
-              </q-item-section>
 
-              <q-btn
-                class="q-mr-sm text-grey"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-2"
-                size="sm"
-              />
-            </q-item>
-          </q-list>
-        </div>
-        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-          <q-list
-            fullwidth
-            rounded
-            padding
-            dense
-            class="rounded-borders; bg-grey-2"
-            style="
-              display: flex;
-              align-items: center;
-              height: 66.281px;
-              margin-top: -10px;
-            "
+          <q-item
+          :disabled="isSecondListDisabled"
+            v-for="(item, index) in fourthListItems"
+            :key="index"
+            clickable
+            v-ripple
+            style="flex-grow: 1"
           >
-            <q-img
+            <q-item-section>
+              <q-item-label
+                class="rounded-list-subtitle2 text-left text-weight-medium"
+                >{{ item.title }}</q-item-label
+              >
+            </q-item-section>
+            <q-item-section side>
+              <q-item-label class="text-weight-medium q-mr-sm">{{
+                item.progress
+              }}</q-item-label>
+            </q-item-section>
+            <q-btn
               class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
-              alt="Image description"
-              width="6px"
-              height="55px"
+              text-color="black"
+              round
+              icon="keyboard_arrow_right"
+              color="grey-4"
+              size="sm"
             />
-            <q-item clickable v-ripple style="flex-grow: 1">
-              <q-item-section>
-                <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium text-grey-5"
-                  >Lightning Check</q-item-label
-                >
-              </q-item-section>
+          </q-item>
+        </q-list>
+      </div>
+ <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
+        <q-list
+          fullwidth
+          rounded
+          padding
+          dense
+          class="rounded-borders; bg-grey-2"
+          style="
+             overflow: hidden;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            height: 55.281px;
+            margin-top: -10px;
+          "
+        >
+          <div class="leftBorderDefault"></div>
 
-              <q-item-section side>
-                <q-item-label class="text-weight-medium q-mr-sm text-grey"
-                  >0/4</q-item-label
-                >
-              </q-item-section>
 
-              <q-btn
-                class="q-mr-sm text-grey"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-2"
-                size="sm"
-              />
-            </q-item>
-          </q-list>
-        </div>
-        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-          <q-list
-            fullwidth
-            rounded
-            padding
-            dense
-            class="rounded-borders; bg-grey-2"
-            style="
-              display: flex;
-              align-items: center;
-              height: 66.281px;
-              margin-top: -10px;
-            "
+          <q-item
+          :disabled="isSecondListDisabled"
+            v-for="(item, index) in fifthListItems"
+            :key="index"
+            clickable
+            v-ripple
+            style="flex-grow: 1"
           >
-            <q-img
+            <q-item-section>
+              <q-item-label
+                class="rounded-list-subtitle2 text-left text-weight-medium"
+                >{{ item.title }}</q-item-label
+              >
+            </q-item-section>
+            <q-item-section side>
+              <q-item-label class="text-weight-medium q-mr-sm">{{
+                item.progress
+              }}</q-item-label>
+            </q-item-section>
+            <q-btn
               class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
-              alt="Image description"
-              width="6px"
-              height="55px"
+              text-color="black"
+              round
+              icon="keyboard_arrow_right"
+              color="grey-4"
+              size="sm"
             />
-            <q-item clickable v-ripple style="flex-grow: 1">
-              <q-item-section>
-                <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium text-grey-5"
-                  >Wiper and Washers</q-item-label
-                >
-              </q-item-section>
+          </q-item>
+        </q-list>
+      </div>
+<div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
+        <q-list
+          fullwidth
+          rounded
+          padding
+          dense
+          class="rounded-borders; bg-grey-2"
+          style="
+             overflow: hidden;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            height: 55.281px;
+            margin-top: -10px;
+          "
+        >
+          <div class="leftBorderDefault"></div>
 
-              <q-item-section side>
-                <q-item-label class="text-weight-medium q-mr-sm text-grey"
-                  >0/4</q-item-label
-                >
-              </q-item-section>
 
-              <q-btn
-                class="q-mr-sm text-grey"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-2"
-                size="sm"
-              />
-            </q-item>
-          </q-list>
-        </div>
-        <div class="rounded-box q-pt-xs q-pa-md q-gutter-sm">
-          <q-list
-            fullwidth
-            rounded
-            padding
-            dense
-            class="rounded-borders; bg-grey-2"
-            style="
-              display: flex;
-              align-items: center;
-              height: 66.281px;
-              margin-top: -10px;
-            "
+          <q-item
+          :disabled="isSecondListDisabled"
+            v-for="(item, index) in sixthListItems"
+            :key="index"
+            clickable
+            v-ripple
+            style="flex-grow: 1"
           >
-            <q-img
+            <q-item-section>
+              <q-item-label
+                class="rounded-list-subtitle2 text-left text-weight-medium"
+                >{{ item.title }}</q-item-label
+              >
+            </q-item-section>
+            <q-item-section side>
+              <q-item-label class="text-weight-medium q-mr-sm">{{
+                item.progress
+              }}</q-item-label>
+            </q-item-section>
+            <q-btn
               class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
-              alt="Image description"
-              width="6px"
-              height="55px"
+              text-color="black"
+              round
+              icon="keyboard_arrow_right"
+              color="grey-4"
+              size="sm"
             />
-            <q-item clickable v-ripple style="flex-grow: 1">
-              <q-item-section>
-                <q-item-label
-                  class="rounded-list-subtitle2 text-left text-weight-medium text-grey-5"
-                  >Tyre Check</q-item-label
-                >
-              </q-item-section>
+          </q-item>
+        </q-list>
+      </div>
 
-              <q-item-section side>
-                <q-item-label class="text-weight-medium q-mr-sm text-grey"
-                  >0/4</q-item-label
-                >
-              </q-item-section>
-
-              <q-btn
-                class="q-mr-sm text-grey"
-                text-color="black"
-                round
-                icon="keyboard_arrow_right"
-                color="grey-2"
-                size="sm"
-              />
-            </q-item>
-          </q-list>
-        </div>
-      </q-scroll-area>
       <div
         style="
           display: flex;
@@ -387,6 +406,14 @@ import SkelDash from "../../components/skeleton/SkelOver.vue";
 export default {
   data() {
     return {
+      isSecondListDisabled: true,
+      items: [{ title: "Council Requirement", progress: "0/7" }],
+      secondListItems: [{ title: "Interior Check", progress: "0/5" }],
+      thirdListItems: [{ title: "Engine Fluid Level", progress: "0/5" }],
+      fourthListItems: [{ title: "Lightning Check", progress: "0/5" }],
+      fifthListItems: [{ title: "Wiper and Washers", progress: "0/5" }],
+      sixthListItems: [{ title: "Tyre Check", progress: "0/5" }],
+
       selectedOption: null,
       dropdownOptions: [
         { label: "Option 1", value: 1 },
@@ -401,7 +428,7 @@ export default {
   created() {
     setTimeout(() => {
       this.flag = true;
-    }, 5000);
+    }, 1000);
   },
   methods: {
     viewDetails() {},

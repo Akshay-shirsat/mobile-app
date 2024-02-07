@@ -7,46 +7,48 @@
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
-   <div class="flex-container">
-            <div class="flex-item ">
-                <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"
-          >Selected Vehicle
- </q-item-label
-        >
+      <div class="flex-container">
+        <div class="flex-item">
+          <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"
+            >Selected Vehicle
+          </q-item-label>
 
-              <q-select
-                outlined
-                dense
-                v-model="selectedOption"
-                :options="dropdownOptions"
-                label="Select an option"
-                style="width: 162px;height:35px; "
-                class="q-ml-md  "
-              ></q-select>
+          <q-select
+            outlined
+            dense
+            v-model="selectedOption"
+            :options="dropdownOptions"
+            label="Select an option"
+            style="width: 162px; height: 35px"
+            class="q-ml-md"
+          ></q-select>
 
-              <q-btn
-                label="View Details"
-                color="primary"
-                no-caps
-                rounded
-                @click="viewDetails"
-                class="q-mt-lg q-ml-md"
-                style="width:137px;"
-              />
-            </div>
- <div class="flex-item image-container">
-              <img src="/assets/image1.png" alt="Image" class="image-right"/>
-            </div>
-          </div>
+          <q-btn
+            label="View Details"
+            color="primary"
+            no-caps
+            rounded
+            @click="viewDetails"
+            class="q-mt-lg q-ml-md"
+            style="width: 137px"
+          />
+        </div>
+        <div class="flex-item image-container">
+          <img src="/assets/image1.png" alt="Image" class="image-right" />
+        </div>
+      </div>
        <div class="q-pa-md q-mt-sm items-start">
-        <q-btn-group rounded style="justify-content: center">
+        <q-btn-group
+          rounded
+          style="display: flex; justify-content: center; width: 100%"
+        >
           <q-btn
             color="grey-4"
             rounded
             text-color="black"
             no-caps
             label="Pending"
-            class="btngroup"
+            style="width: 100%"
             to="/inspectionCar"
           />
           <q-btn
@@ -55,7 +57,7 @@
             text-color="black"
             no-caps
             label="Completed"
-            class="btngroup"
+            style="width: 100%"
             to="/inspectionComp"
           />
         </q-btn-group>
@@ -73,9 +75,9 @@
         <div class="q-pa-md">
           <q-btn-dropdown size="12px" flat label="Filter">
             <q-list>
-              <q-item clickable v-close-popup to="/inspectionDraft" >
+              <q-item clickable v-close-popup to="/inspectionDraft">
                 <q-item-section>
-                  <q-item-label >Draft</q-item-label>
+                  <q-item-label>Draft</q-item-label>
                 </q-item-section>
               </q-item>
 
@@ -94,27 +96,19 @@
         :key="index"
       >
         <q-list
-        fullwidth
+          fullwidth
           rounded
           padding
           dense
           class="rounded-borders bg-grey-2"
           style="
-
             display: flex;
             align-items: center;
             height: 66.281px;
             margin-top: -10px;
-
           "
         >
-          <q-img
-            class="q-mr-sm"
-            :src="item.imageSrc"
-            :alt="item.imageAlt"
-            :width="item.imageWidth"
-            :height="item.imageHeight"
-          />
+          <div class="leftBorderInfo"></div>
           <q-item clickable v-ripple style="flex-grow: 1">
             <q-item-section>
               <q-item-label
@@ -123,11 +117,9 @@
               >
               <q-item-label class="text-left text-bold" lines="1"
                 >{{ item.vehicle }},
-                <span class="text-weight-light"
-                  >{{
+                <span class="text-weight-light">{{
                   item.dueDate
-                }}</span
-                ></q-item-label
+                }}</span></q-item-label
               >
             </q-item-section>
 
@@ -156,7 +148,6 @@ import SkelDraft from "../../components/skeleton/SkelDrafts.vue";
 export default {
   created() {
     setTimeout(() => {
-
       this.flag = true;
       this.fetchCompletedReports();
     }, 1000);
@@ -177,45 +168,39 @@ export default {
   methods: {
     viewDetails() {},
     fetchCompletedReports() {
+      const dynamicData = [
+        {
+          status: "Draft",
+          imageSrc: "/assets/Rectangle_176.png",
+          imageAlt: "Image description",
+          imageWidth: "6px",
+          imageHeight: "55px",
+          vehicle: "Sienna",
+          dueDate: "due by-dd.mm.yyyy",
+        },
+        {
+          status: "Draft",
+          imageSrc: "/assets/Rectangle_176.png",
+          imageAlt: "Image description",
+          imageWidth: "6px",
+          imageHeight: "55px",
+          vehicle: "BMW",
+          dueDate: "due by-dd.mm.yyyy",
+        },
+      ];
 
-const dynamicData = [
-  {
-    status: "Draft",
-    imageSrc: "/assets/Rectangle_176.png",
-    imageAlt: "Image description",
-    imageWidth: "6px",
-    imageHeight: "55px",
-    vehicle: "Sienna",
-    dueDate: "due by-dd.mm.yyyy",
-  },
-  {
-    status: "Draft",
-    imageSrc: "/assets/Rectangle_176.png",
-    imageAlt: "Image description",
-    imageWidth: "6px",
-    imageHeight: "55px",
-    vehicle: "BMW",
-    dueDate: "due by-dd.mm.yyyy",
-  },
-
-];
-
-this.completedReports = dynamicData;
-},
+      this.completedReports = dynamicData;
+    },
   },
 };
 </script>
 
 <style scoped>
-
-
-
 .image-right {
   width: 187.041px;
   height: 111.807px;
   flex-shrink: 0;
 }
-
 
 q-btn {
   margin-left: 10px;
@@ -224,7 +209,6 @@ q-btn {
 .btngroup {
   width: 170px;
 }
-
 
 .rounded-list-subtitle2 {
   color: rgb(72, 43, 150);

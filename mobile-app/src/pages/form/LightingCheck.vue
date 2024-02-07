@@ -15,7 +15,7 @@
         <q-bar class="q-py-lg bg-white text-black">
           <q-btn flat round dense icon="arrow_back" @click="goBack" />
           <q-toolbar-title class="q-ml-md">
-            LightingCheck
+            Lighting Check
           </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
@@ -23,35 +23,11 @@
   <q-item-label class="q-pt-md q-ml-md text-weight-medium" color="grey-5"
         >Questions</q-item-label
       >
-
-      <div v-for="(question, index) in questions" :key="index">
-        <q-card class="q-ma-md">
-          <div class="q-pa-sm" style="max-width: 650px">
-            <q-expansion-item
-              v-model="expanded[index]"
-              :label="question.label"
-              class="text-subtitle2"
-            >
-              <q-separator />
-              <q-card>
-                <q-card-section class="q-pt-md q-pb-md">
-                  <div class="centered-container">
-                    <q-btn
-                      v-for="(option, optionIndex) in question.options"
-                      :key="optionIndex"
-                      outline
-                      :label="option"
-                      class="q-mr-md"
-                      style="width: 78px"
-                    />
-                  </div>
-
-                </q-card-section>
-              </q-card>
-            </q-expansion-item>
-          </div>
-        </q-card>
-      </div>
+      <QuestionCard
+        v-for="(question, index) in questions"
+        :key="index"
+        :question="question"
+      />
 
  <div
         style="
@@ -70,8 +46,8 @@
           no-caps
           rounded
           label="Back"
-          color="grey-5"
           text-color="black"
+          color="grey-5"
           @click="goBack"
           class="q-ma-sm"
           style="width: 200.224px; height: 49px"
@@ -83,31 +59,63 @@
           color="primary"
           @click="goNext"
           style="width: 200.224px; height: 49px"
-          to="/Wiper&WsherCheck"
+          to="/wiper&wsherCheck"
           class="q-ma-sm"
         />
       </div>
     </div>
   </q-page>
 </template>
-
 <script>
+import QuestionCard from "./QuestionCard.vue";
 import { ref } from "vue";
 
 export default {
+  components: {
+    QuestionCard,
+  },
   data() {
     return {
-      progress: 0.44,
-      expanded: [],
+       progress: 0.55,
       questions: [
         {
-          label: "Council vehicle licence plate(s) clearly displayed and not obscured? *",
+          label: "Headlights (High Beam)",
           options: ["Yes", "No", "N/A"],
         },
         {
-          label: "No Smoking signs are displayed and viewable by every passenger? *",
+          label: "Headlights (Low Beam)",
           options: ["Yes", "No", "N/A"],
         },
+        {
+          label: "Front Side Lights",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label: "Rear Lights",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label: "Brake Lights",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label: "Number Plate Lights",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label: "Rear Indicators",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label: "Rear Fog Lights",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label:
+            "Taxi rooflight working correctly When lit showing white or yellow to the front and red light to the rear?",
+          options: ["Yes", "No", "N/A"],
+        },
+
       ],
     };
   },

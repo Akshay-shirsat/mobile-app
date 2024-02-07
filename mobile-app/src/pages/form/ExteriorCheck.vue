@@ -75,7 +75,23 @@ export default {
       progress: 0.33,
       questions: [
         {
-          label: "Council vehicle licence plate(s) clearly displayed and not obsured? *",
+          label: "Engine Oil level *",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label: "Engine Coolant level *",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label: "Screen wash level",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label: "Steering fluid level",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label: "Adblue level",
           options: ["Yes", "No", "N/A"],
         },
         // Add more questions as needed

@@ -25,7 +25,7 @@ const routes = [
 
 
 //accident report
-{ path: '/accidenntReport', component: () => import('pages/accident-report/AccidenntReport.vue') },
+{ path: '/accidenntReport',name: "Accident", component: () => import('pages/accident-report/AccidenntReport.vue') },
 
 
 
@@ -58,7 +58,7 @@ const routes = [
 { path: '/commentsD', component: () => import('pages/form/CommentsD.vue') },
 
       // Accident checklist
-      { path: '/acciReportOver',name: "Accident", component: () => import('pages/accident-report/AcciReportOver.vue') },
+      { path: '/acciReportOver',name:"Accidentchecklist", component: () => import('pages/accident-report/AcciReportOver.vue') },
       { path: '/dtLocation', component: () => import('pages/accident-report/DtLocation.vue') },
       { path: '/collisionDetails', component: () => import('pages/accident-report/CollisionDetails.vue') },
 

@@ -1,12 +1,15 @@
 <template>
   <q-page>
     <div v-if="flag">
-      <q-header elevated class="bg-white text-primary">
-        <q-bar class="q-py-lg bg-white text-primary">
-          <q-toolbar-title class="q-ml-sm"> Inspection </q-toolbar-title>
+      <q-header elevated class="bg-white">
+        <q-bar class="q-py-lg bg-white">
+          <q-toolbar-title class="q-ml-sm text-black">
+            Inspection
+          </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
+      <q-separator />
       <div class="flex-container">
         <div class="flex-item">
           <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"
@@ -37,27 +40,28 @@
           <img src="/assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>
-      <q-separator class="q-mt-md"/>
+      <q-separator class="q-mt-md" />
       <div class="q-pa-md q-mt-sm items-start">
-        <q-btn-group rounded style="justify-content: center" >
+        <q-btn-group
+          rounded
+          style="display: flex; justify-content: center; width: 100%"
+        >
           <q-btn
-
             color="white"
             rounded
             text-color="black"
             no-caps
             label="Pending"
-            class="btngroup"
+            style="width: 100%"
             to="/inspectionCar"
           />
           <q-btn
-
             color="grey-4"
             rounded
             text-color="black"
             no-caps
             label="Completed"
-            class="btngroup"
+            style="width: 100%"
             to="/inspectionComp"
           />
         </q-btn-group>
@@ -72,7 +76,6 @@
         <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="grey-5"
           >Completed and Pending reports</q-item-label
         >
-
       </div>
       <div
         class="rounded-box q-pt-sm q-pa-md q-gutter-sm"
@@ -92,13 +95,7 @@
             margin-top: -10px;
           "
         >
-          <q-img
-            class="q-mr-sm"
-            :src="item.imageSrc"
-            :alt="item.imageAlt"
-            :width="item.imageWidth"
-            :height="item.imageHeight"
-          />
+          <div class="leftBorderSuccess"></div>
           <q-item clickable v-ripple style="flex-grow: 1">
             <q-item-section>
               <q-item-label

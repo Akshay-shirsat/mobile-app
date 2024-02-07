@@ -18,22 +18,54 @@
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
-    <q-item-label class="q-pt-md q-ml-md text-weight-medium" color="grey-5"
+      <q-item-label class="q-pt-md q-ml-md text-weight-medium" color="grey-5"
         >Comments</q-item-label
       >
       <QuestionCard
         v-for="(question, index) in questions"
         :key="index"
         :question="question"
-
       />
+      <div class="q-pa-md" fullwidth>
+        <q-list bordered class="rounded-borders">
+          <q-expansion-item
+            expand
+            expand-separator
 
+            label="Add Location"
+            style="background-color: white"
+            class="q-ml-sm"
+          >
+            <q-card>
+              <q-card-section>
+                <q-item-section icon>
+                  <q-item-label
+                    class="text-weight-medium text-caption q-ml-md"
+                    color="blue-grey-6"
+                    >Address</q-item-label
+                  >
+                </q-item-section>
+                <div class="q-pa-md" fullwidth>
+                  <q-input
+                    dense
+                    type="input"
+                    outlined
+                    color="grey"
+                    style="width: 100%"
+                    v-model="notes"
+                  />
+                </div>
+              </q-card-section>
+            </q-card>
+          </q-expansion-item>
+        </q-list>
+      </div>
 
       <div
         style="
           display: flex;
           justify-content: center;
-          background-color:white;
+          background-color: white;
           bottom: 0px;
           position: fixed;
           z-index: 999;
@@ -43,7 +75,7 @@
         "
       >
         <q-btn
-        no-caps
+          no-caps
           rounded
           icon="arrow_back"
           label="Back"
@@ -51,10 +83,10 @@
           text-color="black"
           @click="goBack"
           class="q-ma-sm"
-          style="width: 101.501px; height: 49px;"
+          style="width: 101.501px; height: 49px"
         />
         <q-btn
-        no-caps
+          no-caps
           rounded
           label="submit checks"
           color="positive"
@@ -82,16 +114,6 @@ export default {
         {
           label: "Any Comments? ",
         },
-        {
-          label: "Add Location",
-          sections: [
-
-            {
-              type: "text",
-              label: "Address",
-            },
-          ],
-        },
       ],
     };
   },
@@ -109,8 +131,8 @@ export default {
       this.progress = Math.random();
     },
     goBack() {
-this.$router.go(-1);
-  },
+      this.$router.go(-1);
+    },
   },
 };
 </script>

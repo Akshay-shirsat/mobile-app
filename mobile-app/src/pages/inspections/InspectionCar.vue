@@ -38,16 +38,19 @@
           <img src="/assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>
-       <q-separator class="q-mt-md"/>
+      <q-separator class="q-mt-md" />
       <div class="q-pa-md q-mt-sm items-start">
-        <q-btn-group rounded style="justify-content: center">
+        <q-btn-group
+          rounded
+          style="display: flex; justify-content: center; width: 100%"
+        >
           <q-btn
             color="grey-4"
             rounded
             text-color="black"
             no-caps
             label="Pending"
-            class="btngroup"
+            style="width: 100%"
             to="/inspectionCar"
           />
           <q-btn
@@ -56,7 +59,7 @@
             text-color="black"
             no-caps
             label="Completed"
-            class="btngroup"
+            style="width: 100%"
             to="/inspectionComp"
           />
         </q-btn-group>
@@ -80,7 +83,7 @@
             label="Filter"
             icon="filter_list"
           >
-            <q-list >
+            <q-list>
               <q-item clickable v-close-popup to="/inspectionDraft">
                 <q-item-section>
                   <q-item-label>Draft</q-item-label>
@@ -114,13 +117,7 @@
             margin-top: -10px;
           "
         >
-          <q-img
-            class="q-mr-sm"
-            :src="item.imageSrc"
-            :alt="item.imageAlt"
-            :width="item.imageWidth"
-            :height="item.imageHeight"
-          />
+          <div class="leftBorderDanger"></div>
           <q-item clickable v-ripple style="flex-grow: 1">
             <q-item-section>
               <q-item-label
@@ -165,13 +162,7 @@
             margin-top: -10px;
           "
         >
-          <q-img
-            class="q-mr-sm"
-            :src="item.imageSrc2"
-            :alt="item.imageAlt"
-            :width="item.imageWidth"
-            :height="item.imageHeight"
-          />
+          <div class="leftBorderInfo"></div>
           <q-item clickable v-ripple style="flex-grow: 1">
             <q-item-section>
               <q-item-label
@@ -268,7 +259,7 @@ export default {
 }
 
 .btngroup {
-  width: 170px;
+  width: 200px;
 }
 
 .rounded-list-subtitle {

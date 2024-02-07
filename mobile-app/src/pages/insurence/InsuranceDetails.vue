@@ -45,16 +45,22 @@
                   <div style="display: flex" class="q-pa-sm">
                     <div class="col">
                       <q-label class="q-pa-sm">First Name</q-label>
-                      <q-input outlined class="q-pa-sm" />
+                       <div class="q-pa-md" style="max-width: 300px;">
+              <q-input dense v-model="text"  label="type here" outlined fullwidth />
+            </div>
                     </div>
                     <div class="col">
                       <q-label class="q-pa-sm">Last Name</q-label>
-                      <q-input outlined class="q-pa-sm" />
+                            <div class="q-pa-md" style="max-width: 300px;">
+              <q-input dense v-model="text"  label="type here" outlined fullwidth />
+            </div>
                     </div>
                   </div>
                   <div>
                     <q-label class="q-pa-sm">Street Address</q-label>
-                    <q-input outlined class="q-pa-sm" />
+                           <div class="q-pa-md" >
+              <q-input dense v-model="text"  label="type here" outlined fullwidth />
+            </div>
                   </div>
                 </div>
                 <div style="display: flex">
@@ -83,35 +89,38 @@
         </q-list>
       </div>
 
-<div
+    <div
         style="
           display: flex;
           justify-content: center;
-
+          background-color: white;
+          bottom: 0px;
           position: fixed;
           z-index: 999;
           padding: 10px;
           width: 100%;
           box-sizing: border-box;
-          background-color:white;
-          bottom: 0px;
         "
       >
         <q-btn
+          no-caps
           rounded
           label="Back"
           color="grey-5"
+          text-color="black"
           @click="goBack"
-          class="q-mr-md"
-          style="width: 101.501px; height: 47px"
+          class="q-ma-sm"
+          style="width: 101.5px; height: 47px"
         />
         <q-btn
+          no-caps
           rounded
-          label="submit checks"
-          color="positive"
+          label="submit"
+          color="info"
           @click="goNext"
-          style="width: 233.653px; height: 47px"
-          to="/accidenntReport"
+          style="width: 233.65px; height: 47px"
+          to="/AccidenntReport"
+          class="q-ma-sm"
         />
       </div>
     </div>

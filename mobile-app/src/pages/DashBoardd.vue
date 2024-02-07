@@ -232,7 +232,7 @@ export default {
       ],
       icons: [
         { name: "Start Inspection", route: "inspectionOver",url:"/assets/calendar--tools.png" },
-        { name: "Accident Report", route: "Accident",url:"/assets/vector.png" },
+        { name: "Accident Report", route: "Accidentchecklist",url:"/assets/vector.png" },
         { name: "Log Miles ", route: "logMile",url:"/assets/vectorr.png" },
       ],
     };

@@ -78,7 +78,7 @@ export default {
       questions: [
         {
           label:
-            "Council vehicle licence plate(s) clearly displayed and not obsured? *",
+            "Is the bodywork free from rust, dents and major scratches? Are all panels and trims safely secured?",
           options: ["Yes", "No", "N/A"],
         },
 

@@ -75,10 +75,14 @@ export default {
       progress: 0.72,
       questions: [
         {
-          label: "Council vehicle licence plate(s) clearly displayed and not obsured? *",
+          label: "Are all tyres road legal, including a minimum tread depth of 1.6mm with no cords visable or damage to tyre walls?",
           options: ["Yes", "No", "N/A"],
         },
-        // Add more questions as needed
+        {
+          label: "Are all tyres are sufficiently inflated to the manufactures guidelines?  ",
+          options: ["Yes", "No", "N/A"],
+        },
+       
       ],
     };
   },

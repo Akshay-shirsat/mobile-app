@@ -80,10 +80,15 @@ export default {
       questions: [
         {
           label:
-            "Council vehicle licence plate(s) clearly displayed and not obsured? *",
+            "Are all wipers in full working order, do the wiper blades clear windscreen effectively? (both front and rear where applicable)",
           options: ["Yes", "No", "N/A"],
         },
-
+         {
+          label:
+            "Are all windscreen washers aligned and fully operational to clean window? (both front and rear where applicable)",
+          options: ["Yes", "No", "N/A"],
+        },
+         
       ],
     };
   },

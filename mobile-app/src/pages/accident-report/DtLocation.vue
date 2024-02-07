@@ -23,41 +23,44 @@
         color="grey-5"
         >Date, Time and Location</q-item-label
       >
-      <!-- Include your NewQuestionCard component here -->
+      
       <NewQuestionCard :question="dateQuestion" />
       <NewQuestionCard :question="timeQuestion" />
       <NewQuestionCard :question="locationQuestion" />
 
 
-        <div
+       <div
         style="
           display: flex;
           justify-content: center;
-
+          background-color: white;
+          bottom: 0px;
           position: fixed;
           z-index: 999;
           padding: 10px;
           width: 100%;
           box-sizing: border-box;
-          background-color:white;
-          bottom: 0px;
         "
       >
         <q-btn
+          no-caps
           rounded
           label="Back"
           color="grey-5"
-          @click="goBack"
-          class="q-mr-md"
-          style="width: 169.224px; height: 47px"
+          text-color="black"
+          @click="goBackk"
+          class="q-ma-sm"
+          style="width: 200.224px; height: 49px"
         />
         <q-btn
+          no-caps
           rounded
           label="Next"
           color="primary"
           @click="goNext"
-          style="width: 169.224px; height: 47px"
-          to="/collisionDetails"
+          style="width: 200.224px; height: 49px"
+          to="/CollisionDetails"
+          class="q-ma-sm"
         />
       </div>
     </div>
@@ -95,9 +98,7 @@ export default {
     randomize() {
       this.progress = Math.random();
     },
-    goBack() {
-      // Implement goBack method if needed
-    },
+
     goNext() {
       // Implement goNext method if needed
     },

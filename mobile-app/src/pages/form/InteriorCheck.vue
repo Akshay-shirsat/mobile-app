@@ -75,10 +75,23 @@ export default {
       progress: 0.22,
       questions: [
         {
-          label: "Council vehicle licence plate(s) clearly displayed and not obsured? *",
+          label: "Are all seatbelts present, securely fixed and free from cuts or damage?",
           options: ["Yes", "No", "N/A"],
         },
-        // Add more questions as needed
+         {
+          label: "Are there any dashboard warning lights illuminuted including: EML, OIL, ABS, TYRES, BRAKES, ETC?",
+          options: ["Yes", "No", "N/A"],
+        },
+         {
+          label: "Does the horn operate correctly?",
+          options: ["Yes", "No", "N/A"],
+        },
+         {
+          label: "Are all driving mirrors free from damage or cracks securely fitted and aligned correctly?",
+          options: ["Yes", "No", "N/A"],
+        },
+        
+
       ],
     };
   },

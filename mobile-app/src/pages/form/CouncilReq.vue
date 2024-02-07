@@ -79,12 +79,37 @@ export default {
       questions: [
         {
           label:
-            "Council vehicle licence plate(s) clearly displayed and not obsured? *",
+           "Council vehicle licence plate(s) clearly displayed and not obscured?*",
           options: ["Yes", "No", "N/A"],
         },
         {
           label:
-            "Council vehicle licence plate(s) clearly displayed and not obsured? *",
+            "No Smoking signs are displayed and viewable by every passenger? *",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label:
+            "Is there a first aid kit available and accessible? * (Check expiry date) ",
+          options: ["Yes", "No", "N/A"],
+        },
+         {
+          label:
+            "Is there a fire extinguisher available and accessible? * (Check expiry date)  ",
+          options: ["Yes", "No", "N/A"],
+        },
+         {
+          label:
+            "Is the taxi meter visible and correctly collaborated to the current tariffs? ",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label:
+            "Is the table of charges cleared displayed in accordance to licence? ",
+          options: ["Yes", "No", "N/A"],
+        },
+        {
+          label:
+            "In vehicle CCTV-Signed displayed and viewable? Sound is switched off camera whilst recording? *",
           options: ["Yes", "No", "N/A"],
         },
       ],
@@ -101,6 +126,7 @@ export default {
       goBack() {
     this.$router.go(-1);
   },
+
   goNext() {
     if (this.progress < 100) {
       this.progress += 10;
