@@ -1,16 +1,17 @@
 <template>
   <q-card class="q-ma-md">
-    <div class="q-pa-sm" fullwidth>
+    <div class="q-pa-sm" >
       <q-expansion-item
         v-model="expanded"
         :label="question.label"
-        class="text-subtitle2"
+        class="text-subtitle2 q-ml-md"
+        fullwidth
       >
         <q-separator />
 
-        <q-card>
-          <q-card-section class="q-pt-md q-pb-md">
-            <div class="centered-container" fullwidth>
+        <q-card >
+          <q-card-section class="q-pt-md q-pb-md" >
+            <div class="centered-container" >
               <q-btn
                 no-caps
                 flat
@@ -123,4 +124,5 @@ export default {
   align-items: center;
   margin-right: 25px;
 }
+
 </style>
