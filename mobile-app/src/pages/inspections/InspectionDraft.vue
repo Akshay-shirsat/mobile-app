@@ -219,7 +219,7 @@ q-btn {
 }
 
 .rounded-borders {
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
 }
 .q-pt-sm {

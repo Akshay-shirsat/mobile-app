@@ -59,6 +59,7 @@
             @click="viewDetails"
             class="q-mt-lg q-ml-md"
             style="width: 137px"
+            to="/VehicleDetails"
           />
         </div>
         <div class="flex-item image-container">

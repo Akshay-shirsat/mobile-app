@@ -1,11 +1,20 @@
 <template>
   <q-page>
     <div v-if="flag">
-      <q-header elevated class="bg-white text-primary">
-        <q-bar class="q-py-lg bg-white text-primary">
-          <q-toolbar-title class="q-ml-md"> Inspection </q-toolbar-title>
+     <q-header class="bg-white text-primary">
+        <q-bar class="q-py-lg bg-white">
 
-          <q-btn flat round dense icon="more_vert" />
+          <q-toolbar-title
+            class="q-ml-md"
+            style="color: black;width: 104px
+                height: 33px
+                 top: 132.29px
+              left: 16.5px
+            "
+          >
+            Inspection
+          </q-toolbar-title>
+          <q-btn flat round dense color="black" icon="more_vert" />
         </q-bar>
       </q-header>
       <div class="flex-container">
@@ -80,6 +89,7 @@
             size="12px"
             flat
             no-caps
+            color="primary"
             label="Filter"
             icon="filter_list"
           >
@@ -90,9 +100,9 @@
                 </q-item-section>
               </q-item>
 
-              <q-item clickable v-close-popup to="/inspectionComp">
+              <q-item clickable v-close-popup>
                 <q-item-section>
-                  <q-item-label>Completed</q-item-label>
+                  <q-item-label>Pending</q-item-label>
                 </q-item-section>
               </q-item>
             </q-list>
@@ -274,7 +284,7 @@ export default {
 }
 
 .rounded-borders {
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   margin-top: -10px;
 }

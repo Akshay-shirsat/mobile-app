@@ -1,15 +1,18 @@
 <template>
   <q-page>
     <div v-if="flag">
-      <q-header class="bg-white text-primary">
-        <q-bar class="q-py-lg bg-white text-primary">
-          <q-btn flat round dense icon="arrow_back" @click="goBack" />
-          <q-toolbar-title class="q-ml-md"> Vehicle Details </q-toolbar-title>
-
-          <div>
-            <DarkModeToggle />
-          </div>
-
+     <q-header  class="bg-white">
+        <q-bar class="q-py-lg bg-white">
+           <q-btn
+            flat
+            dense
+            icon="arrow_back"
+            style="color: black"
+            @click="goBack"
+          />
+          <q-toolbar-title class="q-ml-sm text-black">
+            Vehicle Details
+          </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
@@ -279,7 +282,7 @@
 </style>
 <script>
 import SkelDash from "../components/skeleton/SkelDrafts.vue";
-import DarkModeToggle from "./DarkModeToggle.vue";
+
 
 export default {
   data() {
@@ -303,16 +306,13 @@ export default {
       mileageN: "0000",
     };
   },
-  components: {
-    SkelDash,
-    DarkModeToggle,
-  },
+
   created() {
     setTimeout(() => {
       // Code to be executed after the specified delay
 
       this.flag = true;
-    }, 5000);
+    }, 100);
   },
   methods: {
     viewDetails() {},

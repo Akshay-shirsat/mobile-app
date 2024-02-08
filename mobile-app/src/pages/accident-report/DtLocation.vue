@@ -26,7 +26,7 @@
 
       <NewQuestionCard :question="dateQuestion" />
       <NewQuestionCard :question="timeQuestion" />
-      <NewQuestionCard :question="locationQuestion" />
+      <NewQuestionCard   :question="locationQuestion" />
 
 
        <div
@@ -78,7 +78,8 @@ export default {
   data() {
     return {
       progress: 0.33,
-      // Define your questions for Date, Time, and Location
+      expanded: ref(true),
+
       dateQuestion: {
         label: "Select Date",
         date: true,

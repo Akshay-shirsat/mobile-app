@@ -20,7 +20,7 @@
           >
             Accident Report
           </q-toolbar-title>
-          <q-btn flat round dense icon="more_vert" />
+          <q-btn flat round dense color="black" icon="more_vert" />
         </q-bar>
       </q-header>
       <q-separator />

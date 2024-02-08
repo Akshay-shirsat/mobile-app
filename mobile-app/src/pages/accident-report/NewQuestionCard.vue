@@ -12,23 +12,23 @@
 
 
             <template v-if="question.date">
-              <q-item-label class="q-pt-md text-weight-medium text-caption q-ml-md" color="blue-grey-6">Date</q-item-label>
-              <q-date v-model="selectedDate" style="width: 324px" />
+              <q-item-label class="q-pt-md text-weight-medium text-caption q-ml-md subline" >Date</q-item-label>
+              <q-date v-model="selectedDate" size="sm" />
             </template>
 
             <template v-if="question.time">
-              <q-item-label class="q-pt-md text-weight-medium text-caption q-ml-md" color="blue-grey-6">Time</q-item-label>
+              <q-item-label class="q-pt-md text-weight-medium text-caption q-ml-md subline" >Time</q-item-label>
               <q-time v-model="selectedTime" style="width: 324px" />
             </template>
 
 
             <template v-if="question.allLocation">
-              <q-item-label class="q-pt-md text-weight-medium text-caption q-ml-md" color="blue-grey-6">Address</q-item-label>
-            <div class="q-pa-md" style="max-width: 300px;">
-              <q-input dense v-model="text"  label="type here" outlined style="width: 324px;" />
+              <q-item-label class="q-pt-md text-weight-medium text-caption  subline" >Address</q-item-label>
+            <div class="q-pt-sm" style="max-width: 300px;">
+              <q-input dense v-model="text"  label="type here" outlined fullwidth />
             </div>
-             <q-item-label class="q-pt-md text-weight-medium text-caption q-ml-md" color="Primary" Icon="Radar">Auto Detect My Location</q-item-label>
-            
+             <q-item-label class="q-pt-md text-weight-medium text-caption text-primary"  Icon="Radar">Auto Detect My Location</q-item-label>
+
             </template>
           </q-card-section>
         </q-card>
@@ -47,6 +47,7 @@ export default {
   data() {
     return {
       expanded: ref(false),
+      
       selectedDate: null,
       selectedTime: null,
        text: ref('')

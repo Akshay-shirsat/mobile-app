@@ -1,16 +1,29 @@
 <template>
   <q-page>
     <div v-if="flag">
-      <q-header class="bg-white text-primary">
-        <q-bar class="q-py-lg bg-white text-primary">
-          <q-btn flat round dense icon="arrow_back" @click="goBack" />
-          <q-toolbar-title class="q-ml-md"> Log Miles </q-toolbar-title>
-          <div>
-         <DarkModeToggle/>
-          </div>
-          <q-btn flat round dense icon="more_vert" />
+       <q-header class="bg-white text-primary">
+        <q-bar class="q-py-lg bg-white">
+          <q-btn
+            flat
+            dense
+            icon="arrow_back"
+            style="color: black"
+            @click="goBack"
+          />
+          <q-toolbar-title
+            class="q-ml-md"
+            style="color: black;width: 104px
+                height: 33px
+                 top: 132.29px
+              left: 16.5px
+            "
+          >
+            Log Miles
+          </q-toolbar-title>
+          <q-btn flat round dense color="black" icon="more_vert" />
         </q-bar>
       </q-header>
+      <q-separator />
       <div class="flex-container">
         <div class="flex-item">
           <img src="/assets/image1.png" alt="Image" class="image-center" />
@@ -29,7 +42,7 @@
           line-height: normal;
         "
       >
-        <!-- Left side: Vehicle Name -->
+
         <div>
           <q-item-label
             class="q-pa-sm q-ml-sm text-weight-medium"
@@ -39,7 +52,7 @@
           </q-item-label>
         </div>
 
-        <!-- Right side: Vehicle Tag -->
+
         <div class="q-pa-md">
           <q-item-label class="text-left text-bold" lines="1">
             <span class="text-weight-light text-left">{{
@@ -62,7 +75,7 @@
           line-height: normal;
         "
       >
-        <!-- Left side: Vehicle Name -->
+
         <div>
           <q-item-label
             class="q-pa-sm q-ml-sm text-weight-medium"
@@ -72,7 +85,7 @@
           </q-item-label>
         </div>
 
-        <!-- Right side: Vehicle Tag -->
+
         <div class="q-pa-md">
           <q-item-label class="text-left text-bold" lines="1">
             <span class="text-weight-light text-left">{{
@@ -95,7 +108,7 @@
           line-height: normal;
         "
       >
-        <!-- Left side: Vehicle Name -->
+
         <div>
           <q-item-label
             class="q-pa-sm q-ml-sm text-weight-medium"
@@ -105,7 +118,7 @@
           </q-item-label>
         </div>
 
-        <!-- Right side: Vehicle Tag -->
+
         <div class="q-pa-md">
           <q-item-label class="text-left text-bold" lines="1">
             <span class="text-weight-light text-left">{{
@@ -218,11 +231,9 @@
 </style>
 <script>
 import SkelDash from "../components/skeleton/SkelDrafts.vue";
-import DarkModeToggle from './DarkModeToggle.vue';
+
 export default {
-  components:{
-    DarkModeToggle,
-  },
+
   data() {
     return {
       selectedOption: null,
@@ -241,13 +252,13 @@ export default {
   },
   components: {
     SkelDash,
-    DarkModeToggle,
+
   },
   created() {
     setTimeout(() => {
       this.selectedVehicleName = "Example Vehicle";
       this.flag = true;
-    }, 5000);
+    }, 100    );
   },
   methods: {
     viewDetails() {},

@@ -208,7 +208,7 @@ export default {
 }
 
 .rounded-borders {
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   margin-top: -10px;
 }
