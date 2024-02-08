@@ -20,7 +20,7 @@
           >
             Inspection
           </q-toolbar-title>
-          <q-btn flat round dense icon="more_vert" />
+          <q-btn flat round dense color="black" icon="more_vert" />
         </q-bar>
       </q-header>
       <q-separator />
@@ -82,7 +82,7 @@
           class="rounded-borders; bg-grey-2"
           style="
             overflow: hidden;
-            border-radius: 12px;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             height: 55.281px;
@@ -129,8 +129,8 @@
           dense
           class="rounded-borders; bg-grey-2"
           style="
-             overflow: hidden;
-            border-radius: 12px;
+          overflow: hidden;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             height: 55.281px;
@@ -178,8 +178,8 @@
           dense
           class="rounded-borders; bg-grey-2"
           style="
-             overflow: hidden;
-            border-radius: 12px;
+          overflow: hidden;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             height: 55.281px;
@@ -227,8 +227,8 @@
           dense
           class="rounded-borders; bg-grey-2"
           style="
-             overflow: hidden;
-            border-radius: 12px;
+          overflow: hidden;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             height: 55.281px;
@@ -276,8 +276,8 @@
           dense
           class="rounded-borders; bg-grey-2"
           style="
-             overflow: hidden;
-            border-radius: 12px;
+          overflow: hidden;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             height: 55.281px;
@@ -325,8 +325,8 @@
           dense
           class="rounded-borders; bg-grey-2"
           style="
-             overflow: hidden;
-            border-radius: 12px;
+          overflow: hidden;
+            border-radius: 10px;
             display: flex;
             align-items: center;
             height: 55.281px;
@@ -559,7 +559,7 @@ export default {
 }
 
 .rounded-borders {
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
 }
 

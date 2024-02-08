@@ -23,7 +23,7 @@
         color="grey-5"
         >Date, Time and Location</q-item-label
       >
-      
+
       <NewQuestionCard :question="dateQuestion" />
       <NewQuestionCard :question="timeQuestion" />
       <NewQuestionCard :question="locationQuestion" />
@@ -77,7 +77,7 @@ export default {
   },
   data() {
     return {
-      progress: ref(0.65),
+      progress: 0.33,
       // Define your questions for Date, Time, and Location
       dateQuestion: {
         label: "Select Date",

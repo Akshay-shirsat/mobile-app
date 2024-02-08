@@ -18,19 +18,105 @@
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
-      <q-item-label
-        class="q-pt-md q-ml-md text-weight-medium "
-        color="grey-5"
+      <q-item-label class="q-pt-md q-ml-md text-weight-medium" color="grey-5"
         >Accident report overview
       </q-item-label>
+      <div class="q-pa-md" fullwidth>
+        <q-list bordered class="rounded-borders">
+          <q-expansion-item
+             v-model="expanded"
+            expand-separator
+            label="Collision Details "
+            style="background-color: white"
+            class="text-weight-medium"
+          >
+            <q-card>
+              <div class="centered-container">
+                <q-card-section>
+                  <div>
+                    <q-label style="color: #474747"
+                      >1. Is your vehicle driveable?</q-label
+                    >
+                  </div>
 
+                  <q-btn
+                  flat
+                  no-caps
+                    style="
+                      width: 77.79px;
+                      height: 23px;
+                      border: 1px solid rgb(190, 176, 176);
+                    "
+                    class="q-ma-sm"
+                    label="Yes"
+                  />
+                  <q-btn
+                  flat
+                  no-caps
+                    style="
+                      width: 77.79px;
+                      height: 23px;
+                      border: 1px solid rgb(190, 176, 176);
+                    "
+                    class="q-ma-sm"
+                    label="No"
+                  />
+                  <div>
+                    <q-label style="color: #474747"
+                      >2. No. Of vehicle Involved
+                    </q-label>
+                  </div>
+                  <div
+                    class="square-box q-mb-sm q-ml-sm q-mt-sm"
+                    style="width: 156px; height: 42px"
+                  >
+                    <div
+                      class="q-pa-md q-gutter-md q-space-between"
+                      style="display: flex; align-items: center"
+                    >
+                      <q-btn
+                        @click="decrement"
+                        class="bg-primary"
+                        rounded
+                        dense
+                        flat
+                        icon="remove"
+                      ></q-btn>
+                      <div class="count">{{ count }}</div>
+                      <q-btn
+                        @click="increment"
+                        class="bg-primary"
+                        rounded
+                        dense
+                        flat
+                        icon="add"
+                      ></q-btn>
+                    </div>
+                  </div>
+                  <q-label class="q-mt-md" style="color: #474747"
+                    >Tap on the image below to indicate where your vehicle has
+                    been damaged. You can select multiple area</q-label
+                  >
+                  <div class="centered-image">
+                    <img
+                      src="/assets/image38.png"
+                      alt="Your Vehicle"
+                      style="width: 294px; height: 149px"
+                    />
+                  </div>
+                </q-card-section>
+              </div>
+            </q-card>
+          </q-expansion-item>
+        </q-list>
+      </div>
       <QuestionCard
         v-for="(question, index) in questions"
         :key="index"
         :question="question"
       />
 
-         <div
+      <div
         style="
           display: flex;
           justify-content: center;
@@ -78,7 +164,9 @@ export default {
   },
   data() {
     return {
-      progress: ref(0.65),
+      progress: 0.66,
+      count: 0,
+       expanded: ref(true),
       questions: [
         {
           label: "Upload Photos of damage to Vehicle 1",
@@ -86,7 +174,6 @@ export default {
         {
           label: "Upload Photos of damage to Vehicle 2",
         },
-
       ],
       newQuestions: [
         {
@@ -100,17 +187,23 @@ export default {
       this.$refs.fileInput.click();
     },
     handleFileUpload(event) {
-
       const file = event.target.files[0];
       console.log("Selected file:", file);
-
     },
     randomize() {
       this.progress = Math.random();
     },
     goBack() {
-this.$router.go(-1);
-  },
+      this.$router.go(-1);
+    },
+    increment() {
+      this.count++;
+    },
+    decrement() {
+      if (this.count > 0) {
+        this.count--;
+      }
+    },
   },
 };
 </script>

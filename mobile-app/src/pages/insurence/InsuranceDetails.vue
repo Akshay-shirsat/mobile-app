@@ -14,7 +14,7 @@
       <q-header class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-black">
           <q-btn flat round dense icon="arrow_back" @click="goBack" />
-          <q-toolbar-title class="q-ml-md"> InsuranceDetails </q-toolbar-title>
+          <q-toolbar-title class="q-ml-md "> InsuranceDetails </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
@@ -24,72 +24,159 @@
       <div class="q-pa-md" fullwidth>
         <q-list bordered class="rounded-borders">
           <q-expansion-item
+           v-model="expanded"
             expand-separator
+            class="text-weight-medium"
             label="Insurence Details"
             style="background-color: white"
           >
             <q-card>
               <q-card-section>
                 <div><q-label>1st Driver Information</q-label></div>
-                <br />
-                <div>
+                <div style="color: #848484">
                   <q-label
                     >Automatically record other driver’s insurance information
                     by taking a photo</q-label
                   >
                 </div>
+                <q-row class="three-columns-section q-pa-sm q-mx-md">
+                  <q-col
+                    v-for="(icon, index) in icons"
+                    :key="index"
+                    cols="8"
+                    md="2"
+                    class="q-flex q-flex-center q-flex-column text-center"
+                    size="4rem"
+                  >
+                    <div class="border-rounded quickActionDisc">
+                      <router-link :to="{ name: icon.route }">
+                        <q-icon
+                          :class="['custom-icon', 'icon' + (index + 1)]"
+                        ></q-icon>
+                      </router-link>
+                    </div>
+
+                    <div class="name" style="color: #848484">
+                      {{ icon.name }}
+                    </div>
+                  </q-col>
+                </q-row>
+
                 <div>
                   <div class="q-mt-md">
                     <q-label>Driver’s Information</q-label>
                   </div>
                   <div style="display: flex" class="q-pa-sm">
                     <div class="col">
-                      <q-label class="q-pa-sm">First Name</q-label>
-                       <div class="q-pa-md" style="max-width: 300px;">
-              <q-input dense v-model="text"  label="type here" outlined fullwidth />
-            </div>
+                      <q-label class="q-pa-sm" style=" color: #848484" >First Name</q-label>
+                      <div
+                        class="q-pa-sm"
+                        style=" color: #848484"
+                      >
+                        <q-input
+                          dense
+                          v-model="text"
+                          label="type here"
+                          outlined
+                          fullwidth
+                        />
+                      </div>
                     </div>
                     <div class="col">
-                      <q-label class="q-pa-sm">Last Name</q-label>
-                            <div class="q-pa-md" style="max-width: 300px;">
-              <q-input dense v-model="text"  label="type here" outlined fullwidth />
-            </div>
+                      <q-label class="q-pa-sm" style=" color: #848484">Last Name</q-label>
+                       <div
+                        class="q-pa-sm"
+                        style=" color: #848484"
+                      >
+                        <q-input
+                          dense
+                          v-model="text"
+                          label="type here"
+                          outlined
+                          fullwidth
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div>
+                    <div
+                        class="q-pa-sm"
+                        style=" color: #848484"
+                      >
                     <q-label class="q-pa-sm">Street Address</q-label>
-                           <div class="q-pa-md" >
-              <q-input dense v-model="text"  label="type here" outlined fullwidth />
-            </div>
+                      <div
+                        class="q-pa-sm"
+                        style=" color: #848484"
+                      >
+                      <q-input
+                        dense
+                        v-model="text"
+                        label="type here"
+                        outlined
+                        fullwidth
+                      />
+                    </div>
                   </div>
                 </div>
                 <div style="display: flex">
                   <div class="col">
-                    <q-label class="q-pa-sm">City</q-label>
+                    <div
+                        class="q-pa-sm"
+                        style=" color: #848484"
+                      >
+                    <q-label class="q-pa-sm" fullwidth>City</q-label>
+
                     <q-select outlined dense class="q-pa-sm"></q-select>
+                     </div>
                   </div>
                   <div class="col">
+                    <div
+                        class="q-pa-sm"
+                        style=" color: #848484"
+                      >
                     <q-label class="q-pa-sm">State</q-label>
                     <q-select outlined dense class="q-pa-sm"></q-select>
                   </div>
-                </div>
-                <div style="display: flex">
-                  <div class="col">
-                    <q-label class="q-pa-sm" fullwidth>Country</q-label>
-                    <q-select outlined dense class="q-pa-sm"></q-select>
-                  </div>
-                  <div class="col">
-                    <q-label class="q-pa-sm">Zip Code</q-label>
-                    <q-select outlined dense class="q-pa-sm"></q-select>
                   </div>
                 </div>
+                <div style="display: flex" class="q-pa-sm">
+                    <div class="col">
+                      <q-label class="q-pa-sm" style=" color: #848484" >Country</q-label>
+                      <div
+                        class="q-pa-sm"
+                        style=" color: #848484"
+                      >
+                        <q-input
+                          dense
+                          v-model="text"
+                          label="type here"
+                          outlined
+                          fullwidth
+                        />
+                      </div>
+                    </div>
+                    <div class="col">
+                      <q-label class="q-pa-sm" style=" color: #848484">zip code</q-label>
+                       <div
+                        class="q-pa-sm"
+                        style=" color: #848484"
+                      >
+                        <q-input
+                          dense
+                          v-model="text"
+                          label="type here"
+                          outlined
+                          fullwidth
+                        />
+                      </div>
+                    </div>
+                  </div>
               </q-card-section>
             </q-card>
           </q-expansion-item>
         </q-list>
       </div>
 
-    <div
+      <div
         style="
           display: flex;
           justify-content: center;
@@ -132,7 +219,19 @@ import { ref } from "vue";
 export default {
   data() {
     return {
-      progress: ref(0.65),
+       expanded: ref(true),
+      progress: 1,
+      icons: [
+        {
+          name: "Driver’s License",
+          route: "",
+        },
+        {
+          name: "Insurance Card ",
+          route: "",
+        },
+      ],
+
       questions: [
         {
           label: "Any Comments? ",
@@ -140,7 +239,6 @@ export default {
         {
           label: "Add Location",
           sections: [
-
             {
               type: "text",
               label: "Address",
@@ -177,5 +275,18 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.border-rounded {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.three-columns-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+  gap: 65px;
 }
 </style>

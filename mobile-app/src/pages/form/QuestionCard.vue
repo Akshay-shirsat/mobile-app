@@ -1,6 +1,6 @@
 <template>
   <q-card class="q-ma-md">
-    <div class="q-pa-sm" style="max-width: 650px">
+    <div class="q-pa-sm" fullwidth>
       <q-expansion-item
         v-model="expanded"
         :label="question.label"
@@ -12,28 +12,39 @@
           <q-card-section class="q-pt-md q-pb-md">
             <div class="centered-container" fullwidth>
               <q-btn
+                no-caps
+                flat
                 v-for="(option, index) in question.options"
                 :key="index"
-                outline
                 :label="option"
-                class="q-mr-md"
-                style="width: 78px"
+                class="q-mr-xl"
+                style="
+                  display: flex;
+                  justify-contain: space-between;
+                  width: 77.79px;
+                  height: 23px;
+                  border: 1px solid rgb(190, 176, 176);
+                "
               />
             </div>
             <q-item-label
-              class="q-pt-md text-weight-medium text-caption q-ml-md"
-              color="blue-grey-6"
+              class="q-pt-md text-weight-medium text-caption subline"
               >Upload Photos</q-item-label
             >
             <div class="centered-upload" fullwidth>
               <q-btn
-                text-color="black"
+                no-caps
+                flat
                 label="+ Upload"
                 @click="openFileDialog"
                 style="
                   width: 324px;
                   background-color: #d9d9d9;
                   margin-top: 10px;
+                  color: #484848;
+                  border-radius: 6px;
+                  font-size: 12px;
+                  font-weight: normal;
                 "
               />
               <input
@@ -45,19 +56,19 @@
             </div>
             <q-item-section icon>
               <q-item-label
-                class="q-pt-md text-weight-medium text-caption q-ml-md"
+                class="q-pt-md text-weight-medium text-caption subline"
                 color="blue-grey-6"
                 >Notes</q-item-label
               >
             </q-item-section>
-            <div class="q-pa-md" fullwidth>
+            <div class="q-pt-md" fullwidth>
               <q-input
                 dense
                 type="textarea"
                 label="Add Notes"
                 outlined
                 color="grey"
-                style="width: 100%"
+                style="width: 94%"
                 v-model="notes"
               />
             </div>
@@ -110,5 +121,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 25px;
 }
 </style>

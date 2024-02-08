@@ -14,7 +14,7 @@ const routes = [
       { path: '/inspectionCar',name: 'inspectionCar', component: () => import('pages/inspections/InspectionCar.vue') },
       { path: '/inspectionOver',name: "inspectionOver", component: () => import('pages/inspections/InspectionOver.vue') },
       { path: '/inspectionDraft',name: 'draft', component: () => import('pages/inspections/InspectionDraft.vue') },
-      { path: '/inspectionComp',name: 'completed', component: () => import('pages/inspections/InspectionComp.vue') },
+      { path: '/inspectionComp',name: 'inspectionComp', component: () => import('pages/inspections/InspectionComp.vue') },
 
 
       { path: '/signupUser', component: () => import('pages/SignupUser.vue') },

@@ -26,33 +26,37 @@
       <div class="q-pa-md" fullwidth>
         <q-list bordered class="rounded-borders">
           <q-expansion-item
-            expand
+             v-model="expanded"
             expand-separator
+            class="text-weight-medium"
             label="Please enter current mileage of vehicle"
             style="background-color: white"
           >
+        <q-separator inset />
             <q-card>
               <q-card-section>
                 <div
                   class="q-pa-md"
-                  style="display: flex; justify-content: center; gap: 10px"
+                  style="display: flex; justify-content: center; gap: 30px "
                 >
                   <q-select
+                  fullwidth
                     outlined
                     dense
                     v-model="selectedOption"
                     :options="dropdownOptions"
                     label="Miles"
-                    style="width: 150px; margin-left: 10px"
+                    style="width: 150px; "
                   ></q-select>
 
                   <q-select
+                    fullwidth
                     outlined
                     dense
                     v-model="selectedOption"
                     :options="dropdownOptions"
                     label="100"
-                    style="width: 150px; margin-left: 10px"
+                    style="width: 150px; "
                   ></q-select>
                 </div>
               </q-card-section>

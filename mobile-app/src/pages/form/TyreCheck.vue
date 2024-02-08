@@ -72,7 +72,7 @@ export default {
   },
   data() {
     return {
-      progress: 0.72,
+      progress: 0.66,
       questions: [
         {
           label: "Are all tyres road legal, including a minimum tread depth of 1.6mm with no cords visable or damage to tyre walls?",
@@ -82,7 +82,7 @@ export default {
           label: "Are all tyres are sufficiently inflated to the manufactures guidelines?  ",
           options: ["Yes", "No", "N/A"],
         },
-       
+
       ],
     };
   },

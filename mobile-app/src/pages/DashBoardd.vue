@@ -3,7 +3,10 @@
     <div>
       <q-header class="text-primary">
         <q-bar style="background-color: white; height: 45px">
-          <q-toolbar-title style="margin-left: 3px" class="text-primary text-bold">
+          <q-toolbar-title
+            style="margin-left: 3px"
+            class="text-primary text-bold"
+          >
             Good Morning Dan!
           </q-toolbar-title>
 
@@ -66,17 +69,15 @@
       <q-item-label
         class="q-pa-md q-ml-sm text-weight-medium"
         style="color: #4e4d4f;font-family: Roboto;
-font-size: 16px;
-font-weight: 700;
-line-height: 22px;
-letter-spacing: 0px;
-text-align: left;
-width: 154px
-height: 21px
-top: 298.28px
-left: 17px
-
-"
+              font-size: 16px;
+              font-weight: 700;
+              line-height: 22px;
+              letter-spacing: 0px;
+              text-align: left;
+              width: 154px
+              height: 21px
+              top: 298.28px
+              left: 17px"
         >Quick Actions</q-item-label
       >
       <q-row class="three-columns-section q-pa-sm q-mx-md">
@@ -85,7 +86,7 @@ left: 17px
           :key="index"
           cols="12"
           md="4"
-          class="q-flex q-flex-center q-flex-column text-center  "
+          class="q-flex q-flex-center q-flex-column text-center"
           size="4rem"
         >
           <div class="border-rounded shadow-2 quickActionDisc">
@@ -100,16 +101,15 @@ left: 17px
       <q-item-label
         class="q-pa-sm q-ml-md text-weight-medium"
         style="color: #4e4d4f;
-font-size: 16px;
-font-weight: 700;
-line-height: 22px;
-letter-spacing: 0px;
-text-align: left;
-width: 186px
-height: 18px
-top: 478px
-left: 18px
-"
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 22px;
+                letter-spacing: 0px;
+                text-align: left;
+                width: 186px
+                height: 18px
+                top: 478px
+                left: 18px"
         >Need Your Attention</q-item-label
       >
 
@@ -231,9 +231,17 @@ export default {
         { label: "Option 2", value: 2 },
       ],
       icons: [
-        { name: "Start Inspection", route: "inspectionOver",url:"/assets/calendar--tools.png" },
-        { name: "Accident Report", route: "Accidentchecklist",url:"/assets/vector.png" },
-        { name: "Log Miles ", route: "logMile",url:"/assets/vectorr.png" },
+        {
+          name: "Start Inspection",
+          route: "inspectionOver",
+          url: "/assets/calendar--tools.png",
+        },
+        {
+          name: "Accident Report",
+          route: "Accidentchecklist",
+          url: "/assets/vector.png",
+        },
+        { name: "Log Miles ", route: "logMile", url: "/assets/vectorr.png" },
       ],
     };
   },
@@ -270,7 +278,6 @@ export default {
   font-size: 24px;
   margin-bottom: 8px;
 }
-
 
 .icon1 {
   background-image: url("/assets/calendar--tools.png");

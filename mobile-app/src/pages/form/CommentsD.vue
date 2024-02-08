@@ -29,23 +29,24 @@
       <div class="q-pa-md" fullwidth>
         <q-list bordered class="rounded-borders">
           <q-expansion-item
-            expand
+            v-model="expanded"
             expand-separator
-
             label="Add Location"
             style="background-color: white"
-            class="q-ml-sm"
+            class="text-weight-medium q-pa-sm"
+
           >
+          <q-separator  inset/>
             <q-card>
               <q-card-section>
                 <q-item-section icon>
                   <q-item-label
-                    class="text-weight-medium text-caption q-ml-md"
-                    color="blue-grey-6"
+                    class="text-weight-medium text-caption subline"
+
                     >Address</q-item-label
                   >
                 </q-item-section>
-                <div class="q-pa-md" fullwidth>
+                <div class="q-pt-md q-mr-md" fullwidth>
                   <q-input
                     dense
                     type="input"
@@ -89,7 +90,7 @@
           no-caps
           rounded
           label="submit checks"
-          color="positive"
+          color="info"
           @click="goNext"
           style="width: 233.653px; height: 49px"
           to="/inspectionComp"
@@ -109,6 +110,7 @@ export default {
   },
   data() {
     return {
+      expanded: ref(true),
       progress: 1,
       questions: [
         {
