@@ -63,7 +63,7 @@
           />
         </div>
         <div class="flex-item image-container">
-          <img src="/assets/image1.png" alt="Image" class="image-right" />
+          <img src="../assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>
       <q-separator class="q-mt-md" />
@@ -124,7 +124,7 @@
                 size="68px"
                 text-color="white"
               >
-                <img src="/assets/horizontal.png" class="q-py-sm q-px-sm" />
+                <img src="../assets/horizontal.png" class="q-py-sm q-px-sm" />
               </q-avatar>
             </q-item-section>
 
@@ -157,7 +157,7 @@
                 size="68px"
                 text-color="white"
               >
-                <img src="/assets/security.png" class="q-py-sm q-px-sm" />
+                <img src="../assets/security.png" class="q-py-sm q-px-sm" />
               </q-avatar>
             </q-item-section>
 
@@ -190,7 +190,7 @@
                 size="68px"
                 text-color="white"
               >
-                <img src="/assets/certificate.png" class="q-py-sm q-px-sm" />
+                <img src="../assets/certificate.png" class="q-py-sm q-px-sm" />
               </q-avatar>
             </q-item-section>
             <q-item-section>
@@ -220,6 +220,7 @@
 
 <script>
 // import DarkModeToggle from "./DarkModeToggle.vue";
+
 export default {
   // components: {
   //   DarkModeToggle,
@@ -281,27 +282,27 @@ export default {
 }
 
 .icon1 {
-  background-image: url("/assets/calendar--tools.png");
+  background-image: url("../assets/calendar--tools.png");
 }
 
 .icon2 {
-  background-image: url("/assets/vector.png");
+  background-image: url("../assets/vector.png");
 }
 
 .icon3 {
-  background-image: url("/assets/vectorr.png");
+  background-image: url("../assets/vectorr.png");
 }
 
 .icon11 {
-  background-image: url("/assets/horizontal.png");
+  background-image: url("../assets/horizontal.png");
 }
 
 .icon12 {
-  background-image: url("/assets/security.png");
+  background-image: url("../assets/security.png");
 }
 
 .icon13 {
-  background-image: url("/assets/certificate.png");
+  background-image: url("../assets/certificate.png");
 }
 .subtitle {
   color: red;

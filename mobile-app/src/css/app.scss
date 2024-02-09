@@ -151,3 +151,17 @@ body {
 .subline{
   color: #4E4D4F;
 }
+
+//dashboard
+
+
+
+.btnclass{
+  border: 1px solid rgb(190, 176, 176);
+  border-radius: 5px;
+  padding: 10px 40px 10px 40px;
+}
+
+.removearrow i.q-icon.notranslate.material-icons.q-btn-dropdown__arrow.q-btn-dropdown__arrow-container {
+display: none;
+}

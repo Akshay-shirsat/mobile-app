@@ -76,9 +76,9 @@ export default {
       flag: false,
     };
   },
-  components: {
-    SkelDraft,
-  },
+  // components: {
+  //   SkelDraft,
+  // },
   methods: {
     viewDetails() {},
     goBack() {

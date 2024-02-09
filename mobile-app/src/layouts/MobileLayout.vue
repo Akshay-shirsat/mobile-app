@@ -20,7 +20,7 @@
 
           <div v-if="category.name === 'Emergency'" class="emergency-wrapper">
             <img :src="category.icon" class="category-icon" />
-            <img src="/assets/Frame.png" class="emergency-frame" />
+            <img src="../assets/Frame.png" class="emergency-frame" />
           </div>
 
           <div v-else>
@@ -34,6 +34,12 @@
 </template>
 
 <script>
+import GridI from "../assets/grid.png"
+import InspectionI from "../assets/calendar--tools.png"
+import Sos from "../assets/Emergency.png"
+import AccidentI from "../assets/calendar--add.png"
+import setting from "../assets/settings.png"
+
 export default {
   name: "MobileLayout",
   data() {
@@ -41,24 +47,24 @@ export default {
       bottomSheetVisible: true,
       categories: [
         { name: "Dashboard",
-         icon: "/assets/grid.png",
+         icon: GridI,
          route: "dashboard" },
         {
           name: "Inspection",
-          icon: "/assets/calendar--tools.png",
+          icon: InspectionI,
           route: "inspectionComp",
         },
         {
           name: "Emergency",
-          icon: "/assets/Emergency.png",
+          icon:Sos,
           route: "Emergency",
         },
         {
           name: "Accident",
-          icon: "/assets/calendar--add.png",
+          icon: AccidentI,
           route: "Accident",
         },
-        { name: "setting", icon: "/assets/settings.png", route: "setting" },
+        { name: "setting", icon: setting, route: "setting" },
       ],
     };
   },

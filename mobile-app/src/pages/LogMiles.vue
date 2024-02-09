@@ -26,7 +26,7 @@
       <q-separator />
       <div class="flex-container">
         <div class="flex-item">
-          <img src="/assets/image1.png" alt="Image" class="image-center" />
+          <img src="~assets/image1.png" alt="Image" class="image-center" />
         </div>
       </div>
 

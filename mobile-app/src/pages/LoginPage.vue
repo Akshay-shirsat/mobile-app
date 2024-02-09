@@ -1,8 +1,8 @@
 <template>
   <div class="login-container">
     <q-card flat class="topCard">
-      <q-card-section class="text-center q-mt-lg">
-        <img src="assets/logo.png" alt="Logo" class="logo-image" />
+      <q-card-section class="text-center q-mt-sm">
+        <img src="~assets/logo.png" alt="Logo" class="logo-image" />
         <div class="loginTitleHead">
           <text-h1 class="login-title text-h5 text-bold titleHead">Log-in</text-h1>
           <p class="titleHeadCaption">Please Sign in to continue</p>

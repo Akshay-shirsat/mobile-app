@@ -36,7 +36,7 @@
           />
         </div>
         <div class="flex-item image-container">
-          <img src="/assets/image1.png" alt="Image" class="image-right" />
+          <img src="~assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>
       <q-separator class="q-mt-md" />
@@ -59,6 +59,7 @@
             label="Filter"
             icon="filter_list"
             color="primary"
+            class="removearrow"
           >
             <q-list>
               <q-item clickable v-close-popup >

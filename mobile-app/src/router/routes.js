@@ -70,6 +70,7 @@ const routes = [
 
 //logmiles
 { path: '/logMiles', name:"logMile" ,component: () => import('../pages/LogMiles.vue') },
+
     ]
   },
 

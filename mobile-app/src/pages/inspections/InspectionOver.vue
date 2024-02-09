@@ -47,7 +47,7 @@
         </div>
 
         <div class="flex-item">
-          <img src="/assets/image1.png" alt="Image" class="image-right" />
+          <img src="~assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>
       <q-separator class="q-mt-sm" />

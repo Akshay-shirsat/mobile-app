@@ -34,7 +34,7 @@
           />
         </div>
         <div class="flex-item image-container">
-          <img src="/assets/image1.png" alt="Image" class="image-right" />
+          <img src="~assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>
        <div class="q-pa-md q-mt-sm items-start">

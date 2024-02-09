@@ -99,7 +99,7 @@
                   >
                   <div class="centered-image">
                     <img
-                      src="/assets/image38.png"
+                      src="~assets/image38.png"
                       alt="Your Vehicle"
                       style="width: 294px; height: 149px"
                     />

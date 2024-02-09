@@ -110,9 +110,9 @@ export default {
       flag: false,
     };
   },
-  components: {
-    SkelDash,
-  },
+  // components: {
+  //   SkelDash,
+  // },
   methods: {
     addMoreContacts() {
       console.log("Adding more contacts...");
@@ -124,7 +124,7 @@ export default {
   created() {
     setTimeout(() => {
       this.flag = true;
-    }, 5000);
+    }, 10);
   },
 };
 </script>

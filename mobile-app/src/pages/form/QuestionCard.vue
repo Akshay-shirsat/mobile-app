@@ -1,45 +1,42 @@
 <template>
   <q-card class="q-ma-md">
-    <div class="q-pa-sm" >
+    <div class="q-pa-md">
       <q-expansion-item
         v-model="expanded"
         :label="question.label"
-        class="text-subtitle2 q-ml-md"
+        class="text-subtitle2"
         fullwidth
       >
-        <q-separator />
+        <q-separator class="q-mx-sm" />
 
-        <q-card >
-          <q-card-section class="q-pt-md q-pb-md" >
-            <div class="centered-container" >
-              <q-btn
-                no-caps
-                flat
-                v-for="(option, index) in question.options"
-                :key="index"
-                :label="option"
-                class="q-mr-xl"
-                style="
-                  display: flex;
-                  justify-contain: space-between;
-                  width: 77.79px;
-                  height: 23px;
-                  border: 1px solid rgb(190, 176, 176);
-                "
-              />
+        <q-card>
+          <q-card-section class="q-pt-md q-pb-md">
+            <div class="row">
+              <div class="q-gutter-sm">
+                <q-btn
+                  flat
+                  text-color="black"
+                  v-for="(option, index) in question.options"
+                  :key="index"
+                  :label="option"
+                  class="no-shadow btnclass"
+                />
+              </div>
+        
+      
             </div>
             <q-item-label
               class="q-pt-md text-weight-medium text-caption subline"
               >Upload Photos</q-item-label
             >
-            <div class="centered-upload" fullwidth>
+            <div class="centered-upload q-mr-none">
               <q-btn
                 no-caps
                 flat
                 label="+ Upload"
                 @click="openFileDialog"
                 style="
-                  width: 324px;
+                  width: 100%;
                   background-color: #d9d9d9;
                   margin-top: 10px;
                   color: #484848;
@@ -69,7 +66,6 @@
                 label="Add Notes"
                 outlined
                 color="grey"
-                style="width: 94%"
                 v-model="notes"
               />
             </div>
@@ -122,7 +118,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 25px;
+  /* margin-right: 25px; */
 }
-
 </style>
