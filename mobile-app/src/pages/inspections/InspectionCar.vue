@@ -92,6 +92,7 @@
             color="primary"
             label="Filter"
             icon="filter_list"
+            class="removearrow"
           >
             <q-list>
               <q-item clickable v-close-popup to="/inspectionDraft">

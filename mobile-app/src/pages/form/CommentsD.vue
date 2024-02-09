@@ -26,14 +26,14 @@
         :key="index"
         :question="question"
       />
-      <div class="q-pa-md" fullwidth>
-        <q-list bordered class="rounded-borders">
+      <div class="q-pa-md " fullwidth>
+        <q-list bordered class="rounded-borders ">
           <q-expansion-item
             v-model="expanded"
             expand-separator
             label="Add Location"
             style="background-color: white"
-            class="text-weight-medium q-pa-sm"
+            class="text-weight-medium q-pa-lg"
 
           >
           <q-separator  inset/>
@@ -41,12 +41,12 @@
               <q-card-section>
                 <q-item-section icon>
                   <q-item-label
-                    class="text-weight-medium text-caption subline"
+                    class="text-weight-medium text-caption subline "
 
                     >Address</q-item-label
                   >
                 </q-item-section>
-                <div class="q-pt-md q-mr-md" fullwidth>
+                <div class="q-pt-md q-mr-lg" fullwidth>
                   <q-input
                     dense
                     type="input"
@@ -54,6 +54,7 @@
                     color="grey"
                     style="width: 100%"
                     v-model="notes"
+                   
                   />
                 </div>
               </q-card-section>

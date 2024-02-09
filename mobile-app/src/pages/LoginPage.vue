@@ -1,5 +1,5 @@
 <template>
-  <div class="login-container">
+  <div class="login-container ">
     <q-card flat class="topCard">
       <q-card-section class="text-center q-mt-sm">
         <img src="~assets/logo.png" alt="Logo" class="logo-image" />
@@ -81,26 +81,7 @@ export default {
 </script>
 
 <style scoped>
-.login-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: auto;
-  flex-shrink: 0;
-  color: #4a4a4a;
-  text-align: center;
-  font-family: "DM Sans";
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 22px;
-  max-width: 100%;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10%;
-}
+
 
 .sub-title {
   font-size: 12px;
@@ -132,22 +113,9 @@ export default {
   text-decoration: underline;
 }
 
-.checkbox-link-container {
-  display: flex;
-  align-items: center;
-}
-.rounded-button {
-  border-radius: 16px;
-  width: 265px;
-  height: 45px;
-}
-.logo-section {
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 100px;
-}
+
+
+
 
 .logo-image {
   width: 180px;

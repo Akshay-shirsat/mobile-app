@@ -47,7 +47,7 @@
         <!-- Right side: Vehicle Tag -->
         <div class="q-pa-md">
           <q-item-label class="text-left text-bold" lines="1">
-            <span class="text-weight-light text-left">{{
+            <span class="text-weight-light ">{{
               selectedVehicleTag
             }}</span>
           </q-item-label>

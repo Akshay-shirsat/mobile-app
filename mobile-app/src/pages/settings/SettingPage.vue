@@ -4,7 +4,7 @@
 
       <q-header  class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-primary">
-          <q-btn flat round dense icon="arrow_back" @click="goBack" />
+          <q-btn flat round dense style="color: black"  icon="arrow_back" @click="goBack" />
           <q-toolbar-title class="q-ml-sm" style="color: black">
             Settings
           </q-toolbar-title>
