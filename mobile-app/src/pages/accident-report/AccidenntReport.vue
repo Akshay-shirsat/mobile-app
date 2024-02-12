@@ -207,6 +207,8 @@
                 icon="keyboard_arrow_right"
                 color="#53AA0F33; "
                 size="sm"
+                
+
               />
             </q-item-section>
           </q-item>
@@ -230,6 +232,7 @@
           @click="goNext"
           style="width: 63px; height: 63px; flex-shrink: 0"
           class="q-mr-lg"
+          to="/AcciReportOver"
         />
       </div>
     </div>

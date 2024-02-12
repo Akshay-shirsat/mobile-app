@@ -11,20 +11,17 @@
 
         <q-card>
           <q-card-section class="q-pt-md q-pb-md">
-            <div class="row">
-              <div class="q-gutter-sm">
-                <q-btn
-                  flat
-                  text-color="black"
-                  v-for="(option, index) in question.options"
-                  :key="index"
-                  :label="option"
-                  class="no-shadow btnclass"
-                />
-              </div>
-        
-      
+            <div style="display: flex; justify-content: space-between">
+              <q-btn
+                flat
+                text-color="black"
+                v-for="(option, index) in question.options"
+                :key="index"
+                :label="option"
+                class="no-shadow btnclass"
+              />
             </div>
+
             <q-item-label
               class="q-pt-md text-weight-medium text-caption subline"
               >Upload Photos</q-item-label

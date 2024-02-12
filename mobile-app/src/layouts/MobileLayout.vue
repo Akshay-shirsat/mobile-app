@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-page-container>
+    <q-page-container >
       <router-view />
     </q-page-container>
 
@@ -15,16 +15,24 @@
           v-for="category in categories"
           :key="category.name"
           class="category-item"
-          @click="navigateTo(category.route)"
+          @click="navigateTo(category.route, category.name)"
         >
-
           <div v-if="category.name === 'Emergency'" class="emergency-wrapper">
             <img :src="category.icon" class="category-icon" />
             <img src="../assets/Frame.png" class="emergency-frame" />
           </div>
 
           <div v-else>
-            <img :src="category.icon" class="category-icon" />
+            <img
+              :src="category.icon"
+              class="category-icon bottomIcon"
+              v-if="pageTitle == category.name"
+            />
+            <img
+              :src="category.iconBlack"
+              class="category-icon bottomIcon"
+              v-else
+            />
           </div>
           <div>{{ category.name }}</div>
         </div>
@@ -34,45 +42,67 @@
 </template>
 
 <script>
-import GridI from "../assets/grid.png"
-import InspectionI from "../assets/calendar--tools.png"
-import Sos from "../assets/Emergency.png"
-import AccidentI from "../assets/calendar--add.png"
-import setting from "../assets/settings.png"
+import GridI from "../assets/bottom-icons/active/grid.png";
+import InspectionI from "../assets/bottom-icons/active/calendar--tools.png";
+import Sos from "../assets/Emergency.png";
+import AccidentI from "../assets/bottom-icons/active/calendar--add.png";
+import setting from "../assets/bottom-icons/active/settings.png";
+import gridBlack from "../assets/bottom-icons/black/grid.png";
+import inspectionBlack from "../assets/bottom-icons/black/calendar--tools.png";
+import accidentBlack from "../assets/bottom-icons/black/calendar--add-black.png";
+import settingBlack from "../assets/bottom-icons/black/settings.png";
+import { ref } from "vue";
+import { useQuasar, LocalStorage, Platform } from "quasar";
 
 export default {
   name: "MobileLayout",
+  setup() {
+    const $q = useQuasar();
+  },
   data() {
     return {
       bottomSheetVisible: true,
       categories: [
-        { name: "Dashboard",
-         icon: GridI,
-         route: "dashboard" },
+        {
+          name: "Dashboard",
+          icon: GridI,
+          iconBlack: gridBlack,
+          route: "dashboard",
+        },
         {
           name: "Inspection",
           icon: InspectionI,
+          iconBlack: inspectionBlack,
           route: "inspectionComp",
         },
         {
           name: "Emergency",
-          icon:Sos,
+          icon: Sos,
+          iconBlack: Sos,
           route: "Emergency",
         },
         {
           name: "Accident",
           icon: AccidentI,
+          iconBlack: accidentBlack,
           route: "Accident",
         },
-        { name: "setting", icon: setting, route: "setting" },
+        {
+          name: "setting",
+          icon: setting,
+          route: "setting",
+          iconBlack: settingBlack,
+        },
       ],
+      pageTitle: "Dashboard",
     };
   },
   methods: {
     closeBottomSheet() {
       this.bottomSheetVisible = false;
     },
-    navigateTo(page) {
+    navigateTo(page, name) {
+      this.pageTitle = name;
       this.$router.push({ name: page });
       console.log(`Navigating to ${page}`);
     },
@@ -81,7 +111,7 @@ export default {
 </script>
 
 <style scoped>
-q-layout{
+q-layout {
   position: fixed;
 }
 .bottom-sheet-content {

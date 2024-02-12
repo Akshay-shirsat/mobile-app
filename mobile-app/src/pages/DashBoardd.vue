@@ -1,5 +1,5 @@
 <template>
-  <q-page>
+  <q-page >
     <div>
       <q-header class="text-primary">
         <q-bar style="background-color: white; height: 45px">
@@ -114,7 +114,7 @@
         >Need Your Attention</q-item-label
       >
 
-      <div class="q-px-lg q-gutter-md q-mt-sm">
+      <div class="q-px-lg q-gutter-md q-mt-sm"  >
         <q-list fullwidth class="bg-accent" style="height: auto">
           <q-item clickable v-ripple>
             <q-item-section avatar top class="q-pa-none">
