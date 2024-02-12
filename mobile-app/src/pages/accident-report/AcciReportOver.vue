@@ -72,7 +72,7 @@
         </div>
       </div>
 
-
+<div style="padding-bottom:85px;">
       <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
         <q-list
           fullwidth
@@ -318,7 +318,7 @@
           </q-item>
         </q-list>
       </div>
-
+</div>
 
       <div
         style="

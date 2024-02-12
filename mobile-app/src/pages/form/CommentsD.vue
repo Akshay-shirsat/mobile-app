@@ -21,6 +21,7 @@
       <q-item-label class="q-pt-md q-ml-md text-weight-medium" color="grey-5"
         >Comments</q-item-label
       >
+      <div style="padding-bottom:85px;">
       <QuestionCard
         v-for="(question, index) in questions"
         :key="index"
@@ -54,7 +55,7 @@
                     color="grey"
                     style="width: 100%"
                     v-model="notes"
-                   
+
                   />
                 </div>
               </q-card-section>
@@ -62,7 +63,7 @@
           </q-expansion-item>
         </q-list>
       </div>
-
+</div>
       <div
         style="
           display: flex;

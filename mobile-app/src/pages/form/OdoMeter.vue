@@ -23,6 +23,7 @@
       <q-item-label class="q-pt-md q-ml-md text-weight-medium" color="grey-5">
         Odometer
       </q-item-label>
+      <div style="padding-bottom:85px;">
       <div class="q-pa-md" fullwidth>
         <q-list bordered class="rounded-borders">
           <q-expansion-item
@@ -64,7 +65,7 @@
           </q-expansion-item>
         </q-list>
       </div>
-
+</div>
       <div
         style="
           display: flex;

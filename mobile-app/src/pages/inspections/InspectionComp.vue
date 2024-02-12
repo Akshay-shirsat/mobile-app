@@ -37,7 +37,7 @@
           />
         </div>
         <div class="flex-item image-container">
-          <img src="~assets/image1.png" alt="Image" class="image-right" />
+          <img src="~assets/image1.png" alt="Image"  style="max-width: 100%; height: auto;"/>
         </div>
       </div>
       <q-separator class="q-mt-md" />
@@ -77,6 +77,7 @@
           >Completed and Pending reports</q-item-label
         >
       </div>
+      <div style="padding-bottom:85px;">
       <div
         class="rounded-box q-pt-sm q-pa-md q-gutter-sm"
         v-for="(item, index) in completedReports"
@@ -123,6 +124,7 @@
           </q-item>
         </q-list>
       </div>
+      </div>
     </div>
     <div v-else>
       <SkelDraft />
@@ -158,7 +160,7 @@ export default {
       const dynamicData = [
         {
           status: "Completed",
-          imageSrc: "/assets/Rectangle_177.png",
+         
           imageAlt: "Image description",
           imageWidth: "6px",
           imageHeight: "55px",
@@ -167,7 +169,7 @@ export default {
         },
         {
           status: "Completed",
-          imageSrc: "/assets/Rectangle_177.png",
+
           imageAlt: "Image description",
           imageWidth: "6px",
           imageHeight: "55px",
@@ -189,11 +191,7 @@ export default {
   margin-bottom: 8px;
 }
 
-.image-right {
-  width: 187.041px;
-  height: 111.807px;
-  flex-shrink: 0;
-}
+
 
 .btngroup {
   width: 170px;

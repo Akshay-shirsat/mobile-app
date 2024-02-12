@@ -34,7 +34,7 @@
           />
         </div>
         <div class="flex-item image-container">
-          <img src="~assets/image1.png" alt="Image" class="image-right" />
+          <img src="~assets/image1.png" alt="Image" style="max-width: 100%; height: auto;" />
         </div>
       </div>
        <div class="q-pa-md q-mt-sm items-start">
@@ -90,6 +90,7 @@
           </q-btn-dropdown>
         </div>
       </div>
+      <div style="padding-bottom:85px;">
       <div
         class="rounded-box q-pt-sm q-pa-md q-gutter-sm"
         v-for="(item, index) in completedReports"
@@ -135,6 +136,7 @@
             </q-item-section>
           </q-item>
         </q-list>
+      </div>
       </div>
     </div>
     <div v-else>

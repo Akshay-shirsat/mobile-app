@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-page-container >
+    <q-page-container  >
       <router-view />
     </q-page-container>
 
@@ -111,9 +111,7 @@ export default {
 </script>
 
 <style scoped>
-q-layout {
-  position: fixed;
-}
+
 .bottom-sheet-content {
   display: flex;
   flex-wrap: wrap;

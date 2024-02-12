@@ -9,6 +9,7 @@
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
+      <div style="padding-bottom:85px;">
       <div class="q-pa-md q-gutter-md">
         <q-list padding class="rounded-borders" fullwidth>
           <q-item clickable v-ripple>
@@ -79,6 +80,7 @@
             color="primary"
           />
         </div>
+      </div>
       </div>
     </div>
     <div v-else>

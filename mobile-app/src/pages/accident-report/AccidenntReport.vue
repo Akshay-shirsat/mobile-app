@@ -36,7 +36,7 @@
           />
         </div>
         <div class="flex-item image-container">
-          <img src="~assets/image1.png" alt="Image" class="image-right" />
+          <img src="~assets/image1.png" alt="Image"  style="max-width: 100%; height: auto;"/>
         </div>
       </div>
       <q-separator class="q-mt-md" />
@@ -77,7 +77,7 @@
           </q-btn-dropdown>
         </div>
       </div>
-
+<div style="padding-bottom:85px;">
       <div
         class="rounded-box q-pt-sm q-pa-md q-gutter-sm"
         v-for="(item, index) in completedReports"
@@ -207,13 +207,18 @@
                 icon="keyboard_arrow_right"
                 color="#53AA0F33; "
                 size="sm"
-                
+
 
               />
             </q-item-section>
           </q-item>
         </q-list>
       </div>
+</div>
+
+
+
+
       <div
         style="
           display: flex;
@@ -298,11 +303,7 @@ export default {
   margin-right: 20px;
   margin-top: 10px;
 }
-.image-right {
-  width: 187.041px;
-  height: 111.807px;
-  flex-shrink: 0;
-}
+
 
 .btngroup {
   width: 200px;

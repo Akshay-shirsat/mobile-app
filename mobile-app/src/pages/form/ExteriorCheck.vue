@@ -23,8 +23,9 @@
   <q-item-label class="q-pt-md q-ml-md text-weight-medium" color="grey-5"
         >Questions</q-item-label
       >
+      <div style="padding-bottom:85px;">
 <QuestionCard v-for="(question, index) in questions" :key="index" :question="question" />
-
+</div>
  <div
         style="
           display: flex;

@@ -23,12 +23,12 @@
         color="grey-5"
         >Date, Time and Location</q-item-label
       >
-
+<div style="padding-bottom:85px;">
       <NewQuestionCard :question="dateQuestion" />
       <NewQuestionCard :question="timeQuestion" />
       <NewQuestionCard   :question="locationQuestion" />
 
-
+</div>
        <div
         style="
           display: flex;

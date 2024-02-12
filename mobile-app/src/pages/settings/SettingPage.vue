@@ -8,11 +8,11 @@
           <q-toolbar-title class="q-ml-sm" style="color: black">
             Settings
           </q-toolbar-title>
-          <q-btn flat round dense icon="more_vert" />
+
         </q-bar>
       </q-header>
 <q-separator />
-
+<div style="padding-bottom:85px;">
      <div style="display: flex; align-items: center;">
           <q-icon name="person" class="q-ml-lg text-h6" />
           <q-item-label class="q-pa-md text-weight-medium text-h6 " >Account</q-item-label>
@@ -51,7 +51,7 @@
           </q-item>
         </q-list>
       </div>
-      
+</div>
 <q-separator  inset />
     </div>
     <div v-else>

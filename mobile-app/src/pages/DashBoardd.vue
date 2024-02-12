@@ -81,7 +81,7 @@
               left: 17px"
         >Quick Actions</q-item-label
       >
-      <q-row class="three-columns-section q-pa-sm q-mx-md">
+      <q-row class="three-columns-section q-pa-sm q-mx-md "  >
         <q-col
           v-for="(icon, index) in icons"
           :key="index"
@@ -114,7 +114,7 @@
         >Need Your Attention</q-item-label
       >
 
-      <div class="q-px-lg q-gutter-md q-mt-sm" >
+      <div class="q-px-lg q-gutter-md q-mt-sm "  style="padding-bottom:85px">
         <q-list fullwidth class="bg-accent" style="height: auto">
           <q-item clickable v-ripple>
             <q-item-section avatar top class="q-pa-none">
@@ -214,6 +214,7 @@
           </q-item>
         </q-list>
       </div>
+
     </div>
   </q-page>
 </template>

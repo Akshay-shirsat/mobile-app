@@ -29,7 +29,7 @@
           <img src="~assets/image1.png" alt="Image" class="image-center" />
         </div>
       </div>
-
+<div style="padding-bottom:85px;">
       <div
         style="
           display: flex;
@@ -155,7 +155,7 @@
           style="width: 150px; margin-left: 10px"
         ></q-select>
       </div>
-
+</div>
        <div
         style="
           display: flex;
