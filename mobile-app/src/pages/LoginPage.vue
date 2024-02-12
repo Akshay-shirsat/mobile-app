@@ -10,7 +10,6 @@
 
         <q-input
           v-model="driverName"
-
           outlined
           placeholder="Driver Name"
           class="input-field q-pb-md"
@@ -112,11 +111,6 @@ export default {
   color: #3498db;
   text-decoration: underline;
 }
-
-
-
-
-
 .logo-image {
   width: 180px;
   height: auto;

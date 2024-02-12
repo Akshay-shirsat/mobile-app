@@ -63,7 +63,7 @@
           />
         </div>
         <div class="flex-item image-container">
-          <img src="../assets/image1.png" alt="Image" class="image-right" />
+          <img src="../assets/image1.png" alt="Image" style="max-width: 100%; height: auto;" />
         </div>
       </div>
       <q-separator class="q-mt-md" />
@@ -114,7 +114,7 @@
         >Need Your Attention</q-item-label
       >
 
-      <div class="q-px-lg q-gutter-md q-mt-sm"  >
+      <div class="q-px-lg q-gutter-md q-mt-sm" >
         <q-list fullwidth class="bg-accent" style="height: auto">
           <q-item clickable v-ripple>
             <q-item-section avatar top class="q-pa-none">
