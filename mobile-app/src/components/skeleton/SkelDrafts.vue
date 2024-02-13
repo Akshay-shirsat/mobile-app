@@ -14,38 +14,36 @@
       <q-page>
         <div class="flex-container">
           <div class="flex-item top-section">
-            <q-item-section class="text-weight-medium ">
+            <q-item-section class="text-weight-medium">
               <q-item-label class="text-left q-ml-md">
-                <q-skeleton :type="'text'" width="150px" height="30px"/>
+                <q-skeleton :type="'text'" width="150px" height="30px" />
               </q-item-label>
-              <q-item-label  class="text-left q-ml-md">
+              <q-item-label class="text-left q-ml-md">
                 <q-skeleton :type="'QBtn'" width="150px" />
               </q-item-label>
             </q-item-section>
-<q-item-section class="text-weight-medium q-ml-md">
-             <q-item-label  class="text-left q-ml-md q-mt-md">
-                <q-skeleton :type="'QChip'" width="110px" height="35px"/>
+            <q-item-section class="text-weight-medium q-ml-md">
+              <q-item-label class="text-left q-ml-md q-mt-md">
+                <q-skeleton :type="'QChip'" width="110px" height="35px" />
               </q-item-label>
-               </q-item-section>
+            </q-item-section>
           </div>
 
           <div class="flex-item">
             <q-skeleton :type="'rect'" width="187.041px" height="111.807px" />
           </div>
         </div>
-<div class="q-pa-md items-start">
-    <div style="
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    ">
-      <q-item-section class="text-weight-medium q-ml-md">
-        <q-item-label class="text-left q-ml-md q-mt-md">
-          <q-skeleton :type="'QChip'" width="310px" height="35px"/>
-        </q-item-label>
-      </q-item-section>
-    </div>
-  </div>
+        <div class="q-pa-md items-start">
+          <div
+            style="display: flex; justify-content: center; align-items: center"
+          >
+            <q-item-section class="text-weight-medium q-ml-md">
+              <q-item-label class="text-left q-ml-md q-mt-md">
+                <q-skeleton :type="'QChip'" width="310px" height="35px" />
+              </q-item-label>
+            </q-item-section>
+          </div>
+        </div>
         <div
           style="
             display: flex;
@@ -82,7 +80,6 @@
           >
             <q-img
               class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
               alt="Image description"
               width="6px"
               height="55px"
@@ -116,7 +113,6 @@
           >
             <q-img
               class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
               alt="Image description"
               width="6px"
               height="55px"
@@ -150,7 +146,6 @@
           >
             <q-img
               class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
               alt="Image description"
               width="6px"
               height="55px"
@@ -184,7 +179,6 @@
           >
             <q-img
               class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
               alt="Image description"
               width="6px"
               height="55px"
@@ -218,7 +212,6 @@
           >
             <q-img
               class="q-mr-sm"
-              src="/assets/Rectangle_186.png"
               alt="Image description"
               width="6px"
               height="55px"
@@ -237,8 +230,6 @@
             </q-item>
           </q-list>
         </div>
-
-
       </q-page>
     </q-page-container>
   </div>
@@ -317,6 +308,5 @@
 <script>
 export default {
   name: "SkelDrafts",
-
 };
 </script>

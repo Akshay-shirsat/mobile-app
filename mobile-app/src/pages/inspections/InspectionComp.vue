@@ -1,7 +1,7 @@
 <template>
   <q-page>
     <div v-if="flag">
-      <q-header elevated class="bg-white">
+      <q-header  class="bg-white">
         <q-bar class="q-py-lg bg-white">
           <q-toolbar-title class="q-ml-sm text-black">
             Inspection
@@ -160,7 +160,7 @@ export default {
       const dynamicData = [
         {
           status: "Completed",
-         
+
           imageAlt: "Image description",
           imageWidth: "6px",
           imageHeight: "55px",

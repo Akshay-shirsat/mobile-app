@@ -17,6 +17,7 @@
           <q-btn flat round dense color="black" icon="more_vert" />
         </q-bar>
       </q-header>
+      <q-separator />
       <div class="flex-container">
         <div class="flex-item">
           <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"

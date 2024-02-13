@@ -1,12 +1,13 @@
 <template>
   <q-page>
     <div v-if="flag">
-      <q-header elevated class="bg-white text-primary">
+      <q-header  class="bg-white text-primary">
         <q-bar class="q-py-lg bg-white text-primary">
           <q-toolbar-title class="q-ml-md"> Inspection </q-toolbar-title>
           <q-btn flat round dense icon="more_vert" />
         </q-bar>
       </q-header>
+      <q-separator />
       <div class="flex-container">
         <div class="flex-item">
           <q-item-label class="q-pa-sm q-ml-sm text-weight-medium" color="dark"

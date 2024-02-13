@@ -14,28 +14,17 @@
       <q-page>
         <div class="flex-container">
           <div class="flex-item top-section">
-            <q-item-section class="text-weight-medium q-ml-sm">
-              <q-item-label class="text-left">
-                <q-skeleton :type="'text'" />
+            <q-item-section class="text-weight-medium">
+              <q-item-label class="text-left q-ml-md">
+                <q-skeleton :type="'text'" width="150px" height="30px" />
               </q-item-label>
-              <q-item-label caption class="text-left text-caption">
-                <q-skeleton :type="'text'" />
-              </q-item-label>
-            </q-item-section>
-            <q-item-section class="text-weight-medium q-ml-sm">
-              <q-item-label class="text-left">
-                <q-skeleton :type="'text'" />
-              </q-item-label>
-              <q-item-label caption class="text-left text-caption">
-                <q-skeleton :type="'text'" />
+              <q-item-label class="text-left q-ml-md">
+                <q-skeleton :type="'QBtn'" width="150px" />
               </q-item-label>
             </q-item-section>
-            <q-item-section class="text-weight-medium q-ml-sm">
-              <q-item-label class="text-left">
-                <q-skeleton :type="'text'" />
-              </q-item-label>
-              <q-item-label caption class="text-left text-caption">
-                <q-skeleton :type="'text'" />
+            <q-item-section class="text-weight-medium q-ml-md">
+              <q-item-label class="text-left q-ml-md q-mt-md">
+                <q-skeleton :type="'QChip'" width="110px" height="35px" />
               </q-item-label>
             </q-item-section>
           </div>
@@ -59,11 +48,7 @@
               </q-item-label>
             </q-item-section>
           </div>
-          <div class="q-pa-md">
-            <q-item-label class="text-left text-bold" lines="1">
-              <q-skeleton :type="'text'" width="100px" />
-            </q-item-label>
-          </div>
+
         </div>
 
         <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
@@ -81,7 +66,6 @@
           >
             <q-img
               class="q-mr-sm"
-             
               alt="Image description"
               width="6px"
               height="55px"
@@ -115,7 +99,6 @@
           >
             <q-img
               class="q-mr-sm"
-
               alt="Image description"
               width="6px"
               height="55px"
@@ -149,7 +132,6 @@
           >
             <q-img
               class="q-mr-sm"
-
               alt="Image description"
               width="6px"
               height="55px"
@@ -183,7 +165,6 @@
           >
             <q-img
               class="q-mr-sm"
-
               alt="Image description"
               width="6px"
               height="55px"
@@ -217,7 +198,6 @@
           >
             <q-img
               class="q-mr-sm"
-
               alt="Image description"
               width="6px"
               height="55px"
@@ -236,8 +216,6 @@
             </q-item>
           </q-list>
         </div>
-
-
       </q-page>
     </q-page-container>
   </div>
@@ -315,7 +293,6 @@
 
 <script>
 export default {
-  name: "SkelOver",
-
+  name: "SkelAccidentReport",
 };
 </script>

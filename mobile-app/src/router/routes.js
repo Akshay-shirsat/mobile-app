@@ -80,6 +80,7 @@ const routes = [
     children: [
       { path: '/skelOver', component: () => import('components/skeleton/SkelOver.vue') },
       { path: '/skelDrafts', component: () => import('components/skeleton/SkelDrafts.vue') },
+      { path: '/SkelAccidentReport', component: () => import('components/skeleton/SkelAccidentReport.vue') },
 
       // Add other routes for the default layout as needed
     ]
