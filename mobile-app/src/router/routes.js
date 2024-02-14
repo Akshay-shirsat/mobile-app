@@ -80,9 +80,15 @@ const routes = [
     children: [
       { path: '/skelOver', component: () => import('components/skeleton/SkelOver.vue') },
       { path: '/skelDrafts', component: () => import('components/skeleton/SkelDrafts.vue') },
-      { path: '/SkelAccidentReport', component: () => import('components/skeleton/SkelAccidentReport.vue') },
+      { path: '/SkelAccidentReport', component: () => import('src/components/skeleton/SkelAccompleted.vue') },
+      { path: '/SkelAccompleted', component: () => import('src/components/skeleton/SkelAccompleted.vue') },
+      { path: '/SkelDashboard', component: () => import('src/components/skeleton/SkelDashboard.vue') },
+      { path: '/SkelLogmiles', component: () => import('src/components/skeleton/SkelLogmiles.vue') },
+      { path: '/SkelSos', component: () => import('src/components/skeleton/SkelSos.vue') },
+      { path: '/SkelSetting', component: () => import('src/components/skeleton/SkelSetting.vue') },
+      { path: '/SkelQuestioncard', component: () => import('src/components/skeleton/SkelQuestioncard.vue') },
 
-      // Add other routes for the default layout as needed
+      // Add other routes for the default layout as needed SkelQuestioncard
     ]
   },
 

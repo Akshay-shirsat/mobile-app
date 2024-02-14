@@ -73,7 +73,7 @@ export default {
           name: "Inspection",
           icon: InspectionI,
           iconBlack: inspectionBlack,
-          route: "inspectionComp",
+          route: "inspectionCar",
         },
         {
           name: "Emergency",

@@ -74,7 +74,15 @@
           >Draft and Pending reports</q-item-label
         >
         <div class="q-pa-md">
-          <q-btn-dropdown size="12px" flat label="Filter">
+          <q-btn-dropdown
+            size="12px"
+            flat
+            no-caps
+            color="primary"
+            label="Filter"
+            icon="filter_list"
+            class="removearrow"
+          >
             <q-list>
               <q-item clickable v-close-popup to="/inspectionDraft">
                 <q-item-section>
@@ -82,9 +90,9 @@
                 </q-item-section>
               </q-item>
 
-              <q-item clickable v-close-popup to="/inspectionComp">
+              <q-item clickable v-close-popup>
                 <q-item-section>
-                  <q-item-label>Completed</q-item-label>
+                  <q-item-label>Pending</q-item-label>
                 </q-item-section>
               </q-item>
             </q-list>
@@ -153,7 +161,7 @@ export default {
     setTimeout(() => {
       this.flag = true;
       this.fetchCompletedReports();
-    }, 1000);
+    }, 2000);
   },
   data() {
     return {

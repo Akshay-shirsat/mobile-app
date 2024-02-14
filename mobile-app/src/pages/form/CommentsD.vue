@@ -1,6 +1,6 @@
 <template>
   <q-page style="background-color: #f4f4f4">
-    <div class="container">
+    <div class="container" v-if="flag">
       <div>
         <q-linear-progress
           v-for="size in ['md']"
@@ -100,18 +100,29 @@
         />
       </div>
     </div>
+    <div v-else>
+      <SkelQuestioncard />
+    </div>
   </q-page>
 </template>
 <script>
 import QuestionCard from "./QuestionCard.vue";
 import { ref } from "vue";
-
+import SkelQuestioncard from "../../components/skeleton/SkelQuestioncard.vue";
 export default {
   components: {
     QuestionCard,
+    SkelQuestioncard
+  },
+  created() {
+    setTimeout(() => {
+      this.flag = true;
+      this.fetchCompletedReports();
+    }, 2000);
   },
   data() {
     return {
+      flag: false,
       expanded: ref(true),
       progress: 1,
       questions: [

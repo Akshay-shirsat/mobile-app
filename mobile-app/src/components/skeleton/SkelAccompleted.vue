@@ -33,7 +33,7 @@
             <q-skeleton :type="'rect'" width="187.041px" height="111.807px" />
           </div>
         </div>
-
+    
         <div
           style="
             display: flex;
@@ -48,7 +48,11 @@
               </q-item-label>
             </q-item-section>
           </div>
-
+          <div class="q-pa-md">
+            <q-item-label class="text-left text-bold" lines="1">
+              <q-skeleton :type="'QBtn'" width="100px" />
+            </q-item-label>
+          </div>
         </div>
 
         <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
@@ -293,6 +297,6 @@
 
 <script>
 export default {
-  name: "SkelAccidentReport",
+  name: "SkelAccompleted",
 };
 </script>

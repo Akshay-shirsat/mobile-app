@@ -127,19 +127,19 @@
       </div>
     </div>
     <div v-else>
-      <SkelDraft />
+      <SkelAccompleted />
     </div>
   </q-page>
 </template>
 
 <script>
-import SkelDraft from "../../components/skeleton/SkelDrafts.vue";
+import SkelAccompleted from "../../components/skeleton/SkelAccompleted.vue";
 export default {
   created() {
     setTimeout(() => {
       this.flag = true;
       this.fetchCompletedReports();
-    }, 1000);
+    }, 2000);
   },
   data() {
     return {
@@ -152,7 +152,7 @@ export default {
     };
   },
   components: {
-    SkelDraft,
+    SkelAccompleted,
   },
   methods: {
     viewDetails() {},

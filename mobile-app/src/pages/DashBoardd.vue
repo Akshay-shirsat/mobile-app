@@ -1,6 +1,6 @@
 <template>
   <q-page >
-    <div>
+   <div v-if="flag">
       <q-header class="text-primary">
         <q-bar style="background-color: white; height: 45px">
           <q-toolbar-title
@@ -216,16 +216,26 @@
       </div>
 
     </div>
+    <div v-else>
+      <SkelDashboard />
+    </div>
   </q-page>
 </template>
 
 <script>
 // import DarkModeToggle from "./DarkModeToggle.vue";
-
+import SkelDashboard from "../components/skeleton/SkelDashboard.vue"
 export default {
-  // components: {
-  //   DarkModeToggle,
-  // },
+  components: {
+    SkelDashboard,
+  },
+
+  created() {
+    setTimeout(() => {
+      this.flag = true;
+      this.fetchCompletedReports();
+    }, 2000);
+  },
   data() {
     return {
       selectedOption: null,
@@ -246,6 +256,7 @@ export default {
         },
         { name: "Log Miles ", route: "logMile", url: "/assets/vectorr.png" },
       ],
+      flag: false,
     };
   },
   methods: {

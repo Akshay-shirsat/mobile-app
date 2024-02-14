@@ -2,13 +2,28 @@
   <q-page>
     <div v-if="flag">
       <q-header class="bg-white text-primary">
-        <q-bar class="q-py-lg bg-white text-primary">
-          <q-btn flat round dense icon="arrow_back" @click="goBack" />
-          <q-toolbar-title class="q-ml-md"> SoS Detail </q-toolbar-title>
-
-          <q-btn flat round dense icon="more_vert" />
+        <q-bar class="q-py-lg bg-white">
+          <q-btn
+            flat
+            dense
+            icon="arrow_back"
+            style="color: black"
+            @click="goBack"
+          />
+          <q-toolbar-title
+            class="q-ml-md"
+            style="color: black;width: 104px
+                height: 33px
+                 top: 132.29px
+              left: 16.5px
+            "
+          >
+            Sos Details
+          </q-toolbar-title>
+          <q-btn flat round dense color="black" icon="more_vert" />
         </q-bar>
       </q-header>
+      <q-separator />
       <div style="padding-bottom:85px;">
       <div class="q-pa-md q-gutter-md">
         <q-list padding class="rounded-borders" fullwidth>
@@ -84,7 +99,7 @@
       </div>
     </div>
     <div v-else>
-      <SkelDash />
+      <SkelSos />
     </div>
   </q-page>
 </template>
@@ -105,16 +120,16 @@
 }
 </style>
 <script>
-import SkelDash from "../components/skeleton/SkelDrafts.vue";
+import SkelSos from "../components/skeleton/SkelSos.vue";
 export default {
   data() {
     return {
       flag: false,
     };
   },
-  // components: {
-  //   SkelDash,
-  // },
+  components: {
+    SkelSos,
+  },
   methods: {
     addMoreContacts() {
       console.log("Adding more contacts...");
@@ -126,7 +141,7 @@ export default {
   created() {
     setTimeout(() => {
       this.flag = true;
-    }, 10);
+    }, 1000);
   },
 };
 </script>

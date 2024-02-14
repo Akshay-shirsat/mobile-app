@@ -428,7 +428,7 @@ export default {
   created() {
     setTimeout(() => {
       this.flag = true;
-    }, 1000);
+    }, 2000);
   },
   methods: {
     viewDetails() {},

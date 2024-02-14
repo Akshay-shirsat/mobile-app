@@ -55,13 +55,13 @@
 <q-separator  inset />
     </div>
     <div v-else>
-      <SkelDraft />
+      <SkelSetting />
     </div>
   </q-page>
 </template>
 
 <script>
-import SkelDraft from "../../components/skeleton/SkelDrafts.vue";
+import SkelSetting from "../../components/skeleton/SkelSetting.vue";
 export default {
   created() {
     setTimeout(() => {
@@ -76,9 +76,9 @@ export default {
       flag: false,
     };
   },
-  // components: {
-  //   SkelDraft,
-  // },
+  components: {
+    SkelSetting,
+  },
   methods: {
     viewDetails() {},
     goBack() {

@@ -218,7 +218,7 @@ export default {
     setTimeout(() => {
       this.flag = true;
       this.fetchCompletedReports();
-    }, 1000);
+    }, 2000);
   },
   data() {
     return {

@@ -190,7 +190,7 @@
       </div>
     </div>
     <div v-else>
-      <SkelDash />
+      <SkelLogmiles />
     </div>
   </q-page>
 </template>
@@ -230,7 +230,7 @@
 }
 </style>
 <script>
-import SkelDash from "../components/skeleton/SkelDrafts.vue";
+import SkelLogmiles from "../components/skeleton/SkelLogmiles.vue";
 
 export default {
 
@@ -251,14 +251,14 @@ export default {
     };
   },
   components: {
-    SkelDash,
+    SkelLogmiles,
 
   },
   created() {
     setTimeout(() => {
       this.selectedVehicleName = "Example Vehicle";
       this.flag = true;
-    }, 100    );
+    }, 1000  );
   },
   methods: {
     viewDetails() {},
