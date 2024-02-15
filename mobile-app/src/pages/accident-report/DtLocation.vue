@@ -24,7 +24,7 @@
         >Date, Time and Location</q-item-label
       >
 <div style="padding-bottom:85px;">
-      <NewQuestionCard :question="dateQuestion" />
+      <NewQuestionCard  :question="dateQuestion" />
       <NewQuestionCard :question="timeQuestion" />
       <NewQuestionCard   :question="locationQuestion" />
 

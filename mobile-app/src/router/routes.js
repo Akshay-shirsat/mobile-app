@@ -65,6 +65,8 @@ const routes = [
 
       //insurence report
 { path: '/insuranceDetails', component: () => import('pages/insurence/InsuranceDetails.vue') },
+{ path: '/CanvasImage', component: () => import('pages/insurence/CanvasImage.vue') },
+
 
 
 

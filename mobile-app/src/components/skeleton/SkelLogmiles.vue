@@ -12,7 +12,7 @@
     </q-header>
     <q-page-container>
       <q-page>
-        <div class="flex-container">
+        <div class="flex-container imageCenter">
           <div>
             <q-skeleton :type="'rect'" width="187.041px" height="111.807px" />
           </div>
@@ -106,7 +106,7 @@
         style="
           display: flex;
           justify-content: center;
-         
+
           position: fixed;
           z-index: 999;
           padding: 10px;

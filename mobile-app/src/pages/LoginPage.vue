@@ -7,22 +7,25 @@
           <text-h1 class="login-title text-h5 text-bold titleHead">Log-in</text-h1>
           <p class="titleHeadCaption">Please Sign in to continue</p>
         </div>
-
+<div class="inputbox">
         <q-input
+        fullwidth
           v-model="driverName"
           outlined
           placeholder="Driver Name"
           class="input-field q-pb-md"
         />
-
+</div>
+<div class="inputbox">
         <q-input
           v-model="password"
           outlined
-
+          fullwidth
           type="password"
           placeholder="Password"
-          class="input-field"
+class="input-field "
         />
+</div>
         <div class="row full-width">
           <div class="col-md-6 col-xs-6 col-sm-6">
             <q-checkbox
@@ -90,7 +93,7 @@ export default {
 
 .input-field {
   width: 100%;
-  max-width: 420px;
+
   margin-top: 16px;
 }
 

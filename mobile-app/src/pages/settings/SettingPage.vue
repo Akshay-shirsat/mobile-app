@@ -18,7 +18,7 @@
           <q-item-label class="q-pa-md text-weight-medium text-h6 " >Account</q-item-label>
         </div>
       <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm" v-for="(item, index) in completedReports" :key="index">
-        <q-list rounded padding dense class="rounded-borders" style="max-width: 768px; display: flex; align-items: center; height: 50px; margin-top: -10px;">
+        <q-list rounded padding dense class="rounded-borders" style=" display: flex; align-items: center; height: 50px; margin-top: -10px;">
           <q-img class="q-mr-sm" :src="item.imageSrc" :alt="item.imageAlt" :width="item.imageWidth" :height="item.imageHeight" />
           <q-item clickable v-ripple style="flex-grow: 1">
             <q-item-section>
@@ -38,7 +38,7 @@
           <q-item-label class="q-pa-md text-weight-medium text-h6" >More</q-item-label>
         </div>
       <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm" v-for="(item, index) in moreItems" :key="index">
-        <q-list rounded padding dense class="rounded-borders " style="max-width: 768px; display: flex; align-items: center; height: 50px; margin-top: -10px;">
+        <q-list rounded padding dense class="rounded-borders " style=" display: flex; align-items: center; height: 50px; margin-top: -10px;">
           <q-img class="q-mr-sm" :src="item.imageSrc" :alt="item.imageAlt" :width="item.imageWidth" :height="item.imageHeight" />
           <q-item clickable v-ripple style="flex-grow: 1">
             <q-item-section>

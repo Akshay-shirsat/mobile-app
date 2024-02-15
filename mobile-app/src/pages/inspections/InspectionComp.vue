@@ -36,7 +36,7 @@
             style="width: 137px"
           />
         </div>
-        <div class="flex-item image-container">
+        <div class="flex-item image-container imageCenter">
           <img src="~assets/image1.png" alt="Image"  style="max-width: 100%; height: auto;"/>
         </div>
       </div>

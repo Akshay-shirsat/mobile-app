@@ -62,7 +62,7 @@
             to="/VehicleDetails"
           />
         </div>
-        <div class="flex-item image-container">
+        <div class="flex-item " style="display:flex;justify-content: center;" >
           <img src="../assets/image1.png" alt="Image" style="max-width: 100%; height: auto;" />
         </div>
       </div>
@@ -72,7 +72,7 @@
         style="color: #4e4d4f;font-family: Roboto;
               font-size: 16px;
               font-weight: 700;
-              line-height: 22px;
+              line-height: 22px;y
               letter-spacing: 0px;
               text-align: left;
               width: 154px

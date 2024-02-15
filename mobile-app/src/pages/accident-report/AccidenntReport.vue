@@ -35,7 +35,7 @@
             style="width: 137px"
           />
         </div>
-        <div class="flex-item image-container">
+        <div class="flex-item image-container imageCenter">
           <img src="~assets/image1.png" alt="Image"  style="max-width: 100%; height: auto;"/>
         </div>
       </div>
@@ -84,12 +84,13 @@
         :key="index"
       >
         <q-list
+
           bordered
           padding
           dense
           class="rounded-borders bg-negative"
           style="
-            max-width: 768px;
+
             display: flex;
             align-items: center;
             height: 66.281px;
@@ -134,7 +135,7 @@
           dense
           class="rounded-borders bg-negative"
           style="
-            max-width: 768px;
+
             display: flex;
             align-items: center;
             height: 66.281px;
@@ -174,7 +175,7 @@
         :key="index"
       >
         <q-list
-          fullwidth
+
           bordered
           padding
           dense

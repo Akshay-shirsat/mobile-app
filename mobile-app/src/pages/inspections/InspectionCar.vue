@@ -44,7 +44,7 @@
             style="width: 137px"
           />
         </div>
-        <div class="flex-item image-container">
+        <div class="flex-item image-container imageCenter">
           <img src="~assets/image1.png" alt="Image"  style="max-width: 100%; height: auto;"/>
         </div>
       </div>
@@ -163,12 +163,13 @@
         :key="index"
       >
         <q-list
+        fullwidth
           bordered
           padding
           dense
           class="rounded-borders bg-grey-1"
           style="
-            max-width: 768px;
+
             display: flex;
             align-items: center;
             height: 66.281px;

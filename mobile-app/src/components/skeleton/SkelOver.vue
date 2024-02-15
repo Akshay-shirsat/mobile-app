@@ -40,7 +40,7 @@
             </q-item-section>
           </div>
 
-          <div class="flex-item">
+          <div class="flex-item imageCenter">
             <q-skeleton :type="'rect'" width="187.041px" height="111.807px" />
           </div>
         </div>
@@ -81,7 +81,7 @@
           >
             <q-img
               class="q-mr-sm"
-             
+
               alt="Image description"
               width="6px"
               height="55px"

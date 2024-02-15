@@ -46,7 +46,7 @@
           </q-item-section>
         </div>
 
-        <div class="flex-item">
+        <div class="flex-item imageCenter">
           <img src="~assets/image1.png" alt="Image" class="image-right" />
         </div>
       </div>

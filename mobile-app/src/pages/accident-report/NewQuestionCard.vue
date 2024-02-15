@@ -1,6 +1,6 @@
 <template>
   <q-card class="q-ma-md">
-    <div class="q-pa-sm" style="max-width: 650px">
+    <div class="q-pa-sm" fullwidth>
       <q-expansion-item v-model="expanded" :label="question.label" class="text-subtitle2">
         <q-separator />
 
@@ -47,7 +47,7 @@ export default {
   data() {
     return {
       expanded: ref(false),
-      
+
       selectedDate: null,
       selectedTime: null,
        text: ref('')

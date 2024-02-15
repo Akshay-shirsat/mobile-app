@@ -29,7 +29,7 @@
             </q-item-section>
           </div>
 
-          <div class="flex-item">
+          <div class="flex-item imageCenter">
             <q-skeleton :type="'rect'" width="187.041px" height="111.807px" />
           </div>
         </div>
@@ -46,13 +46,13 @@
                 <q-skeleton :type="'text'" class="q-ml-sm" width="150px" />
               </q-item-label>
             </q-item-section>
-          </div>     
+          </div>
         </div>
- 
+
        <div class=" q-pa-md" style="display:flex;justify-content:space-between" >
             <q-skeleton  :type="'rect'" width="100px" height="100px" />
             <q-skeleton :type="'rect'" width="100px" height="100px" />
-            <q-skeleton :type="'rect'" width="100px" height="100px" /> 
+            <q-skeleton :type="'rect'" width="100px" height="100px" />
           </div>
  <div class="flex-item top-section">
             <q-item-section class="text-weight-medium q-ml-sm">
@@ -60,7 +60,7 @@
                 <q-skeleton :type="'text'" class="q-ml-sm" width="150px" />
               </q-item-label>
             </q-item-section>
-          </div> 
+          </div>
         <div class="rounded-box q-pt-sm q-pa-md q-gutter-sm">
           <q-list
             rounded
